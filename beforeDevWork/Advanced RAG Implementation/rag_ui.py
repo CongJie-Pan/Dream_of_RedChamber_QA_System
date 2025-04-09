@@ -29,11 +29,12 @@ from expansion_answer import (
     create_vector_db,
     augment_query_generated,
     perform_query,
-    visualize_embeddings
+    visualize_embeddings,
+    process_chinese_text
 )
 from helper_utils import word_wrap
 import umap
-from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
+from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction, OpenAIEmbeddingFunction
 
 # Supported file types
 SUPPORTED_FILE_TYPES = {
@@ -47,12 +48,10 @@ SUPPORTED_EXTENSIONS = [ext for exts in SUPPORTED_FILE_TYPES.values() for ext in
 
 # Available embedding models for different languages
 EMBEDDING_MODELS = {
-    "English (Default)": "sentence-transformers/all-MiniLM-L6-v2",
+    "OpenAI": "text-embedding-ada-002",  # Best for all languages, especially Chinese
+    "English": "sentence-transformers/all-MiniLM-L6-v2",
     "Multilingual": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
-    "Chinese/Multilingual": "sentence-transformers/distiluse-base-multilingual-cased-v2",
-    "Chinese Optimized": "shibing624/text2vec-base-chinese",
-    "Chinese Literature": "uer/sbert-base-chinese-nli",  # Better for classical Chinese literature
-    "Chinese General": "hfl/chinese-roberta-wwm-ext"     # Good general Chinese model
+    "Chinese": "sentence-transformers/distiluse-base-multilingual-cased-v2"
 }
 
 # Page configuration
@@ -82,8 +81,8 @@ with st.sidebar:
     embedding_model_name = st.selectbox(
         "Language Model",
         list(EMBEDDING_MODELS.keys()),
-        index=2,  # Default to Chinese/Multilingual model
-        help="Select language model for embeddings - use Chinese models for Chinese documents"
+        index=0,  # Default to OpenAI model
+        help="Select language model for embeddings - OpenAI recommended for all languages, especially Chinese"
     )
     embedding_model_path = EMBEDDING_MODELS[embedding_model_name]
     
@@ -91,19 +90,17 @@ with st.sidebar:
     st.subheader("Text Splitting")
     chunk_size = st.slider(
         "Character Chunk Size",
-        min_value=500,
+        min_value=300,
         max_value=2000,
-        value=1000,
+        value=800,
         step=100,
-        help="Size of chunks for character-based splitting"
+        help="Size of chunks for character-based splitting (smaller values recommended for Chinese)"
     )
-    token_size = st.slider(
-        "Token Chunk Size",
-        min_value=128,
-        max_value=512,
-        value=256,
-        step=32,
-        help="Size of chunks for token-based splitting"
+    
+    use_chinese_segmentation = st.checkbox(
+        "Enable Chinese Word Segmentation", 
+        value=True,
+        help="Uses jieba to improve Chinese text segmentation (recommended for Chinese documents)"
     )
     
     # Retrieval parameters
@@ -122,12 +119,10 @@ with st.sidebar:
     # Language settings info
     st.subheader("Language Support")
     st.markdown("""
-    - **English**: Works best with English documents
-    - **Multilingual**: Supports multiple languages
-    - **Chinese/Multilingual**: Optimized for Chinese and other languages
-    - **Chinese Optimized**: Best for Chinese text only
-    - **Chinese Literature**: Specialized for classical Chinese literature like Dream of the Red Chamber
-    - **Chinese General**: Good all-around model for modern and classical Chinese
+    - **OpenAI**: Recommended for all languages, especially Chinese (avoids [UNK] token issues)
+    - **English**: Works best with English documents only
+    - **Multilingual**: Supports multiple languages but may have issues with some Chinese characters
+    - **Chinese**: Basic Chinese support, may have [UNK] token issues with some characters
     """)
     
     # Add warning about model dimension compatibility
@@ -135,12 +130,14 @@ with st.sidebar:
     **Important**: If you change the embedding model after processing a document, 
     you need to click "Reprocess with Current Model" button to avoid dimension mismatch errors.
     Different models use different vector dimensions:
+    - OpenAI: 1536 dimensions
     - English: 384 dimensions
     - Multilingual: 384 dimensions
-    - Chinese/Multilingual: 512 dimensions
-    - Chinese Optimized: 768 dimensions
-    - Chinese Literature: 768 dimensions
-    - Chinese General: 768 dimensions
+    - Chinese: 512 dimensions
+    
+    The system now uses direct character splitting without token-based splitting for all text.
+    This significantly improves handling of Chinese text by avoiding tokenization issues.
+    OpenAI's embedding model provides the best results for Chinese text.
     """)
     
     # Supported file types information
@@ -216,7 +213,7 @@ if uploaded_file is not None:
                 st.session_state.section_count = len(text_sections)
                 
                 # Text splitting
-                text_chunks = split_text(text_sections, chunk_size, token_size, debug=debug_mode)
+                text_chunks = split_text(text_sections, chunk_size, use_chinese_segmentation, debug=debug_mode)
                 st.session_state.text_chunks = text_chunks
                 
                 # Create a unique collection name based on file name and embedding model
@@ -230,7 +227,14 @@ if uploaded_file is not None:
                 
                 try:
                     # Initialize embedding function with the selected model
-                    embedding_function = SentenceTransformerEmbeddingFunction(model_name=embedding_model_path)
+                    if embedding_model_name == "OpenAI":
+                        embedding_function = OpenAIEmbeddingFunction(
+                            api_key=os.getenv("OPENAI_API_KEY"),
+                            model_name=embedding_model_path
+                        )
+                    else:
+                        embedding_function = SentenceTransformerEmbeddingFunction(model_name=embedding_model_path)
+                    
                     st.session_state.embedding_function = embedding_function
                     
                     vector_db, _ = create_vector_db(text_chunks, collection_name=collection_name, 
@@ -244,7 +248,6 @@ if uploaded_file is not None:
                     st.info("Your document has been indexed and will be available for future queries even if you restart the application.")
                 except Exception as e:
                     st.error(f"Error creating vector database: {str(e)}")
-                    st.session_state.document_processed = False
                 
                 # Display sample chunks to verify encoding
                 with st.expander("View Sample Text Chunks"):
@@ -268,8 +271,14 @@ else:
     
     # Language selection note
     st.warning("""
-    **Note for Chinese documents**: Please select "Chinese/Multilingual" or "Chinese Optimized" 
-    embedding model from the sidebar before processing your document.
+    **Note for Chinese documents**: The system now uses improved Chinese text handling:
+    
+    1. OpenAI embedding model is selected by default (recommended for Chinese)
+    2. Character-based splitting is used instead of token-based splitting
+    3. Chinese punctuation and separators are properly recognized
+    4. Jieba word segmentation is enabled by default for better Chinese text chunking
+    
+    These changes will help avoid [UNK] token issues with Chinese text.
     """)
 
 # Query Section (only show if document is processed)
@@ -296,6 +305,23 @@ if st.session_state.document_processed:
                     
                     # Perform original query with error handling
                     try:
+                        # Check if query contains Chinese and preprocess if needed
+                        has_chinese = any('\u4e00' <= char <= '\u9fff' for char in query)
+                        if has_chinese and use_chinese_segmentation:
+                            st.info("中文查詢已檢測到！正在應用優化的中文處理...")
+                            st.info("Chinese query detected, applying optimized Chinese processing...")
+                            
+                            # Display original query
+                            with st.expander("View original vs processed query"):
+                                # Process the query with the same method used for document indexing
+                                processed_query = process_chinese_text(query, use_segmentation=True)
+                                st.text("Original query:")
+                                st.code(query)
+                                st.text("Processed query (used for searching):")
+                                st.code(processed_query)
+                                st.info("The processed version is used for searching to match how documents were indexed.")
+                        
+                        # Perform query (preprocessing is handled within perform_query)
                         original_results = perform_query(
                             st.session_state.vector_db, 
                             query, 
@@ -341,24 +367,58 @@ if st.session_state.document_processed:
                                     model=openai_model
                                 )
                                 
-                                # Combine with original query
-                                expanded_query = f"{query} {hypothetical_answer}"
+                                # Get processed query if Chinese text detected
+                                has_chinese = any('\u4e00' <= char <= '\u9fff' for char in query)
+                                if has_chinese and use_chinese_segmentation:
+                                    processed_query = process_chinese_text(query, use_segmentation=True)
+                                    # Combine processed query with hypothetical answer for better matching
+                                    expanded_query = f"{processed_query} {hypothetical_answer}"
+                                else:
+                                    expanded_query = f"{query} {hypothetical_answer}"
                                 
                                 # Show expanded query
                                 with st.expander("View AI-generated expansion"):
                                     st.info("Hypothetical answer generated by AI:")
                                     st.markdown(hypothetical_answer)
+                                
+                                # Check if expanded query contains Chinese
+                                if any('\u4e00' <= char <= '\u9fff' for char in expanded_query) and use_chinese_segmentation:
+                                    st.info("中文內容在擴展查詢中被檢測到，正在應用優化處理...")
+                                    st.info("Chinese text detected in expanded query, applying optimized processing...")
+                                    
+                                    with st.expander("View processed expanded query"):
+                                        # Process expanded query for consistency
+                                        processed_expanded_query = process_chinese_text(expanded_query, use_segmentation=True)
+                                        st.text("Original expanded query:")
+                                        st.code(expanded_query)
+                                        st.text("Processed expanded query (used for searching):")
+                                        st.code(processed_expanded_query)
+                                    
+                                    # Use processed expanded query for display
+                                    display_expanded_query = processed_expanded_query
+                                else:
+                                    display_expanded_query = expanded_query
                                     
                                 st.info("Expanded query:")
-                                st.markdown(expanded_query)
+                                st.markdown(display_expanded_query)
                                 
                                 # Perform search with expanded query
-                                expanded_results = perform_query(
-                                    st.session_state.vector_db, 
-                                    expanded_query, 
-                                    n_results=n_results,
-                                    is_augmented=True
-                                )
+                                if any('\u4e00' <= char <= '\u9fff' for char in expanded_query) and use_chinese_segmentation:
+                                    # Ensure the expanded query used for search is correctly processed
+                                    processed_expanded_query = process_chinese_text(expanded_query, use_segmentation=True)
+                                    expanded_results = perform_query(
+                                        st.session_state.vector_db, 
+                                        processed_expanded_query, 
+                                        n_results=n_results,
+                                        is_augmented=True
+                                    )
+                                else:
+                                    expanded_results = perform_query(
+                                        st.session_state.vector_db, 
+                                        expanded_query, 
+                                        n_results=n_results,
+                                        is_augmented=True
+                                    )
                                 
                                 # Display expanded results
                                 st.markdown("#### Expanded Query Results")
@@ -391,9 +451,32 @@ if st.session_state.document_processed:
                                         # Create UMAP transform
                                         umap_transform = umap.UMAP(random_state=0, transform_seed=0).fit(all_embeddings)
                                         
-                                        # Get query embeddings
-                                        original_query_embedding = st.session_state.embedding_function([query])
-                                        augmented_query_embedding = st.session_state.embedding_function([expanded_query])
+                                        # Check if query contains Chinese characters
+                                        has_chinese = any('\u4e00' <= char <= '\u9fff' for char in query)
+                                        if has_chinese and use_chinese_segmentation:
+                                            # Process the query with the same method used during retrieval
+                                            processed_query = process_chinese_text(query, use_segmentation=True)
+                                            # Use processed query for embedding to match how documents were processed
+                                            original_query_embedding = st.session_state.embedding_function([processed_query])
+                                            
+                                            # Also process the expanded query if it contains Chinese
+                                            if any('\u4e00' <= char <= '\u9fff' for char in expanded_query):
+                                                processed_expanded_query = process_chinese_text(expanded_query, use_segmentation=True)
+                                                augmented_query_embedding = st.session_state.embedding_function([processed_expanded_query])
+                                                
+                                                # Add explanation about preprocessing for visualization
+                                                with st.expander("Embedding processing explanation"):
+                                                    st.info("Chinese text detected. For visualization, both the original query and expanded query have been processed to match document embeddings.")
+                                                    st.text("Query embedding created from the processed version:")
+                                                    st.code(processed_query)
+                                                    st.text("Expanded query embedding created from the processed version:")
+                                                    st.code(processed_expanded_query)
+                                            else:
+                                                augmented_query_embedding = st.session_state.embedding_function([expanded_query])
+                                        else:
+                                            # For non-Chinese queries, use as-is
+                                            original_query_embedding = st.session_state.embedding_function([query])
+                                            augmented_query_embedding = st.session_state.embedding_function([expanded_query])
                                         
                                         # Create visualization as a matplotlib figure
                                         fig = visualize_embeddings(
@@ -445,10 +528,11 @@ with st.expander("How to Use This Tool"):
     ### Language Support
     
     For Chinese documents:
-    - Select "Chinese/Multilingual" or "Chinese Optimized" embedding model from the sidebar
-    - You can query in Chinese and the system will automatically detect the language
-    - Chinese query expansion is supported and optimized for Chinese language patterns
-    - Traditional and Simplified Chinese characters are both supported
+    - System now uses character-based splitting optimized for Chinese text
+    - OpenAI embedding model is recommended and set as default
+    - Chinese punctuation is properly recognized as text separators
+    - Jieba word segmentation improves Chinese text processing
+    - Both Traditional and Simplified Chinese characters are supported
     
     ### Visualization Explained
     

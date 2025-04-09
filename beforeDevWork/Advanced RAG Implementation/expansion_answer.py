@@ -29,7 +29,10 @@ import chromadb
 from pypdf import PdfReader
 from openai import OpenAI
 from dotenv import load_dotenv
-from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
+from chromadb.utils.embedding_functions import (
+    SentenceTransformerEmbeddingFunction,
+    OpenAIEmbeddingFunction
+)
 from langchain.text_splitter import (
     RecursiveCharacterTextSplitter,
     SentenceTransformersTokenTextSplitter,
@@ -98,14 +101,14 @@ def process_document(file_path, debug=DEBUG):
         logger.error(f"Error processing document: {str(e)}")
         raise
 
-def split_text(pdf_texts, chunk_size=1000, token_size=256, debug=DEBUG):
+def split_text(pdf_texts, chunk_size=1000, use_chinese_segmentation=True, debug=DEBUG):
     """
-    Split text using two different methods for better chunking
+    Split text using improved methods for better chunking, especially for Chinese text
     
     Args:
         pdf_texts (list): List of text content from PDF
         chunk_size (int): Size of chunks for character-based splitting
-        token_size (int): Size of chunks for token-based splitting
+        use_chinese_segmentation (bool): Whether to use jieba for Chinese word segmentation
         debug (bool): Whether to print debug information
     
     Returns:
@@ -113,35 +116,73 @@ def split_text(pdf_texts, chunk_size=1000, token_size=256, debug=DEBUG):
     """
     logger.info("Starting text splitting process")
     
-    # Step 1: Use recursive character splitter
+    # Check if the text contains Chinese characters
+    has_chinese = any(any('\u4e00' <= char <= '\u9fff' for char in text) for text in pdf_texts)
+    
+    # Use different separators and chunk settings based on text language
+    if has_chinese:
+        logger.info("Chinese text detected, using optimized splitting for Chinese")
+        # Chinese text needs different separators that respect Chinese punctuation
+        separators = ["。", "！", "？", "\n\n", "\n", ". ", " ", ""]
+        # Use smaller chunks for Chinese text for better coherence
+        actual_chunk_size = min(chunk_size, 500)
+        # Add overlap to maintain context across chunks
+        chunk_overlap = 50
+        
+        # Use jieba for Chinese word segmentation if requested
+        if use_chinese_segmentation and has_chinese:
+            try:
+                import jieba
+                logger.info("Using jieba for Chinese word segmentation")
+                
+                # Process each text chunk with jieba
+                segmented_texts = []
+                for text in pdf_texts:
+                    if any('\u4e00' <= char <= '\u9fff' for char in text):
+                        # Only apply jieba to text containing Chinese characters
+                        words = jieba.cut(text)
+                        segmented_text = " ".join(words)
+                        segmented_texts.append(segmented_text)
+                    else:
+                        segmented_texts.append(text)
+                
+                # Replace the original texts with segmented ones
+                pdf_texts = segmented_texts
+                
+                if debug:
+                    print("\nSegmented Chinese text sample:")
+                    print(word_wrap(pdf_texts[0][:200]))
+            except ImportError:
+                logger.warning("Jieba library not found. Chinese word segmentation disabled.")
+            except Exception as e:
+                logger.warning(f"Error during Chinese word segmentation: {str(e)}")
+    else:
+        logger.info("Non-Chinese text detected, using standard separators")
+        separators = ["\n\n", "\n", ". ", " ", ""]
+        actual_chunk_size = chunk_size
+        chunk_overlap = 20
+    
+    # Use recursive character splitter with appropriate separators
     character_splitter = RecursiveCharacterTextSplitter(
-        separators=["\n\n", "\n", ". ", " ", ""], 
-        chunk_size=chunk_size, 
-        chunk_overlap=0
+        separators=separators, 
+        chunk_size=actual_chunk_size, 
+        chunk_overlap=chunk_overlap
     )
-    character_split_texts = character_splitter.split_text("\n\n".join(pdf_texts))
+    
+    # Split the text using the character splitter
+    text_chunks = character_splitter.split_text("\n\n".join(pdf_texts))
     
     if debug:
-        print(f"\nAfter character splitting - Total chunks: {len(character_split_texts)}")
+        print(f"\nAfter character splitting - Total chunks: {len(text_chunks)}")
         print("Sample chunk (character split):")
-        print(word_wrap(character_split_texts[min(10, len(character_split_texts)-1)]))
+        print(word_wrap(text_chunks[min(10, len(text_chunks)-1)]))
     
-    # Step 2: Use SentenceTransformers-based token splitter
-    token_splitter = SentenceTransformersTokenTextSplitter(
-        chunk_overlap=0, 
-        tokens_per_chunk=token_size
-    )
-    token_split_texts = []
-    for text in character_split_texts:
-        token_split_texts += token_splitter.split_text(text)
+    # Skip SentenceTransformersTokenTextSplitter entirely as requested
+    # This avoids [UNK] token issues with Chinese text when using transformer-based tokenizers
+    logger.info(f"Text splitting complete. Generated {len(text_chunks)} chunks")
+    logger.info(f"SentenceTransformersTokenTextSplitter step skipped to avoid [UNK] token issues")
     
-    if debug:
-        print(f"\nAfter token splitting - Total chunks: {len(token_split_texts)}")
-        print("Sample chunk (token split):")
-        print(word_wrap(token_split_texts[min(10, len(token_split_texts)-1)]))
-    
-    logger.info(f"Text splitting complete. Generated {len(token_split_texts)} chunks")
-    return token_split_texts
+    return text_chunks
 
 def create_vector_db(text_chunks, collection_name="microsoft-collection", embedding_function=None):
     """
@@ -157,12 +198,38 @@ def create_vector_db(text_chunks, collection_name="microsoft-collection", embedd
     """
     logger.info(f"Creating vector database with {len(text_chunks)} chunks")
     
+    # Check if any of the chunks contain Chinese text
+    has_chinese = any(any('\u4e00' <= char <= '\u9fff' for char in text) for text in text_chunks)
+    
     # Create embedding function instance if not provided
     if embedding_function is None:
-        logger.info("No embedding function provided, using default English model")
-        embedding_function = SentenceTransformerEmbeddingFunction()
-    else:
-        logger.info(f"Using provided embedding function")
+        # Check if OpenAI API key is available
+        openai_api_key = os.getenv("OPENAI_API_KEY")
+        if openai_api_key:
+            # Always use OpenAI embeddings for Chinese text to avoid [UNK] tokens
+            if has_chinese:
+                logger.info("Chinese text detected, using OpenAI embedding function for better Chinese language support")
+            else:
+                logger.info("Using OpenAI embedding function as default")
+                
+            embedding_function = OpenAIEmbeddingFunction(
+                api_key=openai_api_key,
+                model_name="text-embedding-ada-002"
+            )
+        else:
+            # Only use SentenceTransformer if OpenAI API key is not available and no Chinese text
+            if has_chinese:
+                logger.warning("Chinese text detected but OpenAI API key not found. Chinese may not embed properly.")
+                logger.warning("Please set OPENAI_API_KEY for better Chinese language support.")
+            
+            logger.info("No OpenAI API key available, falling back to SentenceTransformer embedding function")
+            embedding_function = SentenceTransformerEmbeddingFunction()
+    elif has_chinese:
+        # If embedding function was provided but text contains Chinese, check if it's OpenAI
+        if not isinstance(embedding_function, OpenAIEmbeddingFunction):
+            logger.warning("Chinese text detected but non-OpenAI embedding function provided.")
+            logger.warning("This may cause [UNK] token issues with Chinese text.")
+            logger.warning("Consider using OpenAI embeddings for better Chinese language support.")
     
     # Create a persistent ChromaDB client with a local directory
     # This ensures the database persists between application restarts
@@ -213,11 +280,23 @@ def augment_query_generated(client, query, model="gpt-4o-mini"):
     # Detect if query is likely in Chinese or another non-English language
     has_chinese = any(u'\u4e00' <= char <= u'\u9fff' for char in query)
     
+    # Process the query with the same method used during retrieval if it's Chinese
+    # Use the comprehensive processing to ensure consistency
+    if has_chinese:
+        logger.info("Chinese query detected, applying comprehensive Chinese text preprocessing for LLM")
+        # Use the same comprehensive processing function used for queries and documents
+        processed_query = process_chinese_text(query, use_segmentation=True)
+        logger.info(f"Original query for LLM: '{query[:50]}...'")
+        logger.info(f"Processed query for LLM: '{processed_query[:50]}...'")
+    else:
+        processed_query = query
+    
     # Set system prompt for AI assistant based on detected language
     if has_chinese:
-        prompt = """你是一位专业研究助理，能够帮助用户分析文档。
-        请针对用户的问题提供一个可能在文档中出现的示例答案。
-        你的回答应该客观、准确，并且遵循中文表达习惯。回答时无需声明这是一个假设回答。"""
+        prompt = """你是一位專業研究助理，能夠幫助用户分析文檔。         
+        請針對用户的問題提供一個可能在文檔中出現的示例答案。         
+        你的回答應該客觀、準確，並且遵循中文表達習慣。使用自然流暢的中文回答，不要使用機器翻譯的風格。         
+        回答時無需聲明這是一個假設回答。如果回答中包含數字、日期或專有名詞，請確保它們是準確的格式。"""
     else:
         prompt = """You are a helpful expert research assistant. 
         Provide an example answer to the given question, that might be found in a document.
@@ -231,7 +310,7 @@ def augment_query_generated(client, query, model="gpt-4o-mini"):
         },
         {
             "role": "user",
-            "content": query
+            "content": processed_query if has_chinese else query
         },
     ]
 
@@ -243,8 +322,74 @@ def augment_query_generated(client, query, model="gpt-4o-mini"):
     
     # Extract generated content from response
     content = response.choices[0].message.content
+    
+    # If we're dealing with Chinese, apply some post-processing to the generated answer
+    if has_chinese:
+        # Remove any [SEP] tokens that might have been included
+        content = content.replace("[SEP]", "")
+        
+        # Normalize whitespace
+        content = " ".join(content.split())
+        
     logger.info("Query augmentation completed")
     return content
+
+def process_chinese_text(text, use_segmentation=True):
+    """
+    Process Chinese text by applying jieba word segmentation and optimized splitting
+    
+    Args:
+        text (str): The text to process
+        use_segmentation (bool): Whether to use jieba for segmentation
+        
+    Returns:
+        str: Processed text
+    """
+    # Check if text contains Chinese characters
+    has_chinese = any('\u4e00' <= char <= '\u9fff' for char in text)
+    
+    if not has_chinese:
+        return text
+    
+    logger.info("Processing Chinese text with optimized methods")
+    
+    # Apply jieba word segmentation if requested
+    if use_segmentation:
+        try:
+            # Use jieba for Chinese word segmentation
+            import jieba
+            logger.info("Using jieba to segment Chinese text")
+            # Force loading of user dictionaries if any exist
+            user_dict_path = os.path.join(os.path.dirname(__file__), "jieba_userdict.txt")
+            if os.path.exists(user_dict_path):
+                jieba.load_userdict(user_dict_path)
+                logger.info(f"Loaded jieba user dictionary from {user_dict_path}")
+            
+            # Cut the text with jieba
+            words = jieba.cut(text)
+            text = " ".join(words)
+            logger.info("Text segmented with jieba")
+        except ImportError:
+            logger.warning("Jieba library not found. Chinese word segmentation skipped.")
+        except Exception as e:
+            logger.warning(f"Error during Chinese word segmentation: {str(e)}")
+    
+    # Apply additional Chinese-specific processing
+    
+    # 1. Replace traditional Chinese punctuation with spaces for better tokenization
+    chinese_punctuation = "，。！？；：""''「」【】《》（）～"
+    for char in chinese_punctuation:
+        text = text.replace(char, f" {char} ")
+    
+    # 2. Normalize whitespace
+    text = " ".join(text.split())
+    
+    # 3. Add sentence boundary markers to help with context
+    for char in "。！？":
+        text = text.replace(f" {char} ", f" {char} [SEP] ")
+    
+    logger.info(f"Chinese text processed: '{text[:50]}...'")
+    return text
 
 def perform_query(collection, query_text, n_results=5, is_augmented=False):
     """
@@ -262,14 +407,57 @@ def perform_query(collection, query_text, n_results=5, is_augmented=False):
     query_type = "augmented" if is_augmented else "original"
     logger.info(f"Performing {query_type} query: '{query_text[:50]}...'")
     
-    results = collection.query(
-        query_texts=[query_text], 
-        n_results=n_results,
-        include=["documents", "embeddings"]
-    )
+    # Check if query contains Chinese characters
+    has_chinese = any('\u4e00' <= char <= '\u9fff' for char in query_text)
     
-    logger.info(f"Retrieved {len(results['documents'][0])} documents")
-    return results
+    # Apply the same preprocessing to query as we do to documents
+    if has_chinese:
+        logger.info("Chinese query detected, applying comprehensive Chinese text preprocessing")
+        
+        # Always use text processing for Chinese to ensure consistency with document processing
+        processed_query = process_chinese_text(query_text, use_segmentation=True)
+        
+        # Log the transformation for debugging
+        if processed_query != query_text:
+            logger.info(f"Original query: '{query_text[:50]}...'")
+            logger.info(f"Processed query: '{processed_query[:50]}...'")
+            logger.info("Query processing applied to match document processing")
+        
+        # Check if OpenAI embeddings are being used (strongly recommended for Chinese)
+        from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
+        if not isinstance(collection._embedding_function, OpenAIEmbeddingFunction):
+            logger.warning("Chinese query detected but non-OpenAI embedding function is being used.")
+            logger.warning("This may cause [UNK] token issues with Chinese text.")
+            logger.warning("Consider using OpenAI embeddings for better Chinese language support.")
+    else:
+        processed_query = query_text
+    
+    # Perform the query with processed text
+    try:
+        results = collection.query(
+            query_texts=[processed_query], 
+            n_results=n_results,
+            include=["documents", "embeddings"]
+        )
+        
+        logger.info(f"Retrieved {len(results['documents'][0])} documents")
+        return results
+    except Exception as e:
+        logger.error(f"Error during query: {str(e)}")
+        
+        # If error occurs with processed query, try again with original as fallback
+        if processed_query != query_text:
+            logger.warning("Error occurred with processed query. Trying again with original query as fallback.")
+            results = collection.query(
+                query_texts=[query_text], 
+                n_results=n_results,
+                include=["documents", "embeddings"]
+            )
+            logger.info(f"Retrieved {len(results['documents'][0])} documents using original query")
+            return results
+        else:
+            # Re-raise the exception if we can't recover
+            raise
 
 def visualize_embeddings(
     embeddings, 
@@ -361,7 +549,7 @@ def run_rag_pipeline(
     pdf_path="data/microsoft-annual-report.pdf",
     query="What was the total profit for the year, and how does it compare to the previous year?",
     chunk_size=1000,
-    token_size=256,
+    use_chinese_segmentation=True,
     n_results=5,
     model="gpt-4o-mini",
     show_visualization=True,
@@ -374,7 +562,7 @@ def run_rag_pipeline(
         pdf_path (str): Path to the PDF document
         query (str): Query to search for
         chunk_size (int): Size of chunks for character-based splitting
-        token_size (int): Size of chunks for token-based splitting
+        use_chinese_segmentation (bool): Whether to use jieba for Chinese word segmentation
         n_results (int): Number of results to return
         model (str): OpenAI model to use for query expansion
         show_visualization (bool): Whether to display visualization
@@ -390,13 +578,24 @@ def run_rag_pipeline(
     pdf_texts = process_document(pdf_path, debug)
     
     # Split text into chunks
-    text_chunks = split_text(pdf_texts, chunk_size, token_size, debug)
+    text_chunks = split_text(pdf_texts, chunk_size, use_chinese_segmentation, debug)
     
     # Create vector database
     collection, embedding_function = create_vector_db(text_chunks)
     
-    # Perform original query
-    original_query_results = perform_query(collection, query, n_results)
+    # Check for Chinese query and apply comprehensive processing
+    has_chinese = any('\u4e00' <= char <= '\u9fff' for char in query)
+    if has_chinese:
+        logger.info("Chinese query detected in pipeline, applying comprehensive processing")
+        processed_query = process_chinese_text(query, use_chinese_segmentation)
+        if debug and processed_query != query:
+            print(f"Original query: {query}")
+            print(f"Processed query: {processed_query}")
+    else:
+        processed_query = query
+    
+    # Perform original query - use the processed query to ensure consistency with document processing
+    original_query_results = perform_query(collection, processed_query, n_results)
     
     if debug:
         print("\nOriginal query results:")
@@ -406,7 +605,9 @@ def run_rag_pipeline(
     
     # Generate augmented query
     hypothetical_answer = augment_query_generated(client, query, model)
-    augmented_query = f"{query} {hypothetical_answer}"
+    
+    # Combine processed query with hypothetical answer to ensure consistency
+    augmented_query = f"{processed_query} {hypothetical_answer}"
     
     if debug:
         print("\nAugmented query:")
@@ -431,8 +632,8 @@ def run_rag_pipeline(
         # Create UMAP transform
         umap_transform = umap.UMAP(random_state=0, transform_seed=0).fit(all_embeddings)
         
-        # Get query embeddings
-        original_query_embedding = embedding_function([query])
+        # Get query embeddings - always use processed query for consistent embedding
+        original_query_embedding = embedding_function([processed_query])
         augmented_query_embedding = embedding_function([augmented_query])
         
         # Create visualization
@@ -442,7 +643,7 @@ def run_rag_pipeline(
             original_query_embedding,
             augmented_query_embedding,
             augmented_query_results["embeddings"][0],
-            query
+            query  # Keep original query for display purpose
         )
         
         # Display the plot
