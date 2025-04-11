@@ -140,9 +140,9 @@ def read_pdf(file_path="data/microsoft-annual-report.pdf"):
         
         # 將文本按段落分割
         pdf_texts = [t.strip() for t in text.split("\n\n") if t.strip()]
-        
-        # 過濾空字符串 (Filter empty strings)
-        pdf_texts = [text for text in pdf_texts if text]
+
+# 過濾空字符串 (Filter empty strings)
+pdf_texts = [text for text in pdf_texts if text]
         logger.info(f"Extracted {len(pdf_texts)} text sections")
         return pdf_texts
     except Exception as e:
@@ -315,7 +315,7 @@ def generate_multi_query(query, model="gpt-4o-mini"):
     
     If the original query is in Chinese, please also respond with Chinese questions.
     如果原始查詢是中文，請也用中文回答相關問題。
-    """
+                """
 
     messages = [
         {
@@ -420,60 +420,60 @@ def visualize_embeddings(
     logger.info("Generating visualization of embeddings")
     
     # Project embeddings to 2D using UMAP
-    projected_dataset_embeddings = project_embeddings(embeddings, umap_transform)
+projected_dataset_embeddings = project_embeddings(embeddings, umap_transform)
     projected_original_query = project_embeddings(original_query_embedding, umap_transform)
     projected_augmented_queries = project_embeddings(augmented_query_embeddings, umap_transform)
     
     # Flatten retrieved embeddings list
-    result_embeddings = [item for sublist in retrieved_embeddings for item in sublist]
-    projected_result_embeddings = project_embeddings(result_embeddings, umap_transform)
+result_embeddings = [item for sublist in retrieved_embeddings for item in sublist]
+projected_result_embeddings = project_embeddings(result_embeddings, umap_transform)
 
     # Create the visualization plot
     plt.figure(figsize=(10, 8))
 
     # Plot all document embeddings (gray dots)
-    plt.scatter(
-        projected_dataset_embeddings[:, 0],
-        projected_dataset_embeddings[:, 1],
-        s=10,
-        color="gray",
+plt.scatter(
+    projected_dataset_embeddings[:, 0],
+    projected_dataset_embeddings[:, 1],
+    s=10,
+    color="gray",
         alpha=0.5,
         label="All Documents"
-    )
+)
 
     # Plot augmented queries (orange X)
-    plt.scatter(
+plt.scatter(
         projected_augmented_queries[:, 0],
         projected_augmented_queries[:, 1],
-        s=150,
-        marker="X",
-        color="orange",
+    s=150,
+    marker="X",
+    color="orange",
         label="Augmented Queries"
-    )
+)
 
     # Plot retrieved documents (green circles)
-    plt.scatter(
-        projected_result_embeddings[:, 0],
-        projected_result_embeddings[:, 1],
-        s=100,
-        facecolors="none",
-        edgecolors="g",
+plt.scatter(
+    projected_result_embeddings[:, 0],
+    projected_result_embeddings[:, 1],
+    s=100,
+    facecolors="none",
+    edgecolors="g",
         label="Retrieved Documents"
-    )
+)
 
     # Plot original query (red X)
-    plt.scatter(
+plt.scatter(
         projected_original_query[:, 0],
         projected_original_query[:, 1],
-        s=150,
-        marker="X",
-        color="r",
+    s=150,
+    marker="X",
+    color="r",
         label="Original Query"
-    )
+)
 
-    plt.gca().set_aspect("equal", "datalim")
+plt.gca().set_aspect("equal", "datalim")
     plt.title(f"Query: {original_query}")
-    plt.axis("off")
+plt.axis("off")
     plt.legend()
     plt.show()
 

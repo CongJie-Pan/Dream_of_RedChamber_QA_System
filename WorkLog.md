@@ -71,3 +71,12 @@
 
 - 止損此RAG專案，改進行lightRAG專案。
 
+---
+
+## 2025/4/11
+
+- 完成架設Basic RAG 和 light RAG env、API，以及虛擬終端環境建立好。
+
+### 下一步計畫
+
+- Readme 檔案中 Running the Implementations 部分
