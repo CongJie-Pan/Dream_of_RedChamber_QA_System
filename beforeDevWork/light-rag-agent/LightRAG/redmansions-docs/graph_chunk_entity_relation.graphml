@@ -1,0 +1,2696 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d9" for="edge" attr.name="file_path" attr.type="string" />
+  <key id="d8" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d7" for="edge" attr.name="keywords" attr.type="string" />
+  <key id="d6" for="edge" attr.name="description" attr.type="string" />
+  <key id="d5" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d4" for="node" attr.name="file_path" attr.type="string" />
+  <key id="d3" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d2" for="node" attr.name="description" attr.type="string" />
+  <key id="d1" for="node" attr.name="entity_type" attr.type="string" />
+  <key id="d0" for="node" attr.name="entity_id" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="紅樓夢">
+      <data key="d0">紅樓夢</data>
+      <data key="d1">event</data>
+      <data key="d2">《紅樓夢》是中國古代的一部經典小說，由曹雪芹創作，深刻描寫了社會現實和人性，融合了夢幻和現實。&lt;SEP&gt;《紅樓夢》是中國古代著名的小說，以其豐富的人物形象和深刻的社會描寫聞名。</data>
+      <data key="d3">chunk-120e776f266b98c7ffc41021109650ad</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="曹雪芹">
+      <data key="d0">曹雪芹</data>
+      <data key="d1">person</data>
+      <data key="d2">曹雪芹是《紅樓夢》的作者，他的作品反映了對於人生和社會的深刻思考。&lt;SEP&gt;曹雪芹是《紅樓夢》的作者，他的生活經歷和情感深深影響了這部作品的內容和主題。</data>
+      <data key="d3">chunk-120e776f266b98c7ffc41021109650ad</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="甄士隱">
+      <data key="d0">甄士隱</data>
+      <data key="d1">person</data>
+      <data key="d2">甄士隱 is a character portrayed as a noble man of humble means, who values aesthetics and poetry over material success.&lt;SEP&gt;甄士隱是《紅樓夢》中一個主要人物，他的夢境引發了故事的序幕，體現了對於人生和社會的反思。&lt;SEP&gt;甄士隱是《紅樓夢》中一個關鍵人物，他的夢境引導了故事的開始。</data>
+      <data key="d3">chunk-f609ba81173fcf1bab6c6acd868500d2&lt;SEP&gt;chunk-120e776f266b98c7ffc41021109650ad</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="賈雨村">
+      <data key="d0">賈雨村</data>
+      <data key="d1">person</data>
+      <data key="d2">賈雨村 is a character seeking to restore his position in the government and is involved in various social interactions.&lt;SEP&gt;賈雨村 is described as a scholar from 胡州 who lives in葫蘆廟 while pursuing a career in education and literature, reflecting on his ambitions and surroundings.&lt;SEP&gt;賈雨村 is described as a scholar from 胡州, currently living in葫蘆廟 while pursuing academic success, indicated by his effort to sell calligraphy and compose.&lt;SEP&gt;賈雨村同樣是《紅樓夢》中的一個重要角色，他的故事表現了對於名利的追求和失落。&lt;SEP&gt;賈雨村是《紅樓夢》中的一名主要角色，他的故事反映了對富貴及名聲的追求和隨之而來的失落感。</data>
+      <data key="d3">chunk-a159d0861d2ca1baee20bb387fc5e61f&lt;SEP&gt;chunk-120e776f266b98c7ffc41021109650ad&lt;SEP&gt;chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="女媧">
+      <data key="d0">女媧</data>
+      <data key="d1">person</data>
+      <data key="d2">女媧是中國神話中的一位女神，以補天之事著稱，她的形象象徵著創造和救贖。&lt;SEP&gt;女媧是中國神話中的一個重要人物，她與補天的故事有著密切關係。</data>
+      <data key="d3">chunk-120e776f266b98c7ffc41021109650ad</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="高經十丈石">
+      <data key="d0">高經十丈石</data>
+      <data key="d1">geo</data>
+      <data key="d2">高經十丈石是《紅樓夢》中提到的一塊石頭，具有靈性和特殊的寓意，象徵著人性的渴望與追求。&lt;SEP&gt;高經十丈石是書中提到的一塊特殊石頭，代表著靈性與獨特的存在。</data>
+      <data key="d3">chunk-120e776f266b98c7ffc41021109650ad</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="大荒山無稽崖">
+      <data key="d0">大荒山無稽崖</data>
+      <data key="d1">geo</data>
+      <data key="d2">大荒山無稽崖是《紅樓夢》中女媧煉石的地點，具有神話色彩。&lt;SEP&gt;大荒山無稽崖是書中女媧煉石的地點，此地具有神話色彩，與靈性和命運的主題密切相關。</data>
+      <data key="d3">chunk-120e776f266b98c7ffc41021109650ad</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="石頭記">
+      <data key="d0">石頭記</data>
+      <data key="d1">category</data>
+      <data key="d2">《石頭記》 is a significant literary work that provides a commentary on societal morals, class struggles, and interpersonal relationships.&lt;SEP&gt;《石頭記》是《紅樓夢》的另一個名稱，反映了書籍中石頭的特別意義和文化內涵。</data>
+      <data key="d3">chunk-f609ba81173fcf1bab6c6acd868500d2&lt;SEP&gt;chunk-120e776f266b98c7ffc41021109650ad</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="空空道人">
+      <data key="d0">空空道人</data>
+      <data key="d1">person</data>
+      <data key="d2">空空道人 is a character who reflects on societal issues and writes a narrative connecting personal emotions with a larger commentary on life.&lt;SEP&gt;空空道人 is a seeker of truth and immortality who interacts with a stone, discovering its story.</data>
+      <data key="d3">chunk-f609ba81173fcf1bab6c6acd868500d2&lt;SEP&gt;chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="石頭">
+      <data key="d0">石頭</data>
+      <data key="d1">person</data>
+      <data key="d2">石頭 is a character who possesses a significant story connected to a magical transformation by a monk.</data>
+      <data key="d3">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="和尚">
+      <data key="d0">和尚</data>
+      <data key="d1">person</data>
+      <data key="d2">和尚 is a monk mentioned in the text, communicating important messages and reflecting the community's sentiments.&lt;SEP&gt;和尚 is a monk who uses magical powers to transform a stone and guide 石頭 on his journey.&lt;SEP&gt;和尚 is another monk appearing in the story, sharing similar eccentricity with道士, and contributing to the philosophical discourse within the narrative.&lt;SEP&gt;和尚 is another monk in the story, depicted with disheveled appearances and similar behavior to道士, contributing to the dialogue around fate and destiny.</data>
+      <data key="d3">chunk-7e6c31642a42b3e06f2654c1b2325ce1&lt;SEP&gt;chunk-a159d0861d2ca1baee20bb387fc5e61f&lt;SEP&gt;chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="青埂峰">
+      <data key="d0">青埂峰</data>
+      <data key="d1">geo</data>
+      <data key="d2">青埂峰 is a mountain location where the interactions between 空空道人 and the stone occur.</data>
+      <data key="d3">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="佳人才子">
+      <data key="d0">佳人才子</data>
+      <data key="d1">category</data>
+      <data key="d2">佳人才子 refers to a category of literature focusing on the romantic narratives involving talented individuals.</data>
+      <data key="d3">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="野史">
+      <data key="d0">野史</data>
+      <data key="d1">category</data>
+      <data key="d2">野史 is a genre of unofficial history that often contains sensationalist tales about historical figures and events.</data>
+      <data key="d3">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="静极慫级">
+      <data key="d0">静极慫级</data>
+      <data key="d1">category</data>
+      <data key="d2">静极慫级 refers to a philosophical state that embodies tranquility and enlightenment, often discussed in contexts of personal growth or spiritual understanding.</data>
+      <data key="d3">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="幻術">
+      <data key="d0">幻術</data>
+      <data key="d1">category</data>
+      <data key="d2">幻術 refers to the magical arts or illusions that are employed by individuals, such as the monk in the text, to affect transformations or perceptions.</data>
+      <data key="d3">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="昌明隆盛之邦">
+      <data key="d0">昌明隆盛之邦</data>
+      <data key="d1">geo</data>
+      <data key="d2">昌明隆盛之邦 represents an idealized prosperous land where wealth and culture thrive, mentioned in the context of 石頭's potential future.</data>
+      <data key="d3">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="詩禮簪纓之族">
+      <data key="d0">詩禮簪纓之族</data>
+      <data key="d1">category</data>
+      <data key="d2">詩禮簪纓之族 refers to a societal class known for its scholarly pursuits and cultural refinement, often depicted in traditional literature.</data>
+      <data key="d3">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="故事">
+      <data key="d0">故事</data>
+      <data key="d1">category</data>
+      <data key="d2">故事 signifies the narratives and tales that are passed on, including the personal story of 石頭 as shared by 空空道人.</data>
+      <data key="d3">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="情僧">
+      <data key="d0">情僧</data>
+      <data key="d1">person</data>
+      <data key="d2">情僧 is the new name adopted by 空空道人, reflecting a transformation in his identity and the focus of his writings towards love and emotion.</data>
+      <data key="d3">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="金陵十二釵">
+      <data key="d0">金陵十二釵</data>
+      <data key="d1">organization</data>
+      <data key="d2">《金陵十二釵》 is a refined version of《石頭記》 that categorizes the stories and themes surrounding twelve significant female characters.</data>
+      <data key="d3">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="姑蘇">
+      <data key="d0">姑蘇</data>
+      <data key="d1">geo</data>
+      <data key="d2">姑蘇 is a historical location mentioned as a place of wealth and culture within the narrative.</data>
+      <data key="d3">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="閶門">
+      <data key="d0">閶門</data>
+      <data key="d1">geo</data>
+      <data key="d2">閶門 is a city mentioned in the context of the story, known for its affluent lifestyle and artistic ambience.</data>
+      <data key="d3">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="英蓮">
+      <data key="d0">英蓮</data>
+      <data key="d1">person</data>
+      <data key="d2">英蓮 is the daughter of 士隱 who goes missing, prompting distress among her parents.&lt;SEP&gt;英蓮 is the daughter of 甄士隱, described as a young girl with potential to influence the family legacy.&lt;SEP&gt;英蓮 is the daughter of士隱, depicted with beauty and innocence; she is the object of her father's affection and care.&lt;SEP&gt;英蓮 is士隱's daughter, described affectionately, and a focal point for士隱's paternal attention in the narrative.</data>
+      <data key="d3">chunk-f609ba81173fcf1bab6c6acd868500d2&lt;SEP&gt;chunk-7e6c31642a42b3e06f2654c1b2325ce1&lt;SEP&gt;chunk-a159d0861d2ca1baee20bb387fc5e61f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="甘露">
+      <data key="d0">甘露</data>
+      <data key="d1">event</data>
+      <data key="d2">甘露 refers to a mythical liquid associated with nurturing and abundance in the narrative's spiritual context.</data>
+      <data key="d3">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="《石頭記》">
+      <data key="d0">《石頭記》</data>
+      <data key="d1">organization</data>
+      <data key="d2">《石頭記》 is a significant literary work that provides a commentary on societal morals, class struggles, and interpersonal relationships.</data>
+      <data key="d3">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="《金陵十二釵》">
+      <data key="d0">《金陵十二釵》</data>
+      <data key="d1">organization</data>
+      <data key="d2">《金陵十二釵》 is a refined version of《石頭記》 that categorizes the stories and themes surrounding twelve significant female characters.</data>
+      <data key="d3">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="封氏">
+      <data key="d0">封氏</data>
+      <data key="d1">person</data>
+      <data key="d2">封氏 is a family that plays a significant role in the narrative, particularly concerning封肅's concerns about family well-being.&lt;SEP&gt;封氏 is the wife of 甄士隱, described as virtuous and wise, embodying the traditional values of loyalty and family.</data>
+      <data key="d3">chunk-f609ba81173fcf1bab6c6acd868500d2&lt;SEP&gt;chunk-184eadec962a6d205d30dd9327c75ae0</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="神瑛侍者">
+      <data key="d0">神瑛侍者</data>
+      <data key="d1">person</data>
+      <data key="d2">神瑛侍者 is a celestial being mentioned in the narrative, linked to spiritual elements and the unfolding of the story's events.&lt;SEP&gt;神瑛侍者是掌管絳珠草的角色，因其情感和恩德希望下凡体验人类生活。&lt;SEP&gt;神瑛侍者是故事中的角色，负责灌溉絳珠草，并希望下凡体验人间情感。</data>
+      <data key="d3">chunk-f609ba81173fcf1bab6c6acd868500d2&lt;SEP&gt;chunk-1702469f33b75ea3b4061de6bb1a37ed</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="西方靈河">
+      <data key="d0">西方靈河</data>
+      <data key="d1">geo</data>
+      <data key="d2">西方靈河是故事中提及的一个地点，与神瑛侍者和絳珠草的传说相联系。&lt;SEP&gt;西方靈河是故事中的一个地方，与神瑛侍者与絳珠草的传说密切相关。</data>
+      <data key="d3">chunk-1702469f33b75ea3b4061de6bb1a37ed</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="絳珠草">
+      <data key="d0">絳珠草</data>
+      <data key="d1">category</data>
+      <data key="d2">絳珠草是一种特异的草本植物，因甘露灌溉而得以延续生命，并化为人形。&lt;SEP&gt;絳珠草是一种神秘植物，因受甘露灌溉而得以延续生命并化为人形。</data>
+      <data key="d3">chunk-1702469f33b75ea3b4061de6bb1a37ed</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="警幻仙子">
+      <data key="d0">警幻仙子</data>
+      <data key="d1">person</data>
+      <data key="d2">警幻仙子是一位神灵，负责处理神瑛侍者的请求，管理与人间的联系。&lt;SEP&gt;警幻仙子是故事中的神灵角色，负责处理神瑛侍者的下凡请求与相关事务。</data>
+      <data key="d3">chunk-1702469f33b75ea3b4061de6bb1a37ed</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="通靈寶玉">
+      <data key="d0">通靈寶玉</data>
+      <data key="d1">category</data>
+      <data key="d2">通靈寶玉是一块特殊的宝物，象征着神秘与连结，承载了能量和故事的转折。&lt;SEP&gt;通靈寶玉是故事中提到的一个宝物，其上铭刻着字样，承载着神秘的意义。</data>
+      <data key="d3">chunk-1702469f33b75ea3b4061de6bb1a37ed</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="太虛幻境">
+      <data key="d0">太虛幻境</data>
+      <data key="d1">geo</data>
+      <data key="d2">太虛幻境是故事中出现的幻想世界，与主要角色的经历紧密相连。&lt;SEP&gt;太虛幻境是故事中的幻想世界，一个真人则可在此经历不同情感与命运的场所。</data>
+      <data key="d3">chunk-1702469f33b75ea3b4061de6bb1a37ed</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="五內">
+      <data key="d0">五內</data>
+      <data key="d1">category</data>
+      <data key="d2">五內指的是内心深处的情感与欲望，在故事中反映了角色的情感纠葛。</data>
+      <data key="d3">chunk-1702469f33b75ea3b4061de6bb1a37ed</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="餘情">
+      <data key="d0">餘情</data>
+      <data key="d1">category</data>
+      <data key="d2">餘情是指情感的延续与未曾了结的情感线，贯穿多个人物之间的互动与期望。</data>
+      <data key="d3">chunk-1702469f33b75ea3b4061de6bb1a37ed</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="士隱">
+      <data key="d0">士隱</data>
+      <data key="d1">person</data>
+      <data key="d2">士隱 is a character who interacts with others in the narrative, exhibiting paternal feelings toward his daughter, 英蓮, and shows reluctance towards a mad monk's comments.&lt;SEP&gt;士隱 is a character who interacts with various individuals in the narrative, expressing familial affection towards his daughter, 英蓮, and engaging in dialogues with other characters.&lt;SEP&gt;士隱 is a character who is depicted as a father concerned about his daughter's well-being and experiences distress due to her disappearance.&lt;SEP&gt;士隱 is a character who reflects on the words of a道人, showing understanding and wisdom.&lt;SEP&gt;士隱 is a scholar who invites another character, 雨村, to join him for a festive meal during the Mid-Autumn Festival.</data>
+      <data key="d3">chunk-7e6c31642a42b3e06f2654c1b2325ce1&lt;SEP&gt;chunk-a159d0861d2ca1baee20bb387fc5e61f&lt;SEP&gt;chunk-184eadec962a6d205d30dd9327c75ae0&lt;SEP&gt;chunk-b9cc73613f73f57b01fd59d29cdc54d3</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="道士">
+      <data key="d0">道士</data>
+      <data key="d1">person</data>
+      <data key="d2">道士 is a monk characterized by his mad demeanor and cryptic remarks, providing a philosophical reflection within the narrative.&lt;SEP&gt;道士 is a monk characterized by his mad demeanor, offering cryptic and philosophical insights, often depicting themes of fate and societal norms.</data>
+      <data key="d3">chunk-a159d0861d2ca1baee20bb387fc5e61f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="葫蘆廟">
+      <data key="d0">葫蘆廟</data>
+      <data key="d1">geo</data>
+      <data key="d2">葫蘆廟 is a local temple mentioned in the context of an accident involving fire, affecting nearby homes.&lt;SEP&gt;葫蘆廟 is a temple that serves as the residence for賈雨村, representing a temporary home for scholars or individuals seeking solace.&lt;SEP&gt;葫蘆廟 is the location where 賈雨村 resides, a temple that serves as a temporary home for him while he seeks success.</data>
+      <data key="d3">chunk-7e6c31642a42b3e06f2654c1b2325ce1&lt;SEP&gt;chunk-a159d0861d2ca1baee20bb387fc5e61f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="丫鬟">
+      <data key="d0">丫鬟</data>
+      <data key="d1">person</data>
+      <data key="d2">丫鬟 is a servant girl associated with the 甄家, depicted with a modest beauty that catches the attention of賈雨村.&lt;SEP&gt;丫鬟 is a servant girl associated with 甄家, portrayed as possessing modest beauty that intrigues賈雨村, representing the dynamics of social class.&lt;SEP&gt;丫鬟 refers to a maid or servant in a traditional household, assisting in domestic tasks during the family gathering.&lt;SEP&gt;丫鬟 refers to the maidservants in the household who attend to the needs of the main characters, contributing to the social structure of the household.&lt;SEP&gt;丫鬟 refers to the maidservants present in the household, assisting in serving and maintaining the environment.&lt;SEP&gt;丫鬟 refers to the servant girls who assist the noble women of the 榮府, showcasing the social hierarchy within the household.</data>
+      <data key="d3">chunk-6fa35cc584802daf07abbf3042738adb&lt;SEP&gt;chunk-ec98fc74c347f080da9c0a767326566d&lt;SEP&gt;chunk-ed5bb8bc3e594308fd0288d490fc4f16&lt;SEP&gt;chunk-00436f0a9a65710257e867e450e3ace1&lt;SEP&gt;chunk-a159d0861d2ca1baee20bb387fc5e61f</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="甄家">
+      <data key="d0">甄家</data>
+      <data key="d1">organization</data>
+      <data key="d2">甄家 is the family that employs the丫鬟, although further details about this organization are sparse.&lt;SEP&gt;甄家 is the family that employs the丫鬟, suggesting a traditional social structure and familial obligations prevalent in the story.&lt;SEP&gt;甄家 refers to the family of 甄, which is central to the narrative surrounding封肅.</data>
+      <data key="d3">chunk-a159d0861d2ca1baee20bb387fc5e61f&lt;SEP&gt;chunk-184eadec962a6d205d30dd9327c75ae0</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="雨村">
+      <data key="d0">雨村</data>
+      <data key="d1">person</data>
+      <data key="d2">雨村 is a character accompanying 林黛玉 on her journey, demonstrating loyalty and responsibility.&lt;SEP&gt;雨村 is a character engaged in a dialogue about the familial dynamics and heritage related to 寧國府 and 榮國府.&lt;SEP&gt;雨村 is a character who experiences a rise in social status, becoming a知府, and has a complex family history.&lt;SEP&gt;雨村 is a character who has aspirations and literary ambitions, and enjoys a celebratory gathering with 傅士隱 during the Mid-Autumn Festival.&lt;SEP&gt;雨村 is a character who interacts with 士隱 and is being recommended for a position in the capital.&lt;SEP&gt;雨村 is a character who is journeying, recovering from illness, and seeks a place to stay while interacting with friends.&lt;SEP&gt;雨村 is a character who provides insights and comments on the nature of people and the significance of knowledge and wisdom.&lt;SEP&gt;雨村 is a man who experiences significant changes in social status and becomes a知府 through his academic and administrative achievements.</data>
+      <data key="d3">chunk-7e6c31642a42b3e06f2654c1b2325ce1&lt;SEP&gt;chunk-243c6ccda03d09f60fb4d7c2e0e63326&lt;SEP&gt;chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41&lt;SEP&gt;chunk-1ce6ad37f4cfa05a81cd386181e2d624&lt;SEP&gt;chunk-ddb72ffd7e07623a32e68b7097a18fc1&lt;SEP&gt;chunk-69f2e50f3f3833eaa9c91f7024375db1&lt;SEP&gt;chunk-b9cc73613f73f57b01fd59d29cdc54d3</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="中秋佳节">
+      <data key="d0">中秋佳节</data>
+      <data key="d1">event</data>
+      <data key="d2">中秋佳节 refers to the Mid-Autumn Festival, a traditional celebration where families gather to admire the moon and share meals.</data>
+      <data key="d3">chunk-b9cc73613f73f57b01fd59d29cdc54d3</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="月亮">
+      <data key="d0">月亮</data>
+      <data key="d1">category</data>
+      <data key="d2">月亮 symbolizes reunion and longing in traditional culture, especially during the Mid-Autumn Festival.</data>
+      <data key="d3">chunk-b9cc73613f73f57b01fd59d29cdc54d3</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="书房">
+      <data key="d0">书房</data>
+      <data key="d1">geo</data>
+      <data key="d2">书房 is a study room where scholarly discussions and literature reviews take place, serving as a setting for the characters' interactions.</data>
+      <data key="d3">chunk-b9cc73613f73f57b01fd59d29cdc54d3</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="五言一律">
+      <data key="d0">五言一律</data>
+      <data key="d1">category</data>
+      <data key="d2">五言一律 is a type of Chinese poetry composed of five-character verses, showcased by 雨村 in his reflections.</data>
+      <data key="d3">chunk-b9cc73613f73f57b01fd59d29cdc54d3</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="玉人楼">
+      <data key="d0">玉人楼</data>
+      <data key="d1">geo</data>
+      <data key="d2">玉人楼 refers to a poetic image linked to romantic and sentimental themes, illustrating the longing associated with the festival.</data>
+      <data key="d3">chunk-b9cc73613f73f57b01fd59d29cdc54d3</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="紅日">
+      <data key="d0">紅日</data>
+      <data key="d1">geo</data>
+      <data key="d2">紅日 is a natural reference to the sunrise that signifies the passing of time within the narrative.</data>
+      <data key="d3">chunk-7e6c31642a42b3e06f2654c1b2325ce1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="元霄佳節">
+      <data key="d0">元霄佳節</data>
+      <data key="d1">event</data>
+      <data key="d2">元霄佳節 refers to the Lantern Festival, an important cultural event marking the first full moon of the lunar year, which signifies joy and celebration.</data>
+      <data key="d3">chunk-7e6c31642a42b3e06f2654c1b2325ce1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="封肅">
+      <data key="d0">封肅</data>
+      <data key="d1">person</data>
+      <data key="d2">封肅 is a character connected to a prominent family and is involved in negotiations regarding marriage and familial ties.&lt;SEP&gt;封肅 is a character who receives praise and is involved in family negotiations regarding marriage.&lt;SEP&gt;封肅 is a character who worries about the fate of his family and responds to official inquiries about his family.&lt;SEP&gt;封肅 is 士隱's father-in-law, who initially provides assistance to 士隱 but expresses disappointment over his situation.</data>
+      <data key="d3">chunk-1ce6ad37f4cfa05a81cd386181e2d624&lt;SEP&gt;chunk-7e6c31642a42b3e06f2654c1b2325ce1&lt;SEP&gt;chunk-184eadec962a6d205d30dd9327c75ae0</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="田莊">
+      <data key="d0">田莊</data>
+      <data key="d1">geo</data>
+      <data key="d2">田莊 refers to a farming estate, which 士隱 considers for refuge after losing his home.</data>
+      <data key="d3">chunk-7e6c31642a42b3e06f2654c1b2325ce1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="火災">
+      <data key="d0">火災</data>
+      <data key="d1">event</data>
+      <data key="d2">火災 refers to the fire incident that caused destruction in the community, particularly affecting surrounding households.</data>
+      <data key="d3">chunk-7e6c31642a42b3e06f2654c1b2325ce1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="失踪">
+      <data key="d0">失踪</data>
+      <data key="d1">category</data>
+      <data key="d2">失踪 is a situation characterized by the disappearance of 英蓮, leading to the family's search and distress.</data>
+      <data key="d3">chunk-7e6c31642a42b3e06f2654c1b2325ce1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="道人">
+      <data key="d0">道人</data>
+      <data key="d1">person</data>
+      <data key="d2">道人 is portrayed as a wise figure who shares philosophical insights through a song called《好了歌》.</data>
+      <data key="d3">chunk-184eadec962a6d205d30dd9327c75ae0</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="《好了歌》">
+      <data key="d0">《好了歌》</data>
+      <data key="d1">event</data>
+      <data key="d2">《好了歌》 is a philosophical song that explores the nature of life and human understanding.</data>
+      <data key="d3">chunk-184eadec962a6d205d30dd9327c75ae0</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="榮國府">
+      <data key="d0">榮國府</data>
+      <data key="d1">organization</data>
+      <data key="d2">榮國府 is a notable family residence linked to the elite, recognized for its past grandeur and connection to influential characters in the narrative.&lt;SEP&gt;榮國府 is a part of the family house where 林黛玉 will reside, distinguished by its architectural splendor and social standing.&lt;SEP&gt;榮國府 is referenced as a prestigious family that has connections to other characters through the lineage discussion.&lt;SEP&gt;榮國府 represents a significant household in the story associated with political and social dynamics.</data>
+      <data key="d3">chunk-ddb72ffd7e07623a32e68b7097a18fc1&lt;SEP&gt;chunk-243c6ccda03d09f60fb4d7c2e0e63326&lt;SEP&gt;chunk-184eadec962a6d205d30dd9327c75ae0&lt;SEP&gt;chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="甄爺">
+      <data key="d0">甄爺</data>
+      <data key="d1">person</data>
+      <data key="d2">甄爺 is a character mentioned in relation to封肅, as封肅's son-in-law who has become a monk.</data>
+      <data key="d3">chunk-184eadec962a6d205d30dd9327c75ae0</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="軍牢">
+      <data key="d0">軍牢</data>
+      <data key="d1">organization</data>
+      <data key="d2">軍牢 refers to the military authority or personnel, which is involved in the narrative concerning official inquiries.</data>
+      <data key="d3">chunk-184eadec962a6d205d30dd9327c75ae0</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="新太爺">
+      <data key="d0">新太爺</data>
+      <data key="d1">person</data>
+      <data key="d2">新太爺 is a new official whose arrival is acknowledged and affects the community dynamics.</data>
+      <data key="d3">chunk-184eadec962a6d205d30dd9327c75ae0</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="太爺">
+      <data key="d0">太爺</data>
+      <data key="d1">person</data>
+      <data key="d2">太爺 is a high-ranking official who has the authority to make decisions affecting families, and is respected by those around him.&lt;SEP&gt;太爺 is a respected figure who has the authority to summon others and address familial matters.</data>
+      <data key="d3">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="嬌杏">
+      <data key="d0">嬌杏</data>
+      <data key="d1">person</data>
+      <data key="d2">嬌杏 is a maid and becomes a significant figure due to her connection with 雨村 and her eventual rise in status.&lt;SEP&gt;嬌杏 is a maid who becomes involved in the social dynamics of her household and eventually rises in social standing.</data>
+      <data key="d3">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="林如海">
+      <data key="d0">林如海</data>
+      <data key="d1">person</data>
+      <data key="d2">林如海 is a high-ranking official, known for his scholarly achievements, and has familial background as a noble.&lt;SEP&gt;林如海 is a well-regarded official with a background in academia and a noble heritage, known for his qualifications and responsibilities.</data>
+      <data key="d3">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="黛玉">
+      <data key="d0">黛玉</data>
+      <data key="d1">person</data>
+      <data key="d2">黛玉 is a character depicted with grace and beauty, introduced to various relatives during a significant family gathering.&lt;SEP&gt;黛玉 is a character who experiences differing social interactions, showing awareness of her family dynamics and perspectives on relationships.&lt;SEP&gt;黛玉 is a character who is accompanied by her nurse and a young maid and expresses concern about her situation.&lt;SEP&gt;黛玉 is a character who observes the unfamiliar customs in the setting and has a strong curiosity about寶玉.&lt;SEP&gt;黛玉 is a key character who visits 榮府, reflecting her emotional journey and familial connections.&lt;SEP&gt;黛玉 is the daughter of 賈氏, cherished by her parents for her intelligence and beauty, playing a significant role in the family dynamics.&lt;SEP&gt;黛玉 is the daughter of 賈氏, known for her intelligence and beauty, and is aimed to be educated.&lt;SEP&gt;黛玉 is the daughter of 賈氏, who is valued dearly by her parents and is noted for her intelligence.&lt;SEP&gt;黛玉, also known as 林妹妹, represents a poetic and fragile spirit, embodying the ideal of beauty and sadness in the narrative.&lt;SEP&gt;黛玉是一个年轻的女性角色，她与家人有深厚的情感联系，常常反映出脆弱的健康状况。</data>
+      <data key="d3">chunk-6fa35cc584802daf07abbf3042738adb&lt;SEP&gt;chunk-1ce6ad37f4cfa05a81cd386181e2d624&lt;SEP&gt;chunk-ddb72ffd7e07623a32e68b7097a18fc1&lt;SEP&gt;chunk-ed5bb8bc3e594308fd0288d490fc4f16&lt;SEP&gt;chunk-ec98fc74c347f080da9c0a767326566d&lt;SEP&gt;chunk-99bf71caf375ec0055cf71c682952e50&lt;SEP&gt;chunk-00436f0a9a65710257e867e450e3ace1&lt;SEP&gt;chunk-831f35057a101f45a264a95a4aabe7f9&lt;SEP&gt;chunk-e89a93cd0e15c5744d53a6bbaed8cbc9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="秀才">
+      <data key="d0">秀才</data>
+      <data key="d1">category</data>
+      <data key="d2">秀才 refers to a type of scholar who has passed the lowest degree exams in ancient China, indicating education and academic attainment.</data>
+      <data key="d3">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="巡鹽御史">
+      <data key="d0">巡鹽御史</data>
+      <data key="d1">organization</data>
+      <data key="d2">巡鹽御史 is a governmental position responsible for overseeing salt distribution and regulation in ancient China.&lt;SEP&gt;巡鹽御史 is a title for an official in charge of salt administration, showcasing administrative function and government structure.</data>
+      <data key="d3">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="胡州">
+      <data key="d0">胡州</data>
+      <data key="d1">geo</data>
+      <data key="d2">胡州 is mentioned as the ancestral home of 太爺, indicating a connection to geographical identity and heritage.</data>
+      <data key="d3">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="家族">
+      <data key="d0">家族</data>
+      <data key="d1">category</data>
+      <data key="d2">家族 refers to the family structure and relationships that impact the characters’ social status and decisions.</data>
+      <data key="d3">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="官場">
+      <data key="d0">官場</data>
+      <data key="d1">category</data>
+      <data key="d2">官場 represents the political and administrative environment in which the characters operate, highlighting power dynamics and bureaucratic processes.</data>
+      <data key="d3">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="賈氏">
+      <data key="d0">賈氏</data>
+      <data key="d1">person</data>
+      <data key="d2">賈氏 is a character who has a daughter named 黛玉 and cherishes her as a treasure due to having no sons.</data>
+      <data key="d3">chunk-ddb72ffd7e07623a32e68b7097a18fc1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="智通寺">
+      <data key="d0">智通寺</data>
+      <data key="d1">geo</data>
+      <data key="d2">智通寺 is a temple that 雨村 stumbles upon during his journey, noted for its dilapidated condition.</data>
+      <data key="d3">chunk-ddb72ffd7e07623a32e68b7097a18fc1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="冷子興">
+      <data key="d0">冷子興</data>
+      <data key="d1">person</data>
+      <data key="d2">冷子興 is a character who offers advice to 賈雨村 regarding his ambitions and connections.&lt;SEP&gt;冷子興 is an acquaintance of 雨村, engaged in the antique trade, who shares news and interacts socially with 雨村.</data>
+      <data key="d3">chunk-ddb72ffd7e07623a32e68b7097a18fc1&lt;SEP&gt;chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="友人">
+      <data key="d0">友人</data>
+      <data key="d1">person</data>
+      <data key="d2">友人 are the two old friends of 雨村 who reside in the same place and help him in finding a suitable lodging.</data>
+      <data key="d3">chunk-ddb72ffd7e07623a32e68b7097a18fc1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="病">
+      <data key="d0">病</data>
+      <data key="d1">event</data>
+      <data key="d2">病 refers to the illness that 雨村 is suffering from during his travels, impacting his actions and decisions.</data>
+      <data key="d3">chunk-ddb72ffd7e07623a32e68b7097a18fc1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="寧國府">
+      <data key="d0">寧國府</data>
+      <data key="d1">organization</data>
+      <data key="d2">寧國府 is a prominent family residence associated with nobility, historically significant in a literary context and mentioned for its extensive property.</data>
+      <data key="d3">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="金陵">
+      <data key="d0">金陵</data>
+      <data key="d1">geo</data>
+      <data key="d2">金陵 is a historical city in China, known for its rich cultural heritage and significance in classical literature.&lt;SEP&gt;金陵 is a historical city recognized for its cultural significance and connection to the characters' lives and relationships.&lt;SEP&gt;金陵 is a location mentioned in the text, recognized as a city with cultural significance related to the characters' lives.&lt;SEP&gt;金陵 is a location referenced in connection with living arrangements and family discussions.&lt;SEP&gt;金陵 serves as the geographical backdrop of the story, with significant events occurring in this location, particularly relating to 薛家.</data>
+      <data key="d3">chunk-a3f266505826711ba754dca560ebea7c&lt;SEP&gt;chunk-831f35057a101f45a264a95a4aabe7f9&lt;SEP&gt;chunk-5609f7c07ea26b46d64a085e639f15be&lt;SEP&gt;chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="子興">
+      <data key="d0">子興</data>
+      <data key="d1">person</data>
+      <data key="d2">子興 is a character who engages in dialogue with 雨村, expressing curiosity and skepticism about people's natures and perceptions.&lt;SEP&gt;子興 is a character who reflects on and critiques the decline of the noble families known as 寧國府 and 榮國府.</data>
+      <data key="d3">chunk-69f2e50f3f3833eaa9c91f7024375db1&lt;SEP&gt;chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="賈珍">
+      <data key="d0">賈珍</data>
+      <data key="d1">person</data>
+      <data key="d2">賈珍 is a descendant of 寧國府, noted for his lack of interest in traditional education and pursuit of pleasure.</data>
+      <data key="d3">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="賈政">
+      <data key="d0">賈政</data>
+      <data key="d1">person</data>
+      <data key="d2">賈政 is a high-ranking official who values education and provides support to林黛玉's family.&lt;SEP&gt;賈政 is a key figure in the narrative, involved in the family lineage of 榮國府 and known for his official position.&lt;SEP&gt;賈政 is a significant figure in the narrative, noted for holding a governmental position which influences the protagonist's plans.&lt;SEP&gt;賈政 is referenced as a family authority figure who is currently away for religious duties, indicating a role of leadership within the family structure.&lt;SEP&gt;賈政是黛玉的舅父，参与家庭的决策和事务。</data>
+      <data key="d3">chunk-6fa35cc584802daf07abbf3042738adb&lt;SEP&gt;chunk-243c6ccda03d09f60fb4d7c2e0e63326&lt;SEP&gt;chunk-99bf71caf375ec0055cf71c682952e50&lt;SEP&gt;chunk-69f2e50f3f3833eaa9c91f7024375db1&lt;SEP&gt;chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="寶玉">
+      <data key="d0">寶玉</data>
+      <data key="d1">person</data>
+      <data key="d2">寶玉 is a remarkable character born under peculiar circumstances, connected to the nobility and revered in the family narrative.&lt;SEP&gt;寶玉 is a sensitive character, deeply emotional and connected to his family, especially to 林妹妹, with whom he shares a unique bond.&lt;SEP&gt;寶玉 is a young man described with an elaborate outfit, appearing charming and intriguing, sparking curiosity in others.&lt;SEP&gt;寶玉 is described as a troublesome cousin of 黛玉, noted for his difficult personality and the excessive care he received from his grandmother, also referred to as '混世魔王'.&lt;SEP&gt;寶玉 is described as a troublesome cousin of 黛玉, noted for his difficult personality and the excessive care he received from his grandmother.&lt;SEP&gt;寶玉 is the central figure, known for his emotional depth, sensitivity, and a special connection to his family members and particularly his 'sister', 林妹妹.&lt;SEP&gt;寶玉 refers to a precious stone that captures admiration and may symbolize importance and value in the narrative context.</data>
+      <data key="d3">chunk-6fa35cc584802daf07abbf3042738adb&lt;SEP&gt;chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41&lt;SEP&gt;chunk-00436f0a9a65710257e867e450e3ace1&lt;SEP&gt;chunk-69f2e50f3f3833eaa9c91f7024375db1&lt;SEP&gt;chunk-e89a93cd0e15c5744d53a6bbaed8cbc9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="寧國公">
+      <data key="d0">寧國公</data>
+      <data key="d1">person</data>
+      <data key="d2">寧國公 is the patriarch of 寧國府, described as a figure of authority and lineage, who fathered multiple sons, influencing the family legacy.</data>
+      <data key="d3">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="賈代化">
+      <data key="d0">賈代化</data>
+      <data key="d1">person</data>
+      <data key="d2">賈代化 is a descendant of 寧國公 who inherited the family title and had two sons, indicating continuity in the family's legacy.</data>
+      <data key="d3">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="賈敬">
+      <data key="d0">賈敬</data>
+      <data key="d1">person</data>
+      <data key="d2">賈敬 is a son of 賈代化, noted for his disinterest in official duties and a focus on alchemical pursuits.</data>
+      <data key="d3">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="賈蓉">
+      <data key="d0">賈蓉</data>
+      <data key="d1">person</data>
+      <data key="d2">賈蓉 is the grandson of 賈敬, aged sixteen, representing the youthful generation of 御圈 and is under the care of his family.</data>
+      <data key="d3">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="賈赦">
+      <data key="d0">賈赦</data>
+      <data key="d1">person</data>
+      <data key="d2">賈赦 is mentioned in relation to his family background, being a relative of 黛玉, and highlights the interconnectedness of family lineage.&lt;SEP&gt;賈赦 is the elder son of 賈代善 from 榮國府, involved in the family's public life and legacy.&lt;SEP&gt;賈赦 is the patriarch of the family, whose health status affects interactions with 娃玉.&lt;SEP&gt;賈赦是黛玉的舅父，与家族事务和家庭动态有密切关系。</data>
+      <data key="d3">chunk-ec98fc74c347f080da9c0a767326566d&lt;SEP&gt;chunk-99bf71caf375ec0055cf71c682952e50&lt;SEP&gt;chunk-ed5bb8bc3e594308fd0288d490fc4f16&lt;SEP&gt;chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="賈珠">
+      <data key="d0">賈珠</data>
+      <data key="d1">person</data>
+      <data key="d2">賈珠 is the son of 賈政, reflecting the generational development and continuing succession within 榮國府.</data>
+      <data key="d3">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="榮府">
+      <data key="d0">榮府</data>
+      <data key="d1">organization</data>
+      <data key="d2">榮府 is a prominent familial household, related to 林黛玉, known for its wealth and status.&lt;SEP&gt;榮府 is a prominent family residence that features extensive and ornate architecture, highlighting its significance in the narrative.&lt;SEP&gt;榮府 is the family estate linked to key characters, particularly regarding social status and relationships.&lt;SEP&gt;榮府, similar to 寧國府, represents a rival family with a rich history and significance in societal structure.</data>
+      <data key="d3">chunk-ed5bb8bc3e594308fd0288d490fc4f16&lt;SEP&gt;chunk-243c6ccda03d09f60fb4d7c2e0e63326&lt;SEP&gt;chunk-69f2e50f3f3833eaa9c91f7024375db1&lt;SEP&gt;chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="石頭城">
+      <data key="d0">石頭城</data>
+      <data key="d1">geo</data>
+      <data key="d2">石頭城 is a geographical location mentioned within the context of historical exploration near 金陵.</data>
+      <data key="d3">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="六朝遺跡">
+      <data key="d0">六朝遺跡</data>
+      <data key="d1">category</data>
+      <data key="d2">六朝遺跡 refers to the historical remnants from the Six Dynasties period, which are of cultural and touristic interest.</data>
+      <data key="d3">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="政老爹">
+      <data key="d0">政老爹</data>
+      <data key="d1">person</data>
+      <data key="d2">政老爹 is depicted as a traditional figure trying to assess children's futures through their choices and actions.</data>
+      <data key="d3">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="史老太君">
+      <data key="d0">史老太君</data>
+      <data key="d1">person</data>
+      <data key="d2">史老太君 is a character who shows a protective and affectionate side towards 寶玉, treating it as something of great importance.&lt;SEP&gt;史老太君 is a character who shows a protective and affectionate side towards 雜寶玉, treating it as something of great importance.</data>
+      <data key="d3">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="周">
+      <data key="d0">周</data>
+      <data key="d1">person</data>
+      <data key="d2">周 is referenced as a historical figure associated with governance and wisdom, representing a model for success.</data>
+      <data key="d3">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="袁">
+      <data key="d0">袁</data>
+      <data key="d1">person</data>
+      <data key="d2">袁 is a metaphorical reference possibly indicating a type of historical figure or a legendary personality discussed in the context of morality and virtue.</data>
+      <data key="d3">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="古代人物">
+      <data key="d0">古代人物</data>
+      <data key="d1">category</data>
+      <data key="d2">古代人物 encompasses various historical or legendary figures referenced for their exemplary traits and roles in society.&lt;SEP&gt;古代人物 includes various historical or legendary figures referenced for their exemplary traits and roles in society.</data>
+      <data key="d3">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="尹">
+      <data key="d0">尹</data>
+      <data key="d1">person</data>
+      <data key="d2">尹 mentioned in a list of historical figures, potentially representing wisdom or virtue associated with governance.</data>
+      <data key="d3">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="孔">
+      <data key="d0">孔</data>
+      <data key="d1">person</data>
+      <data key="d2">孔, likely referring to Confucius, is a historical figure knowledgeable in ethics and governance, influential in Chinese culture.</data>
+      <data key="d3">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="孟">
+      <data key="d0">孟</data>
+      <data key="d1">person</data>
+      <data key="d2">孟 refers to Mencius, another historical figure known for promoting moral philosophy and ethics in governance.</data>
+      <data key="d3">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="唐明皇">
+      <data key="d0">唐明皇</data>
+      <data key="d1">person</data>
+      <data key="d2">唐明皇 is a historical emperor known for artistic patronage and cultural flourishing during the Tang dynasty.</data>
+      <data key="d3">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="宋徽宗">
+      <data key="d0">宋徽宗</data>
+      <data key="d1">person</data>
+      <data key="d2">宋徽宗 is a historical emperor recognized for his contributions to art and culture in the Song dynasty.</data>
+      <data key="d3">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="江山">
+      <data key="d0">江山</data>
+      <data key="d1">category</data>
+      <data key="d2">江山 refers to the concept of a country or territory, often representing power and governance.</data>
+      <data key="d3">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="人物描写">
+      <data key="d0">人物描写</data>
+      <data key="d1">category</data>
+      <data key="d2">人物描写 refers to character portrayal throughout the narrative, especially regarding virtues and vices.</data>
+      <data key="d3">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="百年大计">
+      <data key="d0">百年大计</data>
+      <data key="d1">category</data>
+      <data key="d2">百年大计 highlights the long-term vision and plans that characters like 政老爹 encourage for future success.</data>
+      <data key="d3">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="薛濤">
+      <data key="d0">薛濤</data>
+      <data key="d1">person</data>
+      <data key="d2">薛濤 is a character referenced in the text, associated with the discussions about societal norms and behaviors.&lt;SEP&gt;薛濤 is a character who engages in discussions about societal norms and personal experiences, showcasing his observations of others.</data>
+      <data key="d3">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="崔鶯">
+      <data key="d0">崔鶯</data>
+      <data key="d1">person</data>
+      <data key="d2">崔鶯 is a character known for participating in the conversation about education and family ties, representing a voice of insight in the narrative.&lt;SEP&gt;崔鶯 is another character mentioned, contributing to dialogues about education and familial expectations.</data>
+      <data key="d3">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="甄府">
+      <data key="d0">甄府</data>
+      <data key="d1">organization</data>
+      <data key="d2">甄府 is the Zhen family estate, known for its affluence and social connections, particularly to the Jia family.&lt;SEP&gt;甄府 refers to the Zhen family estate, noted for its status and interactions with other families, particularly the Jia family.</data>
+      <data key="d3">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="賈府">
+      <data key="d0">賈府</data>
+      <data key="d1">organization</data>
+      <data key="d2">賈府 or Jia family estate is a prominent household involved in various social dealings and familial relationships.&lt;SEP&gt;賈府 or Jia family estate is highlighted for its prominent social ties and the upbringing of its daughters.</data>
+      <data key="d3">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="元春">
+      <data key="d0">元春</data>
+      <data key="d1">person</data>
+      <data key="d2">元春 is the eldest daughter of the Jia family, noted for her virtues and chosen to serve in the imperial court as a female historian.&lt;SEP&gt;元春 is the eldest daughter of the Jia family, who is noted for her virtues and has been selected to serve in the palace.</data>
+      <data key="d3">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="迎春">
+      <data key="d0">迎春</data>
+      <data key="d1">person</data>
+      <data key="d2">迎春 is the second daughter of the Jia family, indicated as the daughter of a concubine.&lt;SEP&gt;迎春 is the second daughter of the Jia family, whose background influences her social status and character traits.</data>
+      <data key="d3">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="探春">
+      <data key="d0">探春</data>
+      <data key="d1">person</data>
+      <data key="d2">探春 is a character in the story who engages with 宝玉 and 林妹妹, showing interest in their interactions and family dynamics.&lt;SEP&gt;探春 is the third daughter in the Jia family, characterized by her intelligence and strong personality within the family dynamics.&lt;SEP&gt;探春 is the third daughter of the Jia family, known for her distinct status as a legitimate child.</data>
+      <data key="d3">chunk-a3f266505826711ba754dca560ebea7c&lt;SEP&gt;chunk-e89a93cd0e15c5744d53a6bbaed8cbc9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="惜春">
+      <data key="d0">惜春</data>
+      <data key="d1">person</data>
+      <data key="d2">惜春 is the fourth daughter, identified as a sister to the family members, related to the dynamics discussed in the text.&lt;SEP&gt;惜春 is the youngest daughter of the Jia family, whose unique attributes and qualities contribute to the family’s narrative.</data>
+      <data key="d3">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="巡鹽御史林家">
+      <data key="d0">巡鹽御史林家</data>
+      <data key="d1">organization</data>
+      <data key="d2">巡鹽御史林家 refers to the Lin family, with whom 薛濤 starts a new association, indicating a shift in his social standing.&lt;SEP&gt;巡鹽御史林家 refers to the family with which the narrator is now associated, indicating a shift in social position and responsibilities.</data>
+      <data key="d3">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="林黛玉">
+      <data key="d0">林黛玉</data>
+      <data key="d1">person</data>
+      <data key="d2">林黛玉 is a character connected to the narrative, likely with familial ties that influence her position.&lt;SEP&gt;林黛玉 is a young woman who is physically weak and has strong family ties that influence her decisions.</data>
+      <data key="d3">chunk-243c6ccda03d09f60fb4d7c2e0e63326&lt;SEP&gt;chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="張如圭">
+      <data key="d0">張如圭</data>
+      <data key="d1">person</data>
+      <data key="d2">張如圭 is a former colleague of 賈雨村, now seeking to reconnect with him after receiving news of his reinstatement.</data>
+      <data key="d3">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="天">
+      <data key="d0">天</data>
+      <data key="d1">geo</data>
+      <data key="d2">天 is referenced in the context of the narrative's setting, indicating the time or environmental context within the story.</data>
+      <data key="d3">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="都中">
+      <data key="d0">都中</data>
+      <data key="d1">geo</data>
+      <data key="d2">都中 refers to the capital city where events take place, suggesting a location of political and social significance.</data>
+      <data key="d3">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="敏字">
+      <data key="d0">敏字</data>
+      <data key="d1">category</data>
+      <data key="d2">敏字 refers to a character or concept discussed within the text, potentially indicating a theme of talent or sensitivity in the characters' interactions.</data>
+      <data key="d3">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="女学生">
+      <data key="d0">女学生</data>
+      <data key="d1">person</data>
+      <data key="d2">女学生 refers to a female student whose behavior sets her apart from contemporary women, indicating depth in her background and upbringing.</data>
+      <data key="d3">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="子兴">
+      <data key="d0">子兴</data>
+      <data key="d1">person</data>
+      <data key="d2">子兴 is a character reflecting on familial loss and contemplating the future of younger generations.</data>
+      <data key="d3">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="政公">
+      <data key="d0">政公</data>
+      <data key="d1">person</data>
+      <data key="d2">政公 is referenced as an individual with influential connections, particularly concerning political paternity and lineage.</data>
+      <data key="d3">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="榮府之孫">
+      <data key="d0">榮府之孫</data>
+      <data key="d1">person</data>
+      <data key="d2">榮府之孫 refers to the grandchild of the 荣府 family, suggesting noble ancestry and its impacts on societal standing.</data>
+      <data key="d3">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="父亲">
+      <data key="d0">父亲</data>
+      <data key="d1">person</data>
+      <data key="d2">父亲 is a significant family figure whose absence may influence the actions and motivations of younger characters.</data>
+      <data key="d3">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="同知">
+      <data key="d0">同知</data>
+      <data key="d1">organization</data>
+      <data key="d2">同知 refers to a government position often associated with administration and local governance, impacting social mobility.</data>
+      <data key="d3">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="内侍">
+      <data key="d0">内侍</data>
+      <data key="d1">category</data>
+      <data key="d2">内侍 relates to court officials in imperial governance, suggesting connections to power and influence.</data>
+      <data key="d3">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="京城">
+      <data key="d0">京城</data>
+      <data key="d1">geo</data>
+      <data key="d2">京城 is a significant urban center in the narrative, serving as the backdrop for the interactions among characters.</data>
+      <data key="d3">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="神京">
+      <data key="d0">神京</data>
+      <data key="d1">geo</data>
+      <data key="d2">神京 refers to the capital city where various significant events and gatherings occur in the story.</data>
+      <data key="d3">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="榮公">
+      <data key="d0">榮公</data>
+      <data key="d1">person</data>
+      <data key="d2">榮公 is an elder of the family and ancestor influencing the current generation's actions and values.</data>
+      <data key="d3">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="工部">
+      <data key="d0">工部</data>
+      <data key="d1">organization</data>
+      <data key="d2">工部 is a government department mentioned in connection with 林黛玉's family lineage.</data>
+      <data key="d3">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="豐盛的街市">
+      <data key="d0">豐盛的街市</data>
+      <data key="d1">event</data>
+      <data key="d2">The bustling marketplace depicts the vibrant life in 神京 and highlights societal norms and interactions.</data>
+      <data key="d3">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="如海">
+      <data key="d0">如海</data>
+      <data key="d1">person</data>
+      <data key="d2">如海 is a character who has familial ties, advocating for his family members and planning a journey for them.</data>
+      <data key="d3">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="榮府的門前">
+      <data key="d0">榮府的門前</data>
+      <data key="d1">geo</data>
+      <data key="d2">榮府的門前 refers to the front of the 榮府 household, a significant location for social interactions in the story.</data>
+      <data key="d3">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="小女">
+      <data key="d0">小女</data>
+      <data key="d1">person</data>
+      <data key="d2">小女 refers to 林黛玉, as she is described as the daughter being sent away during a significant transition in her life.</data>
+      <data key="d3">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="兩個小童">
+      <data key="d0">兩個小童</data>
+      <data key="d1">person</data>
+      <data key="d2">兩個小童 are characters accompanying 雨村 as he travels with 林黛玉, adding to the dynamics of the journey.</data>
+      <data key="d3">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="大理石的插屏">
+      <data key="d0">大理石的插屏</data>
+      <data key="d1">category</data>
+      <data key="d2">大理石的插屏 is an item within 榮國府, highlighting the luxurious decor and cultural significance in the household.</data>
+      <data key="d3">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="外祖母">
+      <data key="d0">外祖母</data>
+      <data key="d1">person</data>
+      <data key="d2">外祖母是黛玉的母亲的母亲，对黛玉表现出深切的关怀和情感。</data>
+      <data key="d3">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="賈母">
+      <data key="d0">賈母</data>
+      <data key="d1">person</data>
+      <data key="d2">賈母 is a character who plays a maternal role in the story, often guiding and advising her family, particularly 宝玉.&lt;SEP&gt;賈母 is a character who plays a maternal role, navigating family dynamics and caring for 宝玉.&lt;SEP&gt;賈母 is a matriarchal figure ensuring the comfort and arrangements for her family members, including 宝玉.&lt;SEP&gt;賈母 is an elder figure in the narrative who commands respect and manages the household interactions during a meal.&lt;SEP&gt;賈母 is the matriarch of the family, characterized by her authority and care, playing a pivotal role in the interactions between family members.&lt;SEP&gt;賈母是賈赦和賈政的母亲，她对孩子们的感情深厚，尤其对黛玉表现出特别的疼爱。</data>
+      <data key="d3">chunk-ec98fc74c347f080da9c0a767326566d&lt;SEP&gt;chunk-99bf71caf375ec0055cf71c682952e50&lt;SEP&gt;chunk-00436f0a9a65710257e867e450e3ace1&lt;SEP&gt;chunk-831f35057a101f45a264a95a4aabe7f9&lt;SEP&gt;chunk-e89a93cd0e15c5744d53a6bbaed8cbc9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="三姐妹">
+      <data key="d0">三姐妹</data>
+      <data key="d1">person</data>
+      <data key="d2">三姐妹是包围着黛玉的年轻女性，她们的到来了为场景增添了生动的气氛。</data>
+      <data key="d3">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="家族聚会">
+      <data key="d0">家族聚会</data>
+      <data key="d1">event</data>
+      <data key="d2">家族聚会是一个家庭成员聚在一起互相关心和交流的场合，体现了家族的亲情和忧虑。</data>
+      <data key="d3">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="药物">
+      <data key="d0">药物</data>
+      <data key="d1">category</data>
+      <data key="d2">药物是为了健康而使用的治疗品，黛玉提到自己常服药物来照顾身体。</data>
+      <data key="d3">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="遊廊">
+      <data key="d0">遊廊</data>
+      <data key="d1">geo</data>
+      <data key="d2">遊廊是一个房屋结构，特征包括开放的通道与雅致的装饰，为聚会和交流提供空间。</data>
+      <data key="d3">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="紫檀架子大理石的大插屏">
+      <data key="d0">紫檀架子大理石的大插屏</data>
+      <data key="d1">category</data>
+      <data key="d2">紫檀架子大理石的大插屏是室内装饰的艺术品，典雅且富有地方特色。</data>
+      <data key="d3">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="俏丽的丫头">
+      <data key="d0">俏丽的丫头</data>
+      <data key="d1">person</data>
+      <data key="d2">俏丽的丫头是负责接待来客的年轻女性，表现出热情和活泼的性格。</data>
+      <data key="d3">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="史氏太君">
+      <data key="d0">史氏太君</data>
+      <data key="d1">person</data>
+      <data key="d2">史氏太君是黛玉的外祖母，具有家族中的重要地位和影响力。</data>
+      <data key="d3">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="大院">
+      <data key="d0">大院</data>
+      <data key="d1">geo</data>
+      <data key="d2">大院是家庭主要居住和交往的场所，反映了家族的规模与社会地位。</data>
+      <data key="d3">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="丫鬟们">
+      <data key="d0">丫鬟们</data>
+      <data key="d1">person</data>
+      <data key="d2">丫鬟们是家中的侍女，负责照顾主人和家务事务。</data>
+      <data key="d3">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="哭声">
+      <data key="d0">哭声</data>
+      <data key="d1">category</data>
+      <data key="d2">哭声反映出家族成员间的情感纠结，是悲伤与关爱的表达。</data>
+      <data key="d3">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="人参养榮丸">
+      <data key="d0">人参养榮丸</data>
+      <data key="d1">category</data>
+      <data key="d2">人参养榮丸是一种传统的草药，常用于调理身体和提高健康。</data>
+      <data key="d3">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="哭泣">
+      <data key="d0">哭泣</data>
+      <data key="d1">category</data>
+      <data key="d2">哭泣是情感的直接表现，表明了悲伤和家庭之间的强烈联系。</data>
+      <data key="d3">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="熙鳳">
+      <data key="d0">熙鳳</data>
+      <data key="d1">person</data>
+      <data key="d2">熙鳳 is a character involved in the family affairs, demonstrating her role in managing household matters and relationships.&lt;SEP&gt;熙鳳 is a character present during the communications regarding family matters and events.&lt;SEP&gt;熙鳳 is a key character who interacts with 王夫人 and is involved in the family matters surrounding 薛家.&lt;SEP&gt;熙鳳 is a notable female character recognized for her strong personality, who displays care for 黛玉 while interacting with other family members.</data>
+      <data key="d3">chunk-ec98fc74c347f080da9c0a767326566d&lt;SEP&gt;chunk-831f35057a101f45a264a95a4aabe7f9&lt;SEP&gt;chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="王夫人">
+      <data key="d0">王夫人</data>
+      <data key="d1">person</data>
+      <data key="d2">王夫人 is a character involved in the discussions and interactions among her family and relatives.&lt;SEP&gt;王夫人 is a maternal figure who guides 黛玉, providing advice about familial relationships and cautioning her about a troublesome cousin known for being mischievous.&lt;SEP&gt;王夫人 is a maternal figure who guides 黛玉, providing advice about familial relationships and cautioning her about a troublesome cousin.&lt;SEP&gt;王夫人 is a prominent character in the narrative, involved in family discussions and relationships, particularly concerning the dynamics within her family.&lt;SEP&gt;王夫人 is a relative of 黛玉, involved in familial discussions and managing the household affairs.&lt;SEP&gt;王夫人 is another maternal figure in the narrative, involved in family matters related to 贾母 and her children.&lt;SEP&gt;王夫人 is seen accompanying黛玉 and facilitating her interactions with賈母 and others.</data>
+      <data key="d3">chunk-6fa35cc584802daf07abbf3042738adb&lt;SEP&gt;chunk-ec98fc74c347f080da9c0a767326566d&lt;SEP&gt;chunk-00436f0a9a65710257e867e450e3ace1&lt;SEP&gt;chunk-831f35057a101f45a264a95a4aabe7f9&lt;SEP&gt;chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="翠幄青車">
+      <data key="d0">翠幄青車</data>
+      <data key="d1">equipment</data>
+      <data key="d2">翠幄青車 is a decorative vehicle used for transporting family members, symbolizing the family's status.</data>
+      <data key="d3">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="家庭聚會">
+      <data key="d0">家庭聚會</data>
+      <data key="d1">event</data>
+      <data key="d2">家庭聚會 signifies the family gathering where various characters interact, showcasing familial ties and emotions.</data>
+      <data key="d3">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="媳婦">
+      <data key="d0">媳婦</data>
+      <data key="d1">person</data>
+      <data key="d2">媳婦 refers to a daughter-in-law or female family member, typically involved in family gatherings and interactions.</data>
+      <data key="d3">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="金絲八寶攢珠髻">
+      <data key="d0">金絲八寶攢珠髻</data>
+      <data key="d1">category</data>
+      <data key="d2">金絲八寶攢珠髻 is a traditional hairstyle adorned with various ornaments, signifying status and cultural heritage.</data>
+      <data key="d3">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="朝陽五鳳掛珠釵">
+      <data key="d0">朝陽五鳳掛珠釵</data>
+      <data key="d1">category</data>
+      <data key="d2">朝陽五鳳掛珠釵 is a decorative hairpin illustrating intricate craftsmanship, symbolizing beauty and wealth.</data>
+      <data key="d3">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="赤金盤螭瓔珞圈">
+      <data key="d0">赤金盤螭瓔珞圈</data>
+      <data key="d1">category</data>
+      <data key="d2">赤金盤螭瓔珞圈 is an ornamental necklace, demonstrating affluence and traditional jewelry design.</data>
+      <data key="d3">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="豆綠宮絛">
+      <data key="d0">豆綠宮絛</data>
+      <data key="d1">category</data>
+      <data key="d2">豆綠宮絛 refers to a type of ribbon or decorative fabric used in traditional attire, showcasing craftsmanship.</data>
+      <data key="d3">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="翡翠撒花洋縐裙">
+      <data key="d0">翡翠撒花洋縐裙</data>
+      <data key="d1">category</data>
+      <data key="d2">翡翠撒花洋縐裙 is a style of skirt featuring intricate floral patterns, representing traditional fashion aesthetics.</data>
+      <data key="d3">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="鳳辣子">
+      <data key="d0">鳳辣子</data>
+      <data key="d1">person</data>
+      <data key="d2">鳳辣子 is a person characterized by a rebellious spirit, typically a prominent figure in social circles known for their distinctive persona.</data>
+      <data key="d3">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="家族关系">
+      <data key="d0">家族关系</data>
+      <data key="d1">category</data>
+      <data key="d2">家族关系 refers to the intricate web of relationships and dynamics among family members, showcasing their interactions.</data>
+      <data key="d3">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="邢夫人">
+      <data key="d0">邢夫人</data>
+      <data key="d1">person</data>
+      <data key="d2">邢夫人 is a nurturing figure who supports 黛玉 during her visit and expresses concern for her well-being.</data>
+      <data key="d3">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="三層儀門">
+      <data key="d0">三層儀門</data>
+      <data key="d1">event</data>
+      <data key="d2">The 三層儀門 is a significant architectural feature of 榮府 that signifies the transition into the inner family area.</data>
+      <data key="d3">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="正室">
+      <data key="d0">正室</data>
+      <data key="d1">category</data>
+      <data key="d2">正室 refers to the main living quarters of the 榮府, characterized by its elegance and central importance.</data>
+      <data key="d3">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="翠幄青□車">
+      <data key="d0">翠幄青□車</data>
+      <data key="d1">category</data>
+      <data key="d2">翠幄青□車 is a type of traditional carriage used for transporting characters like 妇人 and 黛玉, highlighting the customs of the era.</data>
+      <data key="d3">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="房屋院宇">
+      <data key="d0">房屋院宇</data>
+      <data key="d1">category</data>
+      <data key="d2">房屋院宇 refers to the various buildings and courtyards within 榮府, indicative of its large and complex structure.</data>
+      <data key="d3">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="樹木山石">
+      <data key="d0">樹木山石</data>
+      <data key="d1">category</data>
+      <data key="d2">樹木山石 illustrates the natural landscape features present in the 榮府's garden, enhancing the aesthetic appeal of the residence.</data>
+      <data key="d3">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="榮國公賈源">
+      <data key="d0">榮國公賈源</data>
+      <data key="d1">person</data>
+      <data key="d2">榮國公賈源 is an important historical figure who is associated with the 榮府 and whose status impacts the narrative.</data>
+      <data key="d3">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="宴息">
+      <data key="d0">宴息</data>
+      <data key="d1">event</data>
+      <data key="d2">宴息 refers to the social gatherings held within 榮府, demonstrating the cultural practices of the inhabitants.</data>
+      <data key="d3">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="二舅舅">
+      <data key="d0">二舅舅</data>
+      <data key="d1">person</data>
+      <data key="d2">二舅舅 is a relative of 黛玉, who she expresses a desire to visit, highlighting her familial connections and obligations.</data>
+      <data key="d3">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="家裡的混世魔王">
+      <data key="d0">家裡的混世魔王</data>
+      <data key="d1">category</data>
+      <data key="d2">家裡的混世魔王 is a term used to describe 宝玉, emphasizing his challenging and rebellious nature within the family context.&lt;SEP&gt;家裡的混世魔王 is a term used to describe 宝玉, highlighting his character as a mischievous and challenging presence in the family.</data>
+      <data key="d3">chunk-6fa35cc584802daf07abbf3042738adb</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="東廊">
+      <data key="d0">東廊</data>
+      <data key="d1">geo</data>
+      <data key="d2">東廊 is a location within the home where various events and interactions between the characters take place, indicating its role in the family dynamics.</data>
+      <data key="d3">chunk-6fa35cc584802daf07abbf3042738adb</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="後房">
+      <data key="d0">後房</data>
+      <data key="d1">geo</data>
+      <data key="d2">後房 is another location in the household, signifying the setting where personal interactions occur among family members.</data>
+      <data key="d3">chunk-6fa35cc584802daf07abbf3042738adb</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="李氏">
+      <data key="d0">李氏</data>
+      <data key="d1">person</data>
+      <data key="d2">李氏 is the wife of賈珠 and participates in serving food during the gathering.</data>
+      <data key="d3">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="後院">
+      <data key="d0">後院</data>
+      <data key="d1">location</data>
+      <data key="d2">後院 is part of賈母's residence where notable interactions among characters take place, representing a familial or social setting.</data>
+      <data key="d3">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="《四書》">
+      <data key="d0">《四書》</data>
+      <data key="d1">category</data>
+      <data key="d2">《四書》 refers to a collection of foundational texts in Confucianism that 黛玉 mentions studying.</data>
+      <data key="d3">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="鳳姐姐">
+      <data key="d0">鳳姐姐</data>
+      <data key="d1">person</data>
+      <data key="d2">鳳姐姐 is a character mentioned in a familial context, likely indicating a role within the family dynamic.</data>
+      <data key="d3">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="賈母的後院">
+      <data key="d0">賈母的後院</data>
+      <data key="d1">location</data>
+      <data key="d2">賈母的後院 is a specific area within the household setting where family members gather and interact.</data>
+      <data key="d3">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="賈珠之妻李氏">
+      <data key="d0">賈珠之妻李氏</data>
+      <data key="d1">person</data>
+      <data key="d2">賈珠之妻李氏 is identified as the wife of 賈珠, involved in household duties and serving during the meal.</data>
+      <data key="d3">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="迎春姊妹">
+      <data key="d0">迎春姊妹</data>
+      <data key="d1">person</data>
+      <data key="d2">迎春姊妹 refers to the three sisters, 迎春, 探春, and 惜春, who participate in the family gathering.</data>
+      <data key="d3">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="《四書》報告書">
+      <data key="d0">《四書》報告書</data>
+      <data key="d1">category</data>
+      <data key="d2">《四書》 is a foundational text in Confucian teachings that 黛玉 is noted to have studied.</data>
+      <data key="d3">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="飲茶">
+      <data key="d0">飲茶</data>
+      <data key="d1">event</data>
+      <data key="d2">飲茶 refers to the cultural practice of drinking tea, occurring during the family meal, which is marked by specific etiquette.</data>
+      <data key="d3">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="四張空椅">
+      <data key="d0">四張空椅</data>
+      <data key="d1">category</data>
+      <data key="d2">四張空椅 are empty chairs symbolizing the absence of other family members during the meal.</data>
+      <data key="d3">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="林妹妹">
+      <data key="d0">林妹妹</data>
+      <data key="d1">person</data>
+      <data key="d2">林妹妹 is a delicate character with a poetic nature, seen as 宝玉's 'sister', suggesting a deep bond between them, emphasized by her beauty and grace.&lt;SEP&gt;林妹妹 is portrayed as a delicate and graceful figure, whose beauty captures 宝玉's heart, making her a significant character in his life.</data>
+      <data key="d3">chunk-e89a93cd0e15c5744d53a6bbaed8cbc9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="西江月">
+      <data key="d0">西江月</data>
+      <data key="d1">category</data>
+      <data key="d2">西江月 is a poetic category referenced in context, symbolizing a cultural link to literary expressions about love and emotion.&lt;SEP&gt;西江月 is a traditional poetic form referenced in the text, symbolizing themes of love and longing.</data>
+      <data key="d3">chunk-e89a93cd0e15c5744d53a6bbaed8cbc9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="古今人物通考">
+      <data key="d0">古今人物通考</data>
+      <data key="d1">category</data>
+      <data key="d2">古今人物通考 is a literary work cited in the conversation, discussing figures of historical significance and their traits.&lt;SEP&gt;古今人物通考 is a literary work referenced in the text, known for its examination of historical figures and their characteristics.</data>
+      <data key="d3">chunk-e89a93cd0e15c5744d53a6bbaed8cbc9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="玉">
+      <data key="d0">玉</data>
+      <data key="d1">object</data>
+      <data key="d2">玉 is a symbolic object representing 宝玉's familial ties and emotional state, particularly his feelings towards 林妹妹.</data>
+      <data key="d3">chunk-e89a93cd0e15c5744d53a6bbaed8cbc9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="宝玉">
+      <data key="d0">宝玉</data>
+      <data key="d1">person</data>
+      <data key="d2">宝玉 is a central character whose relationships and behaviors affect those around him, including 黛玉 and 襲人.</data>
+      <data key="d3">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="襲人">
+      <data key="d0">襲人</data>
+      <data key="d1">person</data>
+      <data key="d2">襲人, originally named 珍珠, serves 宝玉 and has a deep care for him, often guiding him.</data>
+      <data key="d3">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="王嬤嬤">
+      <data key="d0">王嬤嬤</data>
+      <data key="d1">person</data>
+      <data key="d2">王嬤嬤 is 黛玉's childhood nurse who supports her in her new living arrangement.</data>
+      <data key="d3">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="鸚哥">
+      <data key="d0">鸚哥</data>
+      <data key="d1">person</data>
+      <data key="d2">鸚哥 is a maid who accompanies 黛玉 and provides companionship and reassurance.</data>
+      <data key="d3">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="雪雁">
+      <data key="d0">雪雁</data>
+      <data key="d1">person</data>
+      <data key="d2">雪雁 is a young maid who has been with 黛玉 since childhood.</data>
+      <data key="d3">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="薛家">
+      <data key="d0">薛家</data>
+      <data key="d1">organization</data>
+      <data key="d2">薛家 is a family organization referred to in the narrative, known for its wealthy influence.&lt;SEP&gt;薛家 is a wealthy family organization connected to various characters and events in the narrative, particularly involving 薛蟠's actions.&lt;SEP&gt;薛家 refers to the family that is being discussed regarding their affairs and status in the narrative.</data>
+      <data key="d3">chunk-831f35057a101f45a264a95a4aabe7f9&lt;SEP&gt;chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="碧紗櫥">
+      <data key="d0">碧紗櫥</data>
+      <data key="d1">geo</data>
+      <data key="d2">碧紗櫥 is a location within the household mentioned where 黛玉 is temporarily residing, indicating a place of comfort and arrangement.</data>
+      <data key="d3">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="夜深">
+      <data key="d0">夜深</data>
+      <data key="d1">event</data>
+      <data key="d2">夜深 refers to the late hour when events and conversations occur in the story, emphasizing the intimate setting of the characters' interactions.</data>
+      <data key="d3">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="金陵城">
+      <data key="d0">金陵城</data>
+      <data key="d1">geo</data>
+      <data key="d2">金陵城 is a geographical location mentioned in the context of the family discussions and events.&lt;SEP&gt;金陵城 is referenced as a geographic location significant to the family's history and relationships, particularly concerning 薛家.</data>
+      <data key="d3">chunk-831f35057a101f45a264a95a4aabe7f9&lt;SEP&gt;chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="薛蟠">
+      <data key="d0">薛蟠</data>
+      <data key="d1">person</data>
+      <data key="d2">薛蟠 is a character mentioned who has a violent reputation and is related through family connections discussed among characters.&lt;SEP&gt;薛蟠 is a member of 薛家 known for his oppressive behavior and is currently under legal scrutiny for his actions that resulted in a death.&lt;SEP&gt;薛蟠 is characterized as a relative of 薛家, known for his violent behavior and current legal troubles.</data>
+      <data key="d3">chunk-831f35057a101f45a264a95a4aabe7f9&lt;SEP&gt;chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="書信">
+      <data key="d0">書信</data>
+      <data key="d1">event</data>
+      <data key="d2">書信 represents a communication method that plays a role in connecting family members and discussing affairs, particularly involving 王夫人.</data>
+      <data key="d3">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="王子騰">
+      <data key="d0">王子騰</data>
+      <data key="d1">person</data>
+      <data key="d2">王子騰 is the maternal uncle who receives information about 薛蟠's legal troubles and is concerned about the family's reputation.&lt;SEP&gt;王子騰 is the maternal uncle who receives information regarding the situation involving 薛蟠.</data>
+      <data key="d3">chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="审理">
+      <data key="d0">审理</data>
+      <data key="d1">event</data>
+      <data key="d2">审理 refers to the legal proceedings regarding 薛蟠's actions as he faces a case in the court.</data>
+      <data key="d3">chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="榮府之孙">
+      <data key="d0">榮府之孙</data>
+      <data key="d3">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d2">政公's grandchild is connected to the expansive family network within the 荣府, affecting social standing.</data>
+      <data key="d1">UNKNOWN</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <node id="街市">
+      <data key="d0">街市</data>
+      <data key="d3">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d2">The bustling街市 embodies the social and economic vitality of 神京.</data>
+      <data key="d1">UNKNOWN</data>
+      <data key="d4">unknown_source</data>
+    </node>
+    <edge source="紅樓夢" target="曹雪芹">
+      <data key="d5">20.0</data>
+      <data key="d6">曹雪芹創作了《紅樓夢》，他的生活和想法很大程度上體現了作品主題。&lt;SEP&gt;曹雪芹是《紅樓夢》的創作者，他的生平和思想直接影響了這部作品的內容和風格。</data>
+      <data key="d7">創作關係</data>
+      <data key="d8">chunk-120e776f266b98c7ffc41021109650ad</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="紅樓夢" target="甄士隱">
+      <data key="d5">18.0</data>
+      <data key="d6">甄士隱的夢境引入了《紅樓夢》的故事，設定了小說的基調和主題。&lt;SEP&gt;甄士隱的故事是《紅樓夢》故事開端，介紹了作品的主題和人物。</data>
+      <data key="d7">角色引入&lt;SEP&gt;角色設定</data>
+      <data key="d8">chunk-120e776f266b98c7ffc41021109650ad</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="紅樓夢" target="賈雨村">
+      <data key="d5">16.0</data>
+      <data key="d6">賈雨村的角色增強了《紅樓夢》的社會性，反映了對名利的深刻思考。&lt;SEP&gt;賈雨村的角色展現了社會的浮沉和人性的複雜性，為《紅樓夢》增添了深度。</data>
+      <data key="d7">角色貢獻</data>
+      <data key="d8">chunk-120e776f266b98c7ffc41021109650ad</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="紅樓夢" target="石頭記">
+      <data key="d5">9.0</data>
+      <data key="d6">《石頭記》是《紅樓夢》的別名，強調了石頭在故事中的重要性與象徵意義。</data>
+      <data key="d7">名稱關係</data>
+      <data key="d8">chunk-120e776f266b98c7ffc41021109650ad</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="甄士隱" target="英蓮">
+      <data key="d5">14.0</data>
+      <data key="d6">甄士隱's hopes for progeny and legacy focus on his daughter英蓮, showcasing traditional family importance.</data>
+      <data key="d7">family dynamics, legacy</data>
+      <data key="d8">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="甄士隱" target="封氏">
+      <data key="d5">8.0</data>
+      <data key="d6">甄士隱 and 封氏 represent a traditional couple, emphasizing harmony and virtue in familial relationships.</data>
+      <data key="d7">marital harmony, traditional values</data>
+      <data key="d8">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈雨村" target="葫蘆廟">
+      <data key="d5">16.0</data>
+      <data key="d6">賈雨村 is currently residing in葫蘆廟 while seeking prospects in the capital."|&gt;"temporary residence, academic pursuit&lt;SEP&gt;賈雨村 is currently residing in葫蘆廟, utilizing it as a hideaway while he seeks career opportunities in the capital."|&gt;"temporary residence, academic pursuit</data>
+      <data key="d7">8</data>
+      <data key="d8">chunk-a159d0861d2ca1baee20bb387fc5e61f</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈雨村" target="丫鬟">
+      <data key="d5">14.0</data>
+      <data key="d6">賈雨村 develops an interest in the丫鬟, feeling a connection despite their social differences, which adds romantic tension."|&gt;"social interest, class dynamics&lt;SEP&gt;賈雨村 feels affection towards the丫鬟, perceiving her interest in him despite their differing social standings."|&gt;"interest, social dynamics</data>
+      <data key="d7">7</data>
+      <data key="d8">chunk-a159d0861d2ca1baee20bb387fc5e61f</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈雨村" target="士隱">
+      <data key="d5">12.0</data>
+      <data key="d6">士隱 interacts and engages in conversation with賈雨村, indicating familiarity and social connection in the community."|&gt;"social acquaintance, interpersonal relationship&lt;SEP&gt;士隱 interacts with賈雨村, indicating a mutual acquaintance and exchanging pleasantries."|&gt;"social acquaintance, dialogue</data>
+      <data key="d7">6</data>
+      <data key="d8">chunk-a159d0861d2ca1baee20bb387fc5e61f</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈雨村" target="張如圭">
+      <data key="d5">8.0</data>
+      <data key="d6">賈雨村 and 張如圭 reestablish their connection after 张如圭 shares news of reintegration into government service.</data>
+      <data key="d7">reconnection, professional news</data>
+      <data key="d8">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈雨村" target="冷子興">
+      <data key="d5">7.0</data>
+      <data key="d6">冷子興 provides strategic advice to 賈雨村 regarding his initiatives and relationships in the city.</data>
+      <data key="d7">advisory relationship, social maneuvering</data>
+      <data key="d8">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈雨村" target="榮府">
+      <data key="d5">9.0</data>
+      <data key="d6">賈雨村's ambitions are tied to the status and connections within 榮府, which shapes his prospects.</data>
+      <data key="d7">family influence, social status</data>
+      <data key="d8">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="女媧" target="高經十丈石">
+      <data key="d5">14.0</data>
+      <data key="d6">女媧的神話故事與高經十丈石的靈性密切相關，反映了人類對於命運及靈性的探索。&lt;SEP&gt;女媧與高經十丈石的故事反映了中國古代神話對於石頭和靈性的理解。</data>
+      <data key="d7">神話和靈性&lt;SEP&gt;神話關聯</data>
+      <data key="d8">chunk-120e776f266b98c7ffc41021109650ad</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="高經十丈石" target="大荒山無稽崖">
+      <data key="d5">16.0</data>
+      <data key="d6">大荒山無稽崖是女媧煉石的背景地點，與高經十丈石的故事有關。&lt;SEP&gt;大荒山無稽崖是高經十丈石的地理背景，與石頭的靈性傳說相結合。</data>
+      <data key="d7">地理背景&lt;SEP&gt;地點背景</data>
+      <data key="d8">chunk-120e776f266b98c7ffc41021109650ad</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="石頭記" target="空空道人">
+      <data key="d5">9.0</data>
+      <data key="d6">空空道人 documents his observations of society through the lens of 石頭記, aiming to immortalize real human experiences.</data>
+      <data key="d7">literary reflection, societal commentary</data>
+      <data key="d8">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="空空道人" target="石頭">
+      <data key="d5">7.0</data>
+      <data key="d6">空空道人 encounters 石頭 and learns about his story, implying a connection of fate and exploration.</data>
+      <data key="d7">destiny, journey</data>
+      <data key="d8">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="空空道人" target="故事">
+      <data key="d5">8.0</data>
+      <data key="d6">空空道人 discovers or narrates the story of 石頭, linking personal experience with the broader concept of storytelling.</data>
+      <data key="d7">narrative, personal experience</data>
+      <data key="d8">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="空空道人" target="情僧">
+      <data key="d5">16.0</data>
+      <data key="d6">空空道人 evolves into情僧, highlighting a shift in focus from societal critique to exploration of romantic and emotional themes.</data>
+      <data key="d7">identity transformation, literary evolution</data>
+      <data key="d8">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="空空道人" target="《石頭記》">
+      <data key="d5">9.0</data>
+      <data key="d6">空空道人 documents his observations of society through the lens of 《石頭記》, aiming to immortalize real human experiences.</data>
+      <data key="d7">literary reflection, societal commentary</data>
+      <data key="d8">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="石頭" target="昌明隆盛之邦">
+      <data key="d5">8.0</data>
+      <data key="d6">石頭 is guided by the monk towards the idealization of 昌明隆盛之邦, indicating a journey towards a better existence.</data>
+      <data key="d7">guidance, aspiration</data>
+      <data key="d8">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="和尚" target="幻術">
+      <data key="d5">9.0</data>
+      <data key="d6">和尚 utilizes 幻術 to perform transformations, demonstrating the connection between magical practices and his spiritual guidance.</data>
+      <data key="d7">magic, transformation</data>
+      <data key="d8">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="和尚" target="道士">
+      <data key="d5">14.0</data>
+      <data key="d6">道士 and和尚 exhibit similar qualities in their behavior and conversation, indicating they share a common outlook on life next to士隱."|&gt;"shared temperament, philosophical discourse&lt;SEP&gt;道士 and和尚 share similarities in their eccentric behavior and philosophical discourse, indicating a shared worldview."|&gt;"shared temperament, philosophical dialogue</data>
+      <data key="d7">7</data>
+      <data key="d8">chunk-a159d0861d2ca1baee20bb387fc5e61f</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="和尚" target="士隱">
+      <data key="d5">5.0</data>
+      <data key="d6">和尚 conveys a message regarding the concerns of the community, which resonates with 士隱's current struggles.</data>
+      <data key="d7">spiritual guidance, community sentiment</data>
+      <data key="d8">chunk-7e6c31642a42b3e06f2654c1b2325ce1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="佳人才子" target="野史">
+      <data key="d5">6.0</data>
+      <data key="d6">The concept of 佳人才子 challenges the themes and narratives often found in 野史 literature.</data>
+      <data key="d7">literary exploration, genre contrast</data>
+      <data key="d8">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="昌明隆盛之邦" target="詩禮簪纓之族">
+      <data key="d5">7.0</data>
+      <data key="d6">The idealized land of 昌明隆盛之邦 is associated with the refined culture represented by 詩禮簪纓之族.</data>
+      <data key="d7">cultural refinement, ideal society</data>
+      <data key="d8">chunk-d07794d3a97500f670994aa313654e2f</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="情僧" target="金陵十二釵">
+      <data key="d5">10.0</data>
+      <data key="d6">情僧's work culminates into the creation of 金陵十二釵, focusing on the stories of female characters that influence the drama of life.</data>
+      <data key="d7">narrative development, character focus</data>
+      <data key="d8">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="情僧" target="《金陵十二釵》">
+      <data key="d5">10.0</data>
+      <data key="d6">情僧's work culminates into the creation of 《金陵十二釵》, focusing on the stories of female characters that influence the drama of life.</data>
+      <data key="d7">narrative development, character focus</data>
+      <data key="d8">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="姑蘇" target="閶門">
+      <data key="d5">12.0</data>
+      <data key="d6">姑蘇 is described as being closely related to閶門, both representing a rich cultural and social environment in the text.</data>
+      <data key="d7">cultural significance, geographic relationship</data>
+      <data key="d8">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="英蓮" target="士隱">
+      <data key="d5">34.0</data>
+      <data key="d6">士隱 demonstrates deep concern and distress regarding the disappearance of his daughter, 英蓮.&lt;SEP&gt;士隱 demonstrates paternal care and affection towards his daughter, 英蓮, as seen in their interactions."|&gt;"family relationship, paternal care&lt;SEP&gt;士隱 exhibits strong paternal feelings and care towards his daughter, reflecting a deep familial bond."|&gt;"family relationship, paternal advocacy</data>
+      <data key="d7">9&lt;SEP&gt;parental concern, familial bonds</data>
+      <data key="d8">chunk-7e6c31642a42b3e06f2654c1b2325ce1&lt;SEP&gt;chunk-a159d0861d2ca1baee20bb387fc5e61f</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="英蓮" target="葫蘆廟">
+      <data key="d5">14.0</data>
+      <data key="d6">英蓮's disappearance is linked to an incident that occurred near the 葫蘆廟 where a fire broke out.</data>
+      <data key="d7">incident connection, family tragedy</data>
+      <data key="d8">chunk-7e6c31642a42b3e06f2654c1b2325ce1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="甘露" target="神瑛侍者">
+      <data key="d5">9.0</data>
+      <data key="d6">神瑛侍者 is associated with甘露, which represents the nurturing aspect within the narrative's celestial and moral themes.</data>
+      <data key="d7">spiritual connection, nurturing element</data>
+      <data key="d8">chunk-f609ba81173fcf1bab6c6acd868500d2</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="封氏" target="封肅">
+      <data key="d5">9.0</data>
+      <data key="d6">封肅 is a member of the封氏 family and expresses concerns regarding their wellbeing.</data>
+      <data key="d7">family matters, familial concern</data>
+      <data key="d8">chunk-184eadec962a6d205d30dd9327c75ae0</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="神瑛侍者" target="絳珠草">
+      <data key="d5">17.0</data>
+      <data key="d6">神瑛侍者因其对絳珠草的浇灌而产生感情，使其拥有了转换为人形的机会。&lt;SEP&gt;神瑛侍者负责灌溉絳珠草，使其生命延续并最终化为人形。</data>
+      <data key="d7">情感、植物与人类&lt;SEP&gt;植物与神灵、生命延续</data>
+      <data key="d8">chunk-1702469f33b75ea3b4061de6bb1a37ed</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="神瑛侍者" target="警幻仙子">
+      <data key="d5">17.0</data>
+      <data key="d6">神瑛侍者希望通过警幻仙子的帮助下凡去体验人间的爱恨情仇。&lt;SEP&gt;神瑛侍者请求警幻仙子帮助自己下凡，体验人间的情感与生活。</data>
+      <data key="d7">请求、神灵之间的互动&lt;SEP&gt;请求、神灵之间的关系</data>
+      <data key="d8">chunk-1702469f33b75ea3b4061de6bb1a37ed</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="神瑛侍者" target="通靈寶玉">
+      <data key="d5">16.0</data>
+      <data key="d6">神瑛侍者手持通靈寶玉，这块美玉与其下凡的任务密切相关。&lt;SEP&gt;通靈寶玉作为神瑛侍者身份与使命的一部分，象征着他与人间的联系。</data>
+      <data key="d7">宝物、人物关联&lt;SEP&gt;宝物、人际关系</data>
+      <data key="d8">chunk-1702469f33b75ea3b4061de6bb1a37ed</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="絳珠草" target="太虛幻境">
+      <data key="d5">12.0</data>
+      <data key="d6">太虛幻境的存在影响着絳珠草化身为人形的过程与经历。&lt;SEP&gt;絳珠草的化身与太虛幻境的设定之间有直接联系，探讨了人生与幻境的关系。</data>
+      <data key="d7">幻境、生命转化&lt;SEP&gt;幻想世界、生命转化</data>
+      <data key="d8">chunk-1702469f33b75ea3b4061de6bb1a37ed</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="警幻仙子" target="太虛幻境">
+      <data key="d5">14.0</data>
+      <data key="d6">警幻仙子与太虛幻境的联系使她能管理人间与神界之间的互动与事务。&lt;SEP&gt;警幻仙子管理与太虛幻境之间的事务，以及角色的下凡过程。</data>
+      <data key="d7">神灵、幻想世界&lt;SEP&gt;神灵管理、幻想世界</data>
+      <data key="d8">chunk-1702469f33b75ea3b4061de6bb1a37ed</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="五內" target="餘情">
+      <data key="d5">9.0</data>
+      <data key="d6">角色内心的五內与其未了的餘情之间形成了复杂的情感网络。</data>
+      <data key="d7">内心情感、未了情感</data>
+      <data key="d8">chunk-1702469f33b75ea3b4061de6bb1a37ed</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="士隱" target="道士">
+      <data key="d5">12.0</data>
+      <data key="d6">士隱 expresses skepticism towards道士's eccentric comments, indicating a philosophical disagreement or dismissal."|&gt;"disregard, philosophical opposition&lt;SEP&gt;士隱 shows disregard for道士's unsettling comments, demonstrating a lack of belief in his mad philosophy."|&gt;"disregard, philosophical opposition</data>
+      <data key="d7">6</data>
+      <data key="d8">chunk-a159d0861d2ca1baee20bb387fc5e61f</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="士隱" target="雨村">
+      <data key="d5">28.0</data>
+      <data key="d6">士隱 intends to write letters of recommendation for 雨村 to secure him a suitable position in the capital.&lt;SEP&gt;士隱 invites 雨村 to celebrate the Mid-Autumn Festival together, indicating a bond between the two characters.</data>
+      <data key="d7">invitation, friendship&lt;SEP&gt;recommendation, support</data>
+      <data key="d8">chunk-7e6c31642a42b3e06f2654c1b2325ce1&lt;SEP&gt;chunk-b9cc73613f73f57b01fd59d29cdc54d3</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="士隱" target="中秋佳节">
+      <data key="d5">14.0</data>
+      <data key="d6">士隱 prepares a feast for the Mid-Autumn Festival, signifying cultural celebration and camaraderie.</data>
+      <data key="d7">cultural significance, festivity</data>
+      <data key="d8">chunk-b9cc73613f73f57b01fd59d29cdc54d3</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="士隱" target="玉人楼">
+      <data key="d5">7.0</data>
+      <data key="d6">士隱 comments on雨村's poetry, hinting at deeper cultural and romantic themes associated with the imagery of玉人楼.</data>
+      <data key="d7">cultural symbolism, literary analysis</data>
+      <data key="d8">chunk-b9cc73613f73f57b01fd59d29cdc54d3</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="士隱" target="封肅">
+      <data key="d5">14.0</data>
+      <data key="d6">士隱 seeks refuge with his father-in-law, 封肅, after facing hardship due to his daughter's disappearance and the fire."+"refuge, familial relationship</data>
+      <data key="d7">7</data>
+      <data key="d8">chunk-7e6c31642a42b3e06f2654c1b2325ce1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="士隱" target="田莊">
+      <data key="d5">7.0</data>
+      <data key="d6">士隱 plans to move to the 田莊 as a means of finding safety and stability following recent events.</data>
+      <data key="d7">relocation, search for safety</data>
+      <data key="d8">chunk-7e6c31642a42b3e06f2654c1b2325ce1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="士隱" target="道人">
+      <data key="d5">9.0</data>
+      <data key="d6">士隱 engages with the道人, seeking to understand the philosophy presented by him.</data>
+      <data key="d7">learning, wisdom exchange</data>
+      <data key="d8">chunk-184eadec962a6d205d30dd9327c75ae0</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="葫蘆廟" target="火災">
+      <data key="d5">18.0</data>
+      <data key="d6">The fire at 葫蘆廟 caused significant damage to nearby homes, impacting the community directly.</data>
+      <data key="d7">emergency, community impact</data>
+      <data key="d8">chunk-7e6c31642a42b3e06f2654c1b2325ce1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="丫鬟" target="甄家">
+      <data key="d5">8.0</data>
+      <data key="d6">丫鬟 serves the 甄家, illustrating the traditional servant-master relationship prevalent in the socio-economic context of the story."|&gt;"servitude, social hierarchy</data>
+      <data key="d7">8</data>
+      <data key="d8">chunk-a159d0861d2ca1baee20bb387fc5e61f</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="丫鬟" target="媳婦">
+      <data key="d5">7.0</data>
+      <data key="d6">媳婦 interacts with 丫鬟, illustrating the hierarchical roles within the family structure during gatherings.</data>
+      <data key="d7">hierarchy, domestic roles</data>
+      <data key="d8">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="丫鬟" target="榮府">
+      <data key="d5">8.0</data>
+      <data key="d6">丫鬟 serve within the 榮府, reflecting the class structure and domestic organization of the household.</data>
+      <data key="d7">domestic hierarchy, service</data>
+      <data key="d8">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="丫鬟" target="黛玉">
+      <data key="d5">6.0</data>
+      <data key="d6">黛玉 interacts with the 丫鬟, who serve the household and are part of the social environment surrounding her.</data>
+      <data key="d7">social structure, household roles</data>
+      <data key="d8">chunk-6fa35cc584802daf07abbf3042738adb</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="丫鬟" target="王夫人">
+      <data key="d5">8.0</data>
+      <data key="d6">王夫人 directs the 丫鬟 in their duties, showcasing her authority within the household.</data>
+      <data key="d7">authority, household management</data>
+      <data key="d8">chunk-6fa35cc584802daf07abbf3042738adb</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="中秋佳节">
+      <data key="d5">18.0</data>
+      <data key="d6">雨村's reflection and poetry during the Mid-Autumn Festival highlight his personal aspirations and emotional connections to the event.</data>
+      <data key="d7">celebration, personal reflection</data>
+      <data key="d8">chunk-b9cc73613f73f57b01fd59d29cdc54d3</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="书房">
+      <data key="d5">6.0</data>
+      <data key="d6">雨村 and士隱 converse in the书房, which serves as a backdrop for their discussions about poetry and life.</data>
+      <data key="d7">conversation, artistic reflection</data>
+      <data key="d8">chunk-b9cc73613f73f57b01fd59d29cdc54d3</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="五言一律">
+      <data key="d5">8.0</data>
+      <data key="d6">雨村 composes a五言一律 poem to express his feelings during the Mid-Autumn Festival, blending personal emotion with literary form.</data>
+      <data key="d7">poetry, expression</data>
+      <data key="d8">chunk-b9cc73613f73f57b01fd59d29cdc54d3</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="嬌杏">
+      <data key="d5">18.0</data>
+      <data key="d6">嬌杏's relationship with 雨村 leads to her rise in status, showing a transformation due to marriage.&lt;SEP&gt;嬌杏's relationship with 雨村 signifies her rise from a maid to a wife, showcasing social mobility through marriage.</data>
+      <data key="d7">social mobility, marital relationship&lt;SEP&gt;social rise, marital relationship</data>
+      <data key="d8">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="林如海">
+      <data key="d5">13.0</data>
+      <data key="d6">雨村 and 林如海 share an acquaintance through their social statuses and government roles, indicating connections among officials.&lt;SEP&gt;雨村 and 林如海 share professional acquaintanceship in the context of governance and education, reflecting their shared societal roles.</data>
+      <data key="d7">professional relationship, governance&lt;SEP&gt;social connection, official interactions</data>
+      <data key="d8">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="太爺">
+      <data key="d5">7.0</data>
+      <data key="d6">雨村 interacts with 太爺 regarding his social status and familial connections, indicating a relationship based on mutual recognition and respect.</data>
+      <data key="d7">social recognition, authority</data>
+      <data key="d8">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="官場">
+      <data key="d5">9.0</data>
+      <data key="d6">雨村's actions and status are shaped by the 官場, illustrating the influence of the bureaucratic environment on personal ambitions.</data>
+      <data key="d7">bureaucracy, personal ambition</data>
+      <data key="d8">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="冷子興">
+      <data key="d5">16.0</data>
+      <data key="d6">雨村 and 冷子興 are old acquaintances who reunite and share personal and family news, strengthening their friendship.</data>
+      <data key="d7">friendship, social ties</data>
+      <data key="d8">chunk-ddb72ffd7e07623a32e68b7097a18fc1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="智通寺">
+      <data key="d5">12.0</data>
+      <data key="d6">雨村 discovers 智通寺 during his stroll, indicating his interest in exploring new locales.</data>
+      <data key="d7">exploration, curiosity</data>
+      <data key="d8">chunk-ddb72ffd7e07623a32e68b7097a18fc1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="友人">
+      <data key="d5">8.0</data>
+      <data key="d6">友人 assist 雨村 in finding a lodging arrangement, demonstrating support and camaraderie.</data>
+      <data key="d7">friendship, support</data>
+      <data key="d8">chunk-ddb72ffd7e07623a32e68b7097a18fc1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="病">
+      <data key="d5">8.0</data>
+      <data key="d6">雨村's experience of being sick influences his journey and interactions with others.</data>
+      <data key="d7">health impact, journey</data>
+      <data key="d8">chunk-ddb72ffd7e07623a32e68b7097a18fc1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="子興">
+      <data key="d5">24.0</data>
+      <data key="d6">子興 and 雨村 engage in a discussion about the historical and current state of both 寧國府 and 榮國府, showing their intellectual connection.&lt;SEP&gt;雨村 offers deep insights into the nature of individuals, and 子興 seeks to understand these ideas, showing a mentor-student dynamic.</data>
+      <data key="d7">insight, dialogue&lt;SEP&gt;intellectual discourse, historical reflection</data>
+      <data key="d8">chunk-69f2e50f3f3833eaa9c91f7024375db1&lt;SEP&gt;chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="六朝遺跡">
+      <data key="d5">8.0</data>
+      <data key="d6">雨村 expresses an interest in visiting 六朝遺跡, reflecting cultural and historical curiosity regarding the past wealth and significance.</data>
+      <data key="d7">historical interest, cultural exploration</data>
+      <data key="d8">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="政老爹">
+      <data key="d5">12.0</data>
+      <data key="d6">雨村 challenges政老爹's perceptions about children, suggesting a more nuanced understanding of human nature.</data>
+      <data key="d7">philosophy, challenge</data>
+      <data key="d8">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="雨村" target="林黛玉">
+      <data key="d5">9.0</data>
+      <data key="d6">雨村 acts as a guardian or protector for 林黛玉 during their journey, emphasizing companionship.</data>
+      <data key="d7">guardianship, loyalty</data>
+      <data key="d8">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="中秋佳节" target="月亮">
+      <data key="d5">10.0</data>
+      <data key="d6">月亮 plays a central role in the Mid-Autumn Festival, symbolizing unity and family gatherings.</data>
+      <data key="d7">traditional symbolism, unity</data>
+      <data key="d8">chunk-b9cc73613f73f57b01fd59d29cdc54d3</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="封肅" target="甄爺">
+      <data key="d5">8.0</data>
+      <data key="d6">封肅 mentions甄爺 as his son-in-law, indicating a familial relationship that influences封肅's actions.</data>
+      <data key="d7">family ties, marital connection</data>
+      <data key="d8">chunk-184eadec962a6d205d30dd9327c75ae0</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="封肅" target="新太爺">
+      <data key="d5">8.0</data>
+      <data key="d6">封肅 interacts with the newfound authority of新太爺 due to the inquiries made regarding his family.</data>
+      <data key="d7">official inquiry, social dynamics</data>
+      <data key="d8">chunk-184eadec962a6d205d30dd9327c75ae0</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="封肅" target="太爺">
+      <data key="d5">16.0</data>
+      <data key="d6">封肅 acts on behalf of his family and interacts with 太爺 regarding family matters, displaying familial respect and authority dynamics.&lt;SEP&gt;封肅 seeks the approval and assistance of 太爺 concerning family matters, demonstrating respect and reliance on authority.</data>
+      <data key="d7">family dynamics, authority&lt;SEP&gt;respect, authority</data>
+      <data key="d8">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="道人" target="《好了歌》">
+      <data key="d5">10.0</data>
+      <data key="d6">The道人 expresses wisdom through the song《好了歌》 and shares insights about life and understanding.</data>
+      <data key="d7">philosophical insight, song</data>
+      <data key="d8">chunk-184eadec962a6d205d30dd9327c75ae0</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="榮國府" target="冷子興">
+      <data key="d5">14.0</data>
+      <data key="d6">冷子興 mentions the 榮國府's recent events, connecting their discussion to broader social dynamics.</data>
+      <data key="d7">social context, discussion topic</data>
+      <data key="d8">chunk-ddb72ffd7e07623a32e68b7097a18fc1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="榮國府" target="寧國府">
+      <data key="d5">19.0</data>
+      <data key="d6">Both 寧國府 and 榮國府 are linked as significant familial houses in the narrative and are portrayed as historically intertwined through kinship.&lt;SEP&gt;寧國府 and 榮國府 are historically connected through familial ties and societal hierarchy, often compared due to their proximity and competition.</data>
+      <data key="d7">familial rivalry, nobility&lt;SEP&gt;familial ties, nobility</data>
+      <data key="d8">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="榮國府" target="賈政">
+      <data key="d5">8.0</data>
+      <data key="d6">賈政 is a descendant of 榮國府 and plays a role in the continuation of his family's legacy, emphasizing duty and governance.</data>
+      <data key="d7">heritage, family duty</data>
+      <data key="d8">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="榮國府" target="榮府的門前">
+      <data key="d5">7.0</data>
+      <data key="d6">榮府的門前 is associated with 榮國府 as the entrance point for visits and social gatherings.</data>
+      <data key="d7">location, social interaction</data>
+      <data key="d8">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="榮國府" target="大理石的插屏">
+      <data key="d5">8.0</data>
+      <data key="d6">The 大理石的插屏 is part of the opulent decor of 榮國府, demonstrating wealth and artistry.</data>
+      <data key="d7">decoration, cultural significance</data>
+      <data key="d8">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="軍牢" target="新太爺">
+      <data key="d5">7.0</data>
+      <data key="d6">The arrival of新太爺 involves official duties carried out by軍牢, impacting societal order.</data>
+      <data key="d7">authority, governance</data>
+      <data key="d8">chunk-184eadec962a6d205d30dd9327c75ae0</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="太爺" target="胡州">
+      <data key="d5">8.0</data>
+      <data key="d6">胡州 is the homeland of 太爺, linking personal identity to geographic origins.</data>
+      <data key="d7">geographical identity, personal heritage</data>
+      <data key="d8">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="嬌杏" target="家族">
+      <data key="d5">7.0</data>
+      <data key="d6">The concept of 家族 is integral to understanding嬌杏's role as her marriage ties her closely to these family dynamics.</data>
+      <data key="d7">family dynamics, social structure</data>
+      <data key="d8">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="林如海" target="黛玉">
+      <data key="d5">18.0</data>
+      <data key="d6">黛玉 is the daughter of 賈氏, and林如海's familial ties will impact her upbringing and opportunities.&lt;SEP&gt;黛玉 is 林如海's daughter, showing family lineage and the importance of legacy in their societal standing.</data>
+      <data key="d7">family lineage, legacy&lt;SEP&gt;family ties, upbringing</data>
+      <data key="d8">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="林如海" target="巡鹽御史">
+      <data key="d5">20.0</data>
+      <data key="d6">林如海 holds the title of 巡鹽御史, indicating his responsibilities in overseeing salt administration and government duties.&lt;SEP&gt;林如海 holds the title of 巡鹽御史, which is a significant governmental position, indicating his power within the administrative structure.</data>
+      <data key="d7">government position, administrative responsibility&lt;SEP&gt;government position, authority</data>
+      <data key="d8">chunk-1ce6ad37f4cfa05a81cd386181e2d624</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="賈氏">
+      <data key="d5">18.0</data>
+      <data key="d6">賈氏 loves her daughter 黛玉 dearly due to her being the only child and admires her intelligence.</data>
+      <data key="d7">parent-child bond, affection</data>
+      <data key="d8">chunk-ddb72ffd7e07623a32e68b7097a18fc1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="外祖母">
+      <data key="d5">19.0</data>
+      <data key="d6">黛玉与外祖母之间有着深厚的情感连接，体现了对亲人的爱和关怀。&lt;SEP&gt;黛玉和外祖母之间有着深厚的情感联系，外祖母对黛玉表达了深切的关怀。</data>
+      <data key="d7">亲情，依恋&lt;SEP&gt;亲情，关怀</data>
+      <data key="d8">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="賈母">
+      <data key="d5">45.0</data>
+      <data key="d6">賈母 oversees the interactions with 黛玉, emphasizing her authoritative role in family dynamics.&lt;SEP&gt;賈母对子女有深厚的情感，特别是对黛玉的疼爱体现在她的言语和行为中。&lt;SEP&gt;賈母对黛玉的爱护显示了他们之间的密切关系和家庭互动的重要性。&lt;SEP&gt;黛玉 interacts with 賈母, highlighting the importance of familial respect and guidance in their relationship.&lt;SEP&gt;黛玉对賈母的关心反映了家族中强烈的情感纽带和亲情的流动。</data>
+      <data key="d7">family authority, guidance&lt;SEP&gt;亲情，照顾&lt;SEP&gt;关怀，亲情&lt;SEP&gt;关爱，家庭</data>
+      <data key="d8">chunk-ec98fc74c347f080da9c0a767326566d&lt;SEP&gt;chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="家族聚会">
+      <data key="d5">8.0</data>
+      <data key="d6">家族聚会是黛玉与家人之间交流和情感流动的场合，体现了家庭的亲密关系。</data>
+      <data key="d7">家庭，情感</data>
+      <data key="d8">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="三姐妹">
+      <data key="d5">7.0</data>
+      <data key="d6">三姐妹围绕黛玉的出现为场合增添了活力和欢愉，反映了年轻人的社交动态。</data>
+      <data key="d7">社交关系，姊妹情</data>
+      <data key="d8">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="药物">
+      <data key="d5">8.0</data>
+      <data key="d6">黛玉的药物使用与其健康状况密切相关，反映了她对健康的关注和照顾。</data>
+      <data key="d7">健康，医药</data>
+      <data key="d8">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="哭声">
+      <data key="d5">8.0</data>
+      <data key="d6">哭声是黛玉所经历的情感体现，表明了她的内心冲突和对亲情的感受。</data>
+      <data key="d7">情感表达，家族</data>
+      <data key="d8">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="丫鬟们">
+      <data key="d5">7.0</data>
+      <data key="d6">丫鬟们负责照顾黛玉，反映了服务和家庭结构之间的关系。</data>
+      <data key="d7">家庭结构，服务关系</data>
+      <data key="d8">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="史氏太君">
+      <data key="d5">9.0</data>
+      <data key="d6">史氏太君作为黛玉的外祖母，对她的生活有重要影响，体现了家庭传统。</data>
+      <data key="d7">家族，传统</data>
+      <data key="d8">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="人参养榮丸">
+      <data key="d5">8.0</data>
+      <data key="d6">人参养榮丸是黛玉用以改善健康状况的药物，显示了她对身体的重视。</data>
+      <data key="d7">健康，药物</data>
+      <data key="d8">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="熙鳳">
+      <data key="d5">18.0</data>
+      <data key="d6">黛玉 is received warmly by 熙鳳, who expresses concern and care for her well-being during the family gathering.</data>
+      <data key="d7">family care, emotional connection</data>
+      <data key="d8">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="賈赦">
+      <data key="d5">7.0</data>
+      <data key="d6">賈赦 is a direct relative to 黛玉, linking them through family lineage and relationships discussed in the gathering.</data>
+      <data key="d7">family lineage, interconnectedness</data>
+      <data key="d8">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="翠幄青車">
+      <data key="d5">16.0</data>
+      <data key="d6">翠幄青車 is the vehicle that transports 黛玉, symbolizing her status within the family during gatherings.&lt;SEP&gt;黛玉 gets transported in 翠幄青車, highlighting her status and care during the family event.</data>
+      <data key="d7">transportation, family status</data>
+      <data key="d8">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="邢夫人">
+      <data key="d5">8.0</data>
+      <data key="d6">黛玉's relationship with 邢夫人 is one of care and support, as 邢夫人 encourages her and addresses her emotional state.</data>
+      <data key="d7">familial support, nurturing</data>
+      <data key="d8">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="榮府">
+      <data key="d5">9.0</data>
+      <data key="d6">黛玉's visit to 榮府 signifies her connection to the family and her exploration of her place within it.</data>
+      <data key="d7">family ties, emotional journey</data>
+      <data key="d8">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="三層儀門">
+      <data key="d5">6.0</data>
+      <data key="d6">The transition through 三層儀門 marks 黛玉's entrance into the significant familial setting of 榮府.</data>
+      <data key="d7">transition, entering family home</data>
+      <data key="d8">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="二舅舅">
+      <data key="d5">7.0</data>
+      <data key="d6">黛玉 expresses a wish to visit 二舅舅, indicating familial respect and the importance of maintaining family ties.</data>
+      <data key="d7">family connections, respect</data>
+      <data key="d8">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="王夫人">
+      <data key="d5">22.0</data>
+      <data key="d6">王夫人 guidance helps 黛玉 in acclimating to the customs of the household during the meal.&lt;SEP&gt;黛玉 interacts with 王夫人 who offers her counsel about family members and their behaviors, indicating a nurturing relationship.</data>
+      <data key="d7">family guidance, maternal advice&lt;SEP&gt;guidance, social adaptation</data>
+      <data key="d8">chunk-6fa35cc584802daf07abbf3042738adb&lt;SEP&gt;chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="寶玉">
+      <data key="d5">32.0</data>
+      <data key="d6">黛玉 acknowledges her understanding of 宝玉's character and the challenges of his behavior, indicating a familial connection with awareness.&lt;SEP&gt;黛玉 acknowledges her understanding of 宝玉's character and the challenges of his behavior, indicating a familial connection with awareness."&lt;/|&gt;"family dynamics, awareness&lt;SEP&gt;黛玉 meets寶玉 for the first time and is immediately intrigued by him, recognizing his familiarity yet feeling puzzled about it.&lt;SEP&gt;黛玉's characteristics and beauty deeply affect 宝玉's feelings, showcasing the theme of beauty and longing in their interactions.</data>
+      <data key="d7">7&lt;SEP&gt;curiosity, first encounter&lt;SEP&gt;family dynamics, awareness&lt;SEP&gt;romantic interest, beauty</data>
+      <data key="d8">chunk-6fa35cc584802daf07abbf3042738adb&lt;SEP&gt;chunk-e89a93cd0e15c5744d53a6bbaed8cbc9&lt;SEP&gt;chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="後房">
+      <data key="d5">7.0</data>
+      <data key="d6">黛玉 enters the 後房 for family discussions and personal interactions, suggesting its significance in her narrative.</data>
+      <data key="d7">family interactions, personal space</data>
+      <data key="d8">chunk-6fa35cc584802daf07abbf3042738adb</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="東廊">
+      <data key="d5">7.0</data>
+      <data key="d6">黛玉 moves into the 東廊 to meet family members, highlighting its role in family gatherings.</data>
+      <data key="d7">family gatherings, meeting place</data>
+      <data key="d8">chunk-6fa35cc584802daf07abbf3042738adb</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="迎春姊妹">
+      <data key="d5">6.0</data>
+      <data key="d6">黛玉 interacts with 迎春姊妹 at the table, indicating social agreements among them during the meal.</data>
+      <data key="d7">social interaction, camaraderie</data>
+      <data key="d8">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="宝玉">
+      <data key="d5">8.0</data>
+      <data key="d6">黛玉 shows concern for 宝玉 and his well-being, which reflects the emotional dynamics between them.</data>
+      <data key="d7">emotional support, concern</data>
+      <data key="d8">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="王嬤嬤">
+      <data key="d5">7.0</data>
+      <data key="d6">王嬤嬤 provides support for 黛玉, reflecting a nurturing relationship between them.</data>
+      <data key="d7">nurturing, support</data>
+      <data key="d8">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="鸚哥">
+      <data key="d5">6.0</data>
+      <data key="d6">鸚哥 offers reassurance to 黛玉, showing their close maid relationship.</data>
+      <data key="d7">companionship, reassurance</data>
+      <data key="d8">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="碧紗櫥">
+      <data key="d5">7.0</data>
+      <data key="d6">黛玉 is located in the 碧紗櫥 which is part of her living arrangements, reflecting the comforts and arrangements made for her.</data>
+      <data key="d7">living arrangements, comfort</data>
+      <data key="d8">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="黛玉" target="夜深">
+      <data key="d5">8.0</data>
+      <data key="d6">At the late hour, 黛玉 shares her concerns and emotions, highlighting her susceptibility and vulnerability during the night.</data>
+      <data key="d7">intimacy, vulnerability</data>
+      <data key="d8">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="寧國府" target="賈珍">
+      <data key="d5">7.0</data>
+      <data key="d6">賈珍, as a descendant of 寧國府, represents the decline of traditional values within the family lineage.</data>
+      <data key="d7">cultural decline, family legacy</data>
+      <data key="d8">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="金陵" target="石頭城">
+      <data key="d5">9.0</data>
+      <data key="d6">石頭城 is located within the 金陵 region, marking its importance in historical and cultural narratives.</data>
+      <data key="d7">geographical relevance, cultural heritage</data>
+      <data key="d8">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="金陵" target="薛家">
+      <data key="d5">7.0</data>
+      <data key="d6">金陵 is the location where 薛家 resides and where the events surrounding 薛蟠's case unfold."}</data>
+      <data key="d7">geographic relevance, family residence</data>
+      <data key="d8">chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="子興" target="賈代化">
+      <data key="d5">7.0</data>
+      <data key="d6">子興's critique of the family legacy includes references to 賈代化, illustrating perceptions of the family's decline.</data>
+      <data key="d7">social critique, familial legacy</data>
+      <data key="d8">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="子興" target="政老爹">
+      <data key="d5">14.0</data>
+      <data key="d6">政老爹's assessment of a child's future shapes 子興's thoughts on destiny and character development.</data>
+      <data key="d7">tradition, expectations</data>
+      <data key="d8">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈珍" target="寶玉">
+      <data key="d5">9.0</data>
+      <data key="d6">寶玉 is born into the same lineage as 賈珍 and attracts significant attention and uniqueness, highlighting family expectations.</data>
+      <data key="d7">family expectations, unique circumstances</data>
+      <data key="d8">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈政" target="賈珠">
+      <data key="d5">7.0</data>
+      <data key="d6">賈珠, as the child of 賈政, represents the lineage and prospects of 榮國府’s future generational integrity.</data>
+      <data key="d7">future generation, family lineage</data>
+      <data key="d8">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈政" target="張如圭">
+      <data key="d5">9.0</data>
+      <data key="d6">張如圭's quest for helping 賈雨村 involves discussions relating to 賈政's influential position.</data>
+      <data key="d7">political connections, familial ties</data>
+      <data key="d8">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈政" target="林黛玉">
+      <data key="d5">16.0</data>
+      <data key="d6">林黛玉's social status is likely intertwined with the influence of 賈政, affecting her position in society.&lt;SEP&gt;賈政 offers support to林黛玉’s family, further showcasing the interconnectedness of influential families.</data>
+      <data key="d7">family dynamics, social hierarchy&lt;SEP&gt;support, familial connections</data>
+      <data key="d8">chunk-243c6ccda03d09f60fb4d7c2e0e63326&lt;SEP&gt;chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈政" target="榮公">
+      <data key="d5">7.0</data>
+      <data key="d6">賈政's respect for教育 reflects the values passed down from榮公 to the current generation.</data>
+      <data key="d7">ancestor influence, education</data>
+      <data key="d8">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="寶玉" target="史老太君">
+      <data key="d5">18.0</data>
+      <data key="d6">史老太君's deep care for寶玉 suggests it is viewed as invaluable or irreplaceable, indicating its significance in the narrative.</data>
+      <data key="d7">value, admiration</data>
+      <data key="d8">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="寶玉" target="王夫人">
+      <data key="d5">18.0</data>
+      <data key="d6">王夫人 expresses concern regarding 宝玉's behavior, suggesting a protective relationship towards her family.</data>
+      <data key="d7">caution, family concern</data>
+      <data key="d8">chunk-6fa35cc584802daf07abbf3042738adb</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="寶玉" target="賈母">
+      <data key="d5">25.0</data>
+      <data key="d6">寶玉 is called to see 賈母, indicating their familial bond and hierarchical relationship in the family.&lt;SEP&gt;賈母 expresses concern over 宝玉's emotional state, indicating a protective and guiding role as a motherly figure.&lt;SEP&gt;賈母 provides emotional support to 宝玉, indicating their close mother-son relationship, especially in times of distress.</data>
+      <data key="d7">family hierarchy, respect&lt;SEP&gt;maternal care, emotional support&lt;SEP&gt;maternal care, family dynamics</data>
+      <data key="d8">chunk-e89a93cd0e15c5744d53a6bbaed8cbc9&lt;SEP&gt;chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="寶玉" target="林妹妹">
+      <data key="d5">19.0</data>
+      <data key="d6">宝玉 feels an immediate connection to 林妹妹, marked by a sense of familiarity and affection, likening her to a long-lost sister.&lt;SEP&gt;寶玉 feels a strong connection to 林妹妹, viewing her as a spirit-like presence that evokes deep affection, suggesting a familial bond.</data>
+      <data key="d7">emotional bond, kinship&lt;SEP&gt;emotional connection, familial bond</data>
+      <data key="d8">chunk-e89a93cd0e15c5744d53a6bbaed8cbc9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="寶玉" target="探春">
+      <data key="d5">7.0</data>
+      <data key="d6">探春 interacts with 宝玉 regarding 林妹妹, indicating her role in the family dynamics and mutual interests.</data>
+      <data key="d7">family interaction, interest</data>
+      <data key="d8">chunk-e89a93cd0e15c5744d53a6bbaed8cbc9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈代化" target="賈敬">
+      <data key="d5">8.0</data>
+      <data key="d6">賈敬 is the son of 賈代化, continuing the family line and legacy of the 寧國府.</data>
+      <data key="d7">family lineage, paternal connection</data>
+      <data key="d8">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈敬" target="賈蓉">
+      <data key="d5">7.0</data>
+      <data key="d6">賈蓉 is the grandson of 賈敬, representing the younger generation and influence of the family's values and pursuits.</data>
+      <data key="d7">generational succession, family values</data>
+      <data key="d8">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈赦" target="榮府">
+      <data key="d5">8.0</data>
+      <data key="d6">賈赦, as the heir in 榮府, embodies the continuation of the family's authority and its relationship with 寧國府.</data>
+      <data key="d7">heirship, family legacy</data>
+      <data key="d8">chunk-69f2e50f3f3833eaa9c91f7024375db1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈赦" target="邢夫人">
+      <data key="d5">7.0</data>
+      <data key="d6">邢夫人 conveys messages from 賈赦 to 黛玉, showing the interconnectedness of family dynamics.</data>
+      <data key="d7">communication, family hierarchy</data>
+      <data key="d8">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="榮府" target="林黛玉">
+      <data key="d5">9.0</data>
+      <data key="d6">林黛玉 is a member of榮府 and her actions are influenced by her family's status and expectations.</data>
+      <data key="d7">family ties, social status</data>
+      <data key="d8">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="榮府" target="神京">
+      <data key="d5">8.0</data>
+      <data key="d6">榮府 is situated in 神京, representing wealth and influence in the capital city.</data>
+      <data key="d7">location, influence</data>
+      <data key="d8">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="榮府" target="小女">
+      <data key="d5">10.0</data>
+      <data key="d6">小女 (林黛玉) arrives at 榮府, marking a new chapter in her life and highlighting family connections.</data>
+      <data key="d7">arrival, family relocation</data>
+      <data key="d8">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="榮府" target="正室">
+      <data key="d5">7.0</data>
+      <data key="d6">The 正室 represents the heart of 榮府, indicating the family’s wealth and status in society.</data>
+      <data key="d7">residence, family structure</data>
+      <data key="d8">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="榮府" target="樹木山石">
+      <data key="d5">6.0</data>
+      <data key="d6">The natural elements like 樹木山石 enhance the beauty of 榮府, linking nature with architectural elegance.</data>
+      <data key="d7">nature and architecture, beauty</data>
+      <data key="d8">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="榮府" target="宴息">
+      <data key="d5">9.0</data>
+      <data key="d6">宴息 events are held at 榮府, showcasing the social and cultural life within the family.</data>
+      <data key="d7">social gatherings, cultural practices</data>
+      <data key="d8">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="周" target="古代人物">
+      <data key="d5">16.0</data>
+      <data key="d6">周 is positioned alongside other historical figures, indicating a shared legacy of wisdom and moral character.</data>
+      <data key="d7">historical context, legacy</data>
+      <data key="d8">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="古代人物" target="孔">
+      <data key="d5">8.0</data>
+      <data key="d6">孔 is referenced as an archetype of moral philosophy within the category of historical figures, indicating ethical governance.</data>
+      <data key="d7">moral philosophy, tradition</data>
+      <data key="d8">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="古代人物" target="孟">
+      <data key="d5">8.0</data>
+      <data key="d6">孟 shares recognition with other historical figures in promoting ethics, indicating a collective legacy of wisdom.</data>
+      <data key="d7">ethical guidance, legacy</data>
+      <data key="d8">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="古代人物" target="江山">
+      <data key="d5">7.0</data>
+      <data key="d6">江山 encompasses the legacy of historical figures, signifying their impact on the state and moral governance.</data>
+      <data key="d7">historical legacy, governance</data>
+      <data key="d8">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="古代人物" target="人物描写">
+      <data key="d5">7.0</data>
+      <data key="d6">人物描写 fosters an understanding of the traits and legacies of ancient figures, enhancing character awareness.</data>
+      <data key="d7">character development, legacy</data>
+      <data key="d8">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="唐明皇" target="百年大计">
+      <data key="d5">8.0</data>
+      <data key="d6">唐明皇's reign is associated with long-term cultural and artistic contributions, highlighting visionary governance.</data>
+      <data key="d7">cultural vision, governance</data>
+      <data key="d8">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="宋徽宗" target="百年大计">
+      <data key="d5">8.0</data>
+      <data key="d6">宋徽宗's contributions during his rule reflect a long-term commitment to cultural advancement.</data>
+      <data key="d7">artistic legacy, governance</data>
+      <data key="d8">chunk-e3d93b78d3d8a73ad3352cb3fd1f7e41</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="薛濤" target="崔鶯">
+      <data key="d5">14.0</data>
+      <data key="d6">薛濤 and 崔鶯 converse about societal behaviors and personal experiences, highlighting their intellectual engagement and friendship.&lt;SEP&gt;薛濤 and 崔鶯 engage in conversations about educational values and familial relationships, showcasing their social interaction.</data>
+      <data key="d7">social discourse, character interaction&lt;SEP&gt;social discourse, friendship</data>
+      <data key="d8">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="薛濤" target="巡鹽御史林家">
+      <data key="d5">14.0</data>
+      <data key="d6">薛濤's association with 林家 signifies a transition in his career and a new social environment to navigate.&lt;SEP&gt;薛濤's move to the 林家 reflects a shift in his social responsibilities and personal growth in the narrative.</data>
+      <data key="d7">social mobility, personal transition&lt;SEP&gt;social transition, professional shift</data>
+      <data key="d8">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="甄府" target="賈府">
+      <data key="d5">18.0</data>
+      <data key="d6">甄府 and 賈府 are related through familial ties and social interactions, being close friends and maintaining warm relations.&lt;SEP&gt;甄府 and 賈府 are significant families within the narrative, showcasing rich social connections and mutual regard as they engage with each other's members.</data>
+      <data key="d7">familial connection, social ties&lt;SEP&gt;familial ties, social connection</data>
+      <data key="d8">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈府" target="元春">
+      <data key="d5">16.0</data>
+      <data key="d6">元春 being a prominent figure of the Jia family showcases the family's status and influences within the community.&lt;SEP&gt;元春 is identified as a daughter of 賈府, further highlighting family prominence and social expectations.</data>
+      <data key="d7">family lineage, social status&lt;SEP&gt;family prominence, social influence</data>
+      <data key="d8">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈府" target="迎春">
+      <data key="d5">16.0</data>
+      <data key="d6">迎春 as a daughter of 賈府 reflects the family's social structure and background.&lt;SEP&gt;迎春's identity as a daughter of 賈府 impacts her role and significance within the social fabric of the narrative.</data>
+      <data key="d7">family lineage, social structure&lt;SEP&gt;family status, social role</data>
+      <data key="d8">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈府" target="探春">
+      <data key="d5">16.0</data>
+      <data key="d6">探春 is another daughter showcasing the characteristics and expectations of the Jia family.&lt;SEP&gt;探春's characteristics as a daughter represent the refined upbringing and familial expectations of the Jia family.</data>
+      <data key="d7">character traits, familial expectations&lt;SEP&gt;family identity, expectations</data>
+      <data key="d8">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈府" target="惜春">
+      <data key="d5">16.0</data>
+      <data key="d6">惜春's connection as a daughter emphasizes the family's prominence and societal duties.&lt;SEP&gt;惜春's youth and unique characteristics contribute to the narrative surrounding the family's dynamics and privilege.</data>
+      <data key="d7">family identity, social duties&lt;SEP&gt;youth representation, family dynamics</data>
+      <data key="d8">chunk-a3f266505826711ba754dca560ebea7c</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="女学生" target="子兴">
+      <data key="d5">7.0</data>
+      <data key="d6">女学生's unique behavior and upbringing are noted by 子兴, reflecting on familial lineage and societal expectations.</data>
+      <data key="d7">social contrast, family impact</data>
+      <data key="d8">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="女学生" target="父亲">
+      <data key="d5">6.0</data>
+      <data key="d6">The absence of the 女学生's father impacts her behavior and social perceptions among peers.</data>
+      <data key="d7">family influence, absence</data>
+      <data key="d8">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="女学生" target="京城">
+      <data key="d5">7.0</data>
+      <data key="d6">京城 serves as the setting where the 女学生 interacts with various societal classes and expectations.</data>
+      <data key="d7">cultural setting, societal interactions</data>
+      <data key="d8">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="子兴" target="政公">
+      <data key="d5">8.0</data>
+      <data key="d6">子兴 recognizes the influence of 政公's descendants and their potential impact on future generations.</data>
+      <data key="d7">familial connections, influence</data>
+      <data key="d8">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="政公" target="榮府之孙">
+      <data key="d5">9.0</data>
+      <data key="d6">政公's grandchild is connected to the expansive family network within the 荣府, affecting social standing.</data>
+      <data key="d7">nobility, lineage</data>
+      <data key="d8">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="政公" target="同知">
+      <data key="d5">8.0</data>
+      <data key="d6">政公 holds a government position that lines up with the role of 同知, reflecting political hierarchy and influence.</data>
+      <data key="d7">government roles, influence</data>
+      <data key="d8">chunk-6350a45b8914491b261bb3ffe0bbe177</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="神京" target="街市">
+      <data key="d5">9.0</data>
+      <data key="d6">The bustling街市 embodies the social and economic vitality of 神京.</data>
+      <data key="d7">economic activity, vibrant community</data>
+      <data key="d8">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="如海" target="小女">
+      <data key="d5">8.0</data>
+      <data key="d6">如海 is making plans for 小女 (林黛玉) to travel, showcasing his care and family obligations.</data>
+      <data key="d7">family care, planning</data>
+      <data key="d8">chunk-243c6ccda03d09f60fb4d7c2e0e63326</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈母" target="熙鳳">
+      <data key="d5">22.0</data>
+      <data key="d6">熙鳳 interacts with 賈母, showing respect and following her guidance in familial matters during the gathering.&lt;SEP&gt;賈母 and 熙鳳 discuss family matters, indicating their cooperation and connection as maternal figures in the household.</data>
+      <data key="d7">family collaboration, management&lt;SEP&gt;respect, family hierarchy</data>
+      <data key="d8">chunk-ec98fc74c347f080da9c0a767326566d&lt;SEP&gt;chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈母" target="王夫人">
+      <data key="d5">15.0</data>
+      <data key="d6">賈母 and 王夫人 are engaged in family discussions, indicating a close maternal relationship.&lt;SEP&gt;賈母 is the elder overseeing the family gathering where 王夫人 is present, facilitating the conversation and meal preparation.</data>
+      <data key="d7">family collaboration, support&lt;SEP&gt;family dynamics, leadership</data>
+      <data key="d8">chunk-00436f0a9a65710257e867e450e3ace1&lt;SEP&gt;chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈母" target="李氏">
+      <data key="d5">7.0</data>
+      <data key="d6">李氏 serves food to賈母 and other guests, showing her role in the household service during the gathering.</data>
+      <data key="d7">household duties, social role</data>
+      <data key="d8">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈母" target="後院">
+      <data key="d5">8.0</data>
+      <data key="d6">The interactions and social hierarchy in the 後院 are led by賈母, representing family authority and dynamics.</data>
+      <data key="d7">hostess, family setting</data>
+      <data key="d8">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈母" target="鳳姐姐">
+      <data key="d5">15.0</data>
+      <data key="d6">賈母 oversees the household activities and interactions during the gathering, indicating her central role.&lt;SEP&gt;鳳姐姐 is mentioned in the context of family dynamics, possibly indicating a close familial relationship with賈母.</data>
+      <data key="d7">family connection, guidance&lt;SEP&gt;household authority, familial oversight</data>
+      <data key="d8">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈母" target="賈珠之妻李氏">
+      <data key="d5">8.0</data>
+      <data key="d6">賈母 and 李氏 both assist in preparing and serving during the meal, highlighting their roles in the familial setting.</data>
+      <data key="d7">household duties, collaboration</data>
+      <data key="d8">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈母" target="飲茶">
+      <data key="d5">9.0</data>
+      <data key="d6">賈母 initiates the tea ceremonies following the meal, reflecting her role in maintaining traditions.</data>
+      <data key="d7">cultural practice, family tradition</data>
+      <data key="d8">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈母" target="林妹妹">
+      <data key="d5">15.0</data>
+      <data key="d6">賈母 acknowledges 林妹妹's significance in 宝玉's life, encouraging their bond and family connection.&lt;SEP&gt;賈母 explains the significance of 林妹妹's arrival and her connection to 宝玉, linking familial relations and history.</data>
+      <data key="d7">family connection, nurturing&lt;SEP&gt;family relationship, nurturing</data>
+      <data key="d8">chunk-e89a93cd0e15c5744d53a6bbaed8cbc9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="賈母" target="宝玉">
+      <data key="d5">9.0</data>
+      <data key="d6">賈母 ensures the comfort of 宝玉, indicating a protective familial relationship.</data>
+      <data key="d7">family dynamics, protection</data>
+      <data key="d8">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="遊廊" target="大院">
+      <data key="d5">8.0</data>
+      <data key="d6">遊廊与大院之间的连接反映了家庭的空间布局和社交交流的场所。</data>
+      <data key="d7">空间布局，家庭</data>
+      <data key="d8">chunk-99bf71caf375ec0055cf71c682952e50</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="熙鳳" target="王夫人">
+      <data key="d5">22.0</data>
+      <data key="d6">王夫人 and 熙鳳 collaborate on household matters and share responsibilities, demonstrating family unity.&lt;SEP&gt;王夫人 and 熙鳳 interact as part of a family discussion regarding events related to 薛家."}&lt;SEP&gt;王夫人 and 熙鳳 interact within the family context, discussing recent events and communications."}</data>
+      <data key="d7">collaboration, family responsibilities&lt;SEP&gt;family discussions, relationships&lt;SEP&gt;family dynamics, communication</data>
+      <data key="d8">chunk-ec98fc74c347f080da9c0a767326566d&lt;SEP&gt;chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="熙鳳" target="鳳辣子">
+      <data key="d5">7.0</data>
+      <data key="d6">熙鳳 refers to 鳳辣子 with familiarity, indicating their established relationship within the family context.</data>
+      <data key="d7">familiarity, social connection</data>
+      <data key="d8">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="熙鳳" target="金絲八寶攢珠髻">
+      <data key="d5">8.0</data>
+      <data key="d6">熙鳳's distinctive hairstyle is exemplified by the 金絲八寶攢珠髻, showcasing her status during the event.</data>
+      <data key="d7">cultural symbolism, status</data>
+      <data key="d8">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="熙鳳" target="赤金盤螭瓔珞圈">
+      <data key="d5">8.0</data>
+      <data key="d6">熙鳳 adorns herself with the 赤金盤螭瓔珞圈, representing her wealth and eye for beauty.</data>
+      <data key="d7">wealth, adornment</data>
+      <data key="d8">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="熙鳳" target="家族关系">
+      <data key="d5">9.0</data>
+      <data key="d6">熙鳳's interactions with various family members highlight the complexities of 家族关系 during events.</data>
+      <data key="d7">family dynamics, interaction</data>
+      <data key="d8">chunk-ec98fc74c347f080da9c0a767326566d</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="熙鳳" target="薛家">
+      <data key="d5">13.0</data>
+      <data key="d6">熙鳳 is connected to 薛家 through familial relations and discussions about 薛蟠."}&lt;SEP&gt;熙鳳 is related to 薛家 through familial ties and discusses the implications of 薛蟠's actions."}</data>
+      <data key="d7">family ties, discussions</data>
+      <data key="d8">chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="王夫人" target="薛家">
+      <data key="d5">5.0</data>
+      <data key="d6">王夫人在讨论与 薛家相关的事务，体现了家庭间的联结.</data>
+      <data key="d7">family matters, connections</data>
+      <data key="d8">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="王夫人" target="書信">
+      <data key="d5">7.0</data>
+      <data key="d6">王夫人 communicates through 書信 to discuss family affairs, demonstrating the significance of correspondence in family interactions.</data>
+      <data key="d7">communication, family matters</data>
+      <data key="d8">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="王夫人" target="王子騰">
+      <data key="d5">7.0</data>
+      <data key="d6">王夫人 communicates with her brother-in-law 王子騰, sharing concerns about family matters affecting 薛蟠."}</data>
+      <data key="d7">family communication, concern</data>
+      <data key="d8">chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="邢夫人" target="榮國公賈源">
+      <data key="d5">8.0</data>
+      <data key="d6">邢夫人 is connected to 榮國公賈源 through family ties and shared influence in the household decisions.</data>
+      <data key="d7">family dynamics, influence</data>
+      <data key="d8">chunk-ed5bb8bc3e594308fd0288d490fc4f16</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="李氏" target="迎春姊妹">
+      <data key="d5">7.0</data>
+      <data key="d6">李氏 serves food, while 迎春姊妹 join the table, emphasizing their participation in the family meal.</data>
+      <data key="d7">meal interaction, familial role</data>
+      <data key="d8">chunk-00436f0a9a65710257e867e450e3ace1</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="林妹妹" target="玉">
+      <data key="d5">8.0</data>
+      <data key="d6">玉 serves as a poignant reminder of 宝玉's connection to 林妹妹 and his feelings of loss and desire.</data>
+      <data key="d7">symbolism, emotional connection</data>
+      <data key="d8">chunk-e89a93cd0e15c5744d53a6bbaed8cbc9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="宝玉" target="襲人">
+      <data key="d5">8.0</data>
+      <data key="d6">襲人 cares for 宝玉 and serves as his confidante, reflecting a deep personal bond.</data>
+      <data key="d7">caregiving, companionship</data>
+      <data key="d8">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="襲人" target="碧紗櫥">
+      <data key="d5">7.0</data>
+      <data key="d6">襲人 helps attend to 黛玉 in the 碧紗櫥, indicating her role in providing care and support in this specific location.</data>
+      <data key="d7">caregiving, support</data>
+      <data key="d8">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="王嬤嬤" target="雪雁">
+      <data key="d5">6.0</data>
+      <data key="d6">王嬤嬤 and 雪雁 provide care for 黛玉, emphasizing their role in nurturing and assisting her in her new home.</data>
+      <data key="d7">nurturing, support</data>
+      <data key="d8">chunk-831f35057a101f45a264a95a4aabe7f9</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="薛家" target="薛蟠">
+      <data key="d5">22.0</data>
+      <data key="d6">薛蟠 is a member of the 薛家, reflecting the family dynamics and conflicts associated with his reputation.&lt;SEP&gt;薛蟠 is a member of 薛家 and is central to the family's current legal issues."}&lt;SEP&gt;薛蟠 is a member of 薛家 and is currently under scrutiny for his actions."}</data>
+      <data key="d7">family dynamics, reputation&lt;SEP&gt;family member, legal issues&lt;SEP&gt;family member, legal troubles</data>
+      <data key="d8">chunk-831f35057a101f45a264a95a4aabe7f9&lt;SEP&gt;chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="薛家" target="金陵城">
+      <data key="d5">12.0</data>
+      <data key="d6">金陵城 is the geographic backdrop for the 薛家, where their societal status and activities evolve.&lt;SEP&gt;金陵城 is the location associated with 薛家 and the events surrounding 薛蟠."}</data>
+      <data key="d7">geographic influence, societal status&lt;SEP&gt;geographical context, family residence</data>
+      <data key="d8">chunk-831f35057a101f45a264a95a4aabe7f9&lt;SEP&gt;chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="薛蟠" target="王子騰">
+      <data key="d5">15.0</data>
+      <data key="d6">王子騰 receives information about 薛蟠's situation, indicating a concern for family reputation."}&lt;SEP&gt;王子騰 receives updates on 薛蟠’s situation, reflecting concerns for the family's standing."}</data>
+      <data key="d7">family communication, concern&lt;SEP&gt;family concern, communication</data>
+      <data key="d8">chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+    <edge source="薛蟠" target="审理">
+      <data key="d5">9.0</data>
+      <data key="d6">The legal proceedings of 审理 are directly connected to 薛蟠, who is facing charges in court."}</data>
+      <data key="d7">legal matters, accountability</data>
+      <data key="d8">chunk-5609f7c07ea26b46d64a085e639f15be</data>
+      <data key="d9">unknown_source</data>
+    </edge>
+  </graph>
+</graphml>
