@@ -5,3 +5,6 @@ data/
 __pycache__/
 venv
 .env
+
+# neglect all log files
+*.log
