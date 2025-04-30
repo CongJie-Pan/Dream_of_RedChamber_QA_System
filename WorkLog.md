@@ -104,6 +104,8 @@
 - 實現單純的 RAG Agent 模型進行對比測試
 - 解決路徑問題導致的檢索失敗
 
+---
+
 ## 2025/4/29
 已藉由實作textParser軟件，完成將data文本轉為較高品質之繁體中文段落markdown格式文本。
 
@@ -111,4 +113,229 @@
 - 解決lightRAG路徑問題導致的檢索失敗
 - 實現單純的 RAG Agent 模型進行對比測試
 - textParser 軟件(app.py)在cursur ai輸出code的最新版本(對話紀錄: streamlit介面開發與deepseek整合，新版的對話紀錄已經不見。)會有以下問題: "當按下處理文件時，軟件會一直在執行，而沒有實際動作。已經盡量在程式碼做更多錯誤日誌紀錄，錯誤日誌還是沒有任何發現。" 所以就返回了可以執行的版本。
+
+---
+
+## 2025/4/30
+
+### BasicRAG與LightRAG系統比較研究
+
+今日完成了BasicRAG和LightRAG兩個系統的輸出品質比較，獲得以下初步觀察結果：
+
+1. **系統差異分析**：
+   - **LightRAG**：能夠理解和提供更延伸的知識內容，但輸出內容相對簡短。系統對知識的關聯性掌握較佳。
+   - **BasicRAG**：輸出更為完整且詳細，提供的解釋和論述更加豐富，但有時會缺少一些知識的延伸連結。
+
+2. **解決問題**：
+   - 之前LightRAG系統中出現的路徑問題導致檢索失敗的錯誤已經修復，不再出現。
+
+3. **後續工作**：
+   - 需要進行更多的系統比較測試，計劃使用Perplexity等工具進行更客觀的評估。
+
+### BasicRAG系統優化
+
+在進行BasicRAG系統開發時遇到了一些界面問題：
+
+1. **界面錯誤**：
+   - streamlit_app.py中複製文字的按鈕功能無法正常顯示
+   - 運行時出現終端機錯誤，嚴重影響使用體驗
+
+2. **解決方案**：
+   - 暫時回退到之前的穩定版本，確保系統可以順利運行
+   - 計劃在後續版本中重新實現此功能
+
+<details>
+<summary>錯誤代碼</summary>
+
+```
+2025-04-30 21:33:58.526 Examining the path of torch.classes raised:
+Traceback (most recent call last):
+  File "D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-agent\BasicRAG\venv\Lib\site-packages\streamlit\web\bootstrap.py", line 347, in run
+    if asyncio.get_running_loop().is_running():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-agent\BasicRAG\venv\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 217, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-agent\BasicRAG\venv\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 210, in <lambda>
+    lambda m: list(m.__path__._path),
+                   ^^^^^^^^^^^^^^^^
+  File "D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-agent\BasicRAG\venv\Lib\site-packages\torch\_classes.py", line 13, in __getattr__
+    proxy = torch._C._get_custom_class_python_wrapper(self.name, attr)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Tried to instantiate class '__path__._path', but it does not exist! Ensure that it is registered via torch::class_
+2025-04-30 21:34:31,834 - rag_agent - INFO - Successfully loaded metadata from ./chroma_db\import_metadata.json
+────────────────────────── Traceback (most recent call last) ───────────────────────────
+  D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-a
+  gent\BasicRAG\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py:121
+   in exec_func_with_error_handling                                               
+
+                                                                                  
+
+  D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-a
+  gent\BasicRAG\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py
+  :640 in code_to_exec                                                            
+
+                                                                                  
+
+  D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-a
+  gent\BasicRAG\streamlit_app.py:572 in <module>                                  
+
+                                                                                  
+
+    569                                                                           
+
+    570 # Application entry point                                                 
+
+    571 if __name__ == "__main__":                                                
+
+  ❱ 572 │   asyncio.run(main())                                                   
+
+    573                                                                           
+
+                                                                                  
+
+  C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py:194 in
+  run                                                                             
+
+                                                                                  
+
+    191 │   │   │   "asyncio.run() cannot be called from a running event loop")   
+
+    192 │                                                                         
+
+    193 │   with Runner(debug=debug, loop_factory=loop_factory) as runner:        
+
+  ❱ 194 │   │   return runner.run(main)                                           
+
+    195                                                                           
+
+    196                                                                           
+
+    197 def _cancel_all_tasks(loop):                                              
+
+                                                                                  
+
+  C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py:118 in
+  run                                                                             
+
+                                                                                  
+
+    115 │   │                                                                     
+
+    116 │   │   self._interrupt_count = 0                                         
+
+    117 │   │   try:                                                              
+
+  ❱ 118 │   │   │   return self._loop.run_until_complete(task)                    
+
+    119 │   │   except exceptions.CancelledError:                                 
+
+    120 │   │   │   if self._interrupt_count > 0:                                 
+
+    121 │   │   │   │   uncancel = getattr(task, "uncancel", None)                
+
+                                                                                  
+
+  C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py:687
+  in run_until_complete                                                           
+
+                                                                                  
+
+     684 │   │   if not future.done():                                            
+
+     685 │   │   │   raise RuntimeError('Event loop stopped before Future completed.')
+     686 │   │                                                                    
+
+  ❱  687 │   │   return future.result()                                           
+
+     688 │                                                                        
+
+     689 │   def stop(self):                                                      
+
+     690 │   │   """Stop running the event loop.                                  
+
+                                                                                  
+
+  D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-a
+  gent\BasicRAG\streamlit_app.py:501 in main                                      
+
+                                                                                  
+
+    498 │   for msg in st.session_state.messages:                                 
+
+    499 │   │   if isinstance(msg, ModelRequest) or isinstance(msg, ModelResponse):
+    500 │   │   │   for part in msg.parts:                                        
+
+  ❱ 501 │   │   │   │   display_message_part(part)                                
+
+    502 │                                                                         
+
+    503 │   # Chat input for the user                                             
+
+    504 │   user_input = st.chat_input("輸入您的問題...")  # Enter your question...
+                                                                                  
+
+  D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-a
+  gent\BasicRAG\streamlit_app.py:141 in display_message_part                      
+
+                                                                                  
+
+    138 │   # Tool calls - show in expander for debugging (hidden by default)     
+
+    139 │   elif part.part_kind == 'tool-call':                                   
+
+    140 │   │   with st.expander("工具呼叫 (調試)", expanded=False):  # Tool Call (Deb
+  ❱ 141 │   │   │   st.markdown(f"**工具:** {part.name}")  # Tool                 
+
+    142 │   │   │   st.markdown(f"**參數:** {part.arguments}")  # Arguments       
+
+    143 │   # Tool returns - show in expander for debugging (hidden by default)   
+
+    144 │   elif part.part_kind == 'tool-return':                                 
+
+────────────────────────────────────────────────────────────────────────────────────────
+AttributeError: 'ToolCallPart' object has no attribute 'name'
+2025-04-30 21:34:33.179 Examining the path of torch.classes raised:
+Traceback (most recent call last):
+  File "D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-agent\BasicRAG\venv\Lib\site-packages\streamlit\web\bootstrap.py", line 347, in run
+    if asyncio.get_running_loop().is_running():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-agent\BasicRAG\venv\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 217, in get_module_paths
+    potential_paths = extract_paths(module)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-agent\BasicRAG\venv\Lib\site-packages\streamlit\watcher\local_sources_watcher.py", line 210, in <lambda>
+    lambda m: list(m.__path__._path),
+                   ^^^^^^^^^^^^^^^^
+  File "D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-agent\BasicRAG\venv\Lib\site-packages\torch\_classes.py", line 13, in __getattr__
+    proxy = torch._C._get_custom_class_python_wrapper(self.name, attr)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Tried to instantiate class '__path__._path', but it does not exist! Ensure that it is registered via torch::class_
+```
+
+</details>
+
+### 未來功能規劃 - Agentic RAG增強
+
+為了提升BasicRAG系統的智能程度，提出了以下功能增強計劃：
+
+1. **思考Agent集成**：
+   - 開發智能思考Agent模組，使系統能夠自主思考需要提取哪些檔案
+   - 實現智能閱讀功能，提高文本理解能力
+   - 加入思考-輸出機制，使回答更加有條理和邏輯性
+
+2. **界面優化**：
+   - 已在系統特點中加入"Agentic RAG系統"的描述，為下一階段開發做準備
+
+這些改進將使BasicRAG系統在保持其詳細、完整輸出優勢的同時，進一步提升知識關聯和延伸能力。
+
 
