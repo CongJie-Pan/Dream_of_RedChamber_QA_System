@@ -336,6 +336,8 @@ RuntimeError: Tried to instantiate class '__path__._path', but it does not exist
 2. **界面優化**：
    - 已在系統特點中加入"Agentic RAG系統"的描述，為下一階段開發做準備
 
+### 將log檔統一寫到一個資料夾
+
 這些改進將使BasicRAG系統在保持其詳細、完整輸出優勢的同時，進一步提升知識關聯和延伸能力。
 
 
