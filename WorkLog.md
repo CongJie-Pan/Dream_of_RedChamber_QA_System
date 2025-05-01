@@ -340,4 +340,7 @@ RuntimeError: Tried to instantiate class '__path__._path', but it does not exist
 
 這些改進將使BasicRAG系統在保持其詳細、完整輸出優勢的同時，進一步提升知識關聯和延伸能力。
 
+### 2025/5/1
 
+- 發現o4-mini、R1、Qwen3 針對台大轉學考問題的輸出品質，是o4-mini的結果最好。
+- 我們這個問答系統最主要的是，要解決學生的問答問題，以及作為ai驅動輔助古漢語學習的工具。所以，問答系統最主要要包含高品質的書面資料，還有好的問答品質。
