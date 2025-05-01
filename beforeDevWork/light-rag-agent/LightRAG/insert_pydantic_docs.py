@@ -35,6 +35,10 @@ from lightrag import LightRAG
 from lightrag.llm.openai import gpt_4o_mini_complete, openai_embed
 from lightrag.kg.shared_storage import initialize_pipeline_status
 import dotenv
+import re
+
+# store the logs in the logs/lightrag_import directory
+os.makedirs("logs/lightrag_import", exist_ok=True)
 
 # Configure logging
 # Set up both file and console logging with timestamps and log levels
@@ -42,7 +46,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(f"lightrag_import_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
+        logging.FileHandler(f"logs/lightrag_import/lightrag_import_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
         logging.StreamHandler()
     ]
 )

@@ -29,6 +29,8 @@ import logging
 import traceback
 import json
 from datetime import datetime
+import uuid
+import time
 
 import dotenv
 from pydantic_ai import RunContext
@@ -39,13 +41,16 @@ from lightrag import LightRAG, QueryParam
 from lightrag.llm.openai import gpt_4o_mini_complete, openai_embed
 from lightrag.kg.shared_storage import initialize_pipeline_status
 
+# store the logs in the logs/lightrag_agent directory
+os.makedirs("logs/lightrag_agent", exist_ok=True)
+
 # Configure logging with timestamps and appropriate formats
 # Both file and console handlers are set up for comprehensive logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(f"lightrag_agent_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
+        logging.FileHandler(f"logs/lightrag_agent/lightrag_agent_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
         logging.StreamHandler()
     ]
 )

@@ -31,6 +31,7 @@ import traceback
 import json
 from datetime import datetime
 import re
+import time
 
 import dotenv
 from pydantic_ai import RunContext
@@ -44,12 +45,15 @@ from utils import (
     format_results_as_context
 )
 
+# store the logs in the logs/rag_agent directory
+os.makedirs("logs/rag_agent", exist_ok=True)
+
 # Configure logging with timestamps and appropriate formats
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(f"rag_agent_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
+        logging.FileHandler(f"logs/rag_agent/rag_agent_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
         logging.StreamHandler()
     ]
 )

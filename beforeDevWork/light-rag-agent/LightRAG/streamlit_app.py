@@ -47,13 +47,16 @@ from pydantic_ai.messages import (
 # Import from the rag_agent module for question answering
 from rag_agent import agent, RAGDeps, initialize_rag
 
+# store the logs in the logs/lightrag_streamlit directory
+os.makedirs("logs/lightrag_streamlit", exist_ok=True)
+
 # Configure logging with both file and console handlers
 # This provides comprehensive logging for debugging and auditing
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(f"lightrag_streamlit_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
+        logging.FileHandler(f"logs/lightrag_streamlit/lightrag_streamlit_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
         logging.StreamHandler()
     ]
 )

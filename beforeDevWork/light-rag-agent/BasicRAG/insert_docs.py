@@ -33,6 +33,8 @@ import logging
 import json
 import hashlib
 import re
+import shutil
+import argparse
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Any, Tuple, Optional
@@ -47,12 +49,15 @@ from utils import (
 )
 import dotenv
 
+# store the logs in the logs/rag_import directory
+os.makedirs("logs/rag_import", exist_ok=True)
+
 # Configure logging with timestamps
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(f"rag_import_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
+        logging.FileHandler(f"logs/rag_import/rag_import_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
         logging.StreamHandler()
     ]
 )
@@ -543,7 +548,6 @@ def main():
     6. Saves comprehensive metadata about the process
     """
     # Parse command line arguments
-    import argparse
     parser = argparse.ArgumentParser(description="Import text files into ChromaDB")
     parser.add_argument("--collection", default=DEFAULT_COLLECTION, 
                         help=f"Name of the ChromaDB collection (default: {DEFAULT_COLLECTION})")

@@ -16,17 +16,23 @@ import traceback
 import sys
 from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
+import uuid
+import json
+import time
 
 import chromadb
 from chromadb.utils import embedding_functions
 from more_itertools import batched
+
+# store the logs in the logs/chromeadb directory
+os.makedirs("logs/chromeadb", exist_ok=True)
 
 # Configure logging with timestamps and appropriate formats
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(f"chromadb_utils_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
+        logging.FileHandler(f"logs/chromeadb/chromadb_utils_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
         logging.StreamHandler()
     ]
 )

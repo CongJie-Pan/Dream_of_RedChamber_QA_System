@@ -50,12 +50,15 @@ from pydantic_ai.messages import (
 from rag_agent import agent, RAGDeps, get_import_metadata, DEFAULT_DB_DIR, DEFAULT_COLLECTION, DEFAULT_EMBEDDING_MODEL
 from utils import get_chroma_client, get_or_create_collection
 
+# store the logs in the logs/streamlit_app directory
+os.makedirs("logs/streamlit_app", exist_ok=True)
+
 # Configure logging with timestamps and appropriate formats
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler(f"streamlit_app_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
+        logging.FileHandler(f"logs/streamlit_app/streamlit_app_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
         logging.StreamHandler()
     ]
 )
