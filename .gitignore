@@ -8,3 +8,6 @@ venv
 
 # neglect all log files
 *.log
+
+# neglect all files in .cursor folder, cause the mcp sever may have api keys
+.cursor/
