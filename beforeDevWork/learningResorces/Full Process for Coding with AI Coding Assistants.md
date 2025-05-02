@@ -56,6 +56,27 @@ Then, create a PLANNING.md and TASK.md file.
 PLANNING.md - high level direction, scope, tech, etc.
 TASK.md-initial tasks to knock out for the project
 ````
+Another Better AI Prompt:
+````
+according to the up plaining, and search and read the project files in "beforeDevWork\light-rag-agent": 
+I need your help with the high level direction and initial tasks. 
+First, use the Brave API to search for related works and learn more about the relevant techs. And in github search for realated repo.
+Then, create a PLANNING.md and TASK.md file in "beforeDevWork\light-rag-agent"
+PLANNING.md - high level direction, scope, tech, etc.
+TASK.md-initial tasks to knock out for the project
+The PLANNING.md and TASK.md need to be written in english.
+---
+PLANNING.md
+- Purpose: High-level vision, architecture, constraints, tech stack, tools, etc.
+- Use the structure and decisions outlined in PLANNING.md.
+- Have to write the detail Style & Conventions of the project.
+---
+TASK.md
+- Purpose: Tracks current tasks, backlog, and sub-tasks.
+- Includes: Bullet list of active work, milestones, and anything discovered mid-process.
+- Update TASK.md to mark XYZ as done and add ABC as a new task.
+- Can prompt the LLM to automatically update and create tasks as well (through global rules).
+````
 
 * We can use different LLM to generate the Planning and Task md file.For better
 can use deep research. I tend to use Perplexity to finish this task. And the
