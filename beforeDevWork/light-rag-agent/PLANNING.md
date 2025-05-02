@@ -28,8 +28,16 @@ By integrating a Reasoning Agent into the existing RAG systems (LightRAG and Bas
 | Agent Module  |<->| (LightRAG/    |
 | (DeepSeek R1) |   |  BasicRAG)    |
 +---------------+   +---------------+
-                        |
-                        v
+        |               |
+        v               v
++----------------------------------+
+|   Chain of Thought Processing    |
+|   1. Question Decomposition      |
+|   2. Sequential Retrieval        |
+|   3. Content Integration         |
++----------------------------------+
+                |
+                v
 +----------------------------------+
 |     Knowledge Base/Retrieval     |
 |  (Vector Store/Knowledge Graph)  |
@@ -40,23 +48,34 @@ By integrating a Reasoning Agent into the existing RAG systems (LightRAG and Bas
 
 1. **Reasoning Agent Module**
    - Responsible for query analysis, decomposition, and retrieval strategy formulation
-   - Implements reasoning functionality based on DeepSeek R1 model
+   - Implements Chain of Thought (COT) reasoning to split questions into sub-questions
+   - Executes sequential content retrieval for each sub-question
+   - Combines retrieved content through reasoning to generate comprehensive answers
    - Includes reasoning process recording and visualization capabilities
 
 2. **RAG System Module**
    - Handles document retrieval and answer generation
    - Includes LightRAG and BasicRAG implementations
-   - Provides APIs for the reasoning agent to call
+   - Provides APIs for the reasoning agent to call for each sub-question
+   - Adapts retrieval parameters based on sub-question characteristics
 
 3. **Reasoning Agent Controller**
    - Coordinates interaction between the reasoning agent and RAG system
+   - Manages the sequential flow of sub-question processing
    - Implements processing and feedback mechanisms for reasoning results
    - Manages the execution and monitoring of the overall process
 
-4. **User Interface**
+4. **Chain of Thought Processing**
+   - Applies structured reasoning methodology to break down complex questions
+   - Determines the optimal sequence for processing sub-questions
+   - Handles dependencies between sub-questions and retrievals
+   - Integrates multiple content retrievals into a coherent answer
+
+5. **User Interface**
    - Provides intuitive interface for displaying the reasoning process
    - Supports adjustment of reasoning parameters and retrieval strategies
-   - Displays sub-problem decomposition and retrieval results
+   - Displays sub-question decomposition and retrieval results
+   - Visualizes the step-by-step reasoning chain
 
 ## 3. Technology Stack
 
@@ -97,18 +116,21 @@ matplotlib>=3.8.2         # Data visualization
    - Identify key concepts and entities
    - Determine if problem decomposition is needed
 
-2. **Problem Decomposition Phase**
-   - Break complex problems into sub-problems
-   - Determine dependencies between sub-problems
-   - Set priorities and execution order for sub-problems
+2. **Chain of Thought Decomposition Phase**
+   - Break complex problems into 3-5 focused sub-questions
+   - Determine dependencies between sub-questions
+   - Set priorities and execution order for sub-questions
 
-3. **Retrieval Strategy Phase**
-   - Select the best retrieval method for each sub-problem
-   - Adjust retrieval parameters (scope, depth, etc.)
-   - Optimize retrieval efficiency and precision
+3. **Sequential Retrieval Phase**
+   - For each sub-question:
+     - Select the best retrieval method for that specific sub-question
+     - Adjust retrieval parameters (scope, depth, etc.)
+     - Execute targeted retrieval operations
+     - Store retrieval results with contextual metadata
 
 4. **Answer Integration Phase**
-   - Integrate retrieval results from various sub-problems
+   - Combine retrieval results from all sub-questions
+   - Apply reasoning to synthesize information
    - Remove duplicate or irrelevant information
    - Generate coherent and accurate final answers
 
@@ -124,10 +146,16 @@ class ReasoningAgent:
         """Analyze the complexity, type, and key concepts of the query"""
         
     def decompose_problem(self, query: str, analysis: Dict) -> List[Dict]:
-        """Break down the problem into multiple sub-problems"""
+        """Break down the problem into multiple sub-questions using Chain of Thought reasoning"""
         
     def determine_strategy(self, subproblem: Dict) -> Dict:
-        """Determine the best retrieval strategy for sub-problems"""
+        """Determine the best retrieval strategy for each sub-question"""
+        
+    def execute_sequential_retrieval(self, subproblems: List[Dict]) -> List[Dict]:
+        """Execute retrieval operations for each sub-question in sequence"""
+        
+    def integrate_results(self, subproblem_results: List[Dict], original_query: str) -> Dict:
+        """Integrate results from multiple sub-question retrievals into a coherent answer"""
         
     def execute_reasoning(self, query: str) -> Dict:
         """Execute the complete reasoning process, returning reasoning results and retrieval strategies"""
@@ -145,8 +173,11 @@ class ReasoningPipeline:
     def process(self, query: str) -> Dict:
         """Process user queries, execute reasoning and retrieval processes"""
         
+    def process_subproblem(self, subproblem: Dict) -> Dict:
+        """Process an individual sub-question and retrieve relevant content"""
+        
     def visualize_reasoning(self, reasoning_result: Dict) -> Dict:
-        """Visualize the reasoning process"""
+        """Visualize the reasoning process and chain of thought"""
 ```
 
 #### DeepSeekModel
@@ -157,6 +188,9 @@ class DeepSeekModel:
     
     def call(self, prompt: str, options: Dict = None) -> str:
         """Call the DeepSeek R1 model"""
+        
+    def generate_chain_of_thought(self, query: str) -> List[str]:
+        """Generate chain of thought reasoning steps for a complex query"""
         
     def batch_call(self, prompts: List[str], options: Dict = None) -> List[str]:
         """Batch call the DeepSeek R1 model"""
@@ -196,6 +230,7 @@ light-rag-agent/
 │   │   ├── __init__.py
 │   │   ├── agent.py      # Reasoning agent implementation
 │   │   ├── models.py     # Model interface
+│   │   ├── cot.py        # Chain of thought implementation
 │   │   └── pipeline.py   # Reasoning pipeline
 │   ├── rag_agent.py      # Original RAG agent
 │   ├── streamlit_app.py  # Interface application
@@ -205,6 +240,7 @@ light-rag-agent/
 │   │   ├── __init__.py
 │   │   ├── agent.py      # Reasoning agent implementation
 │   │   ├── models.py     # Model interface
+│   │   ├── cot.py        # Chain of thought implementation
 │   │   └── pipeline.py   # Reasoning pipeline
 │   ├── rag_agent.py      # Original RAG agent
 │   ├── streamlit_app.py  # Interface application
@@ -317,7 +353,7 @@ light-rag-agent/
 | Phase | Time | Main Goals | Deliverables |
 |------|------|---------|-----------|
 | Environment Preparation | 2 weeks | Establish core framework and infrastructure | DeepSeek R1 interface, reasoning agent basic infrastructure |
-| Reasoning Function Development | 3 weeks | Implement core reasoning and problem decomposition functions | Reasoning agent module, problem decomposition engine |
+| Reasoning Function Development | 3 weeks | Implement core reasoning and problem decomposition functions | Chain of Thought module, problem decomposition engine |
 | Integration and Optimization | 2 weeks | Integrate reasoning agent with RAG system | Complete reasoning-enhanced RAG system |
 | Evaluation and Improvement | 2 weeks | Evaluate system performance and optimize | Performance report, optimized system |
 | Documentation and Deployment | 1 week | Complete documentation and deployment preparation | Deployment guide, user documentation, release version |
