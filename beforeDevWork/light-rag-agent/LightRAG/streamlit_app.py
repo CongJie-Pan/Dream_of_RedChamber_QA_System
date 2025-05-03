@@ -12,6 +12,7 @@ Features:
 - Support for switching between different knowledge bases
 - Detailed error handling and logging
 - Bilingual support (Chinese and English)
+- Reasoning agent visualization for complex queries
 
 Usage:
     streamlit run streamlit_app.py
@@ -47,6 +48,9 @@ from pydantic_ai.messages import (
 # Import from the rag_agent module for question answering
 from rag_agent import agent, RAGDeps, initialize_rag
 
+# Import the reasoning components
+from reasoning import ReasoningAgent, ReasoningPipeline, DeepSeekModel, ChainOfThought
+
 # store the logs in the logs/lightrag_streamlit directory
 os.makedirs("logs/lightrag_streamlit", exist_ok=True)
 
@@ -69,7 +73,7 @@ load_dotenv()
 # This should match the directory used in the insert_pydantic_docs.py script
 DEFAULT_WORKING_DIR = "./basicSinogyAsk"
 
-async def get_agent_deps(working_dir=DEFAULT_WORKING_DIR):
+async def get_agent_deps(working_dir=DEFAULT_WORKING_DIR, use_reasoning=False):
     """
     Create a LightRAG instance and the agent dependencies.
     
@@ -78,6 +82,7 @@ async def get_agent_deps(working_dir=DEFAULT_WORKING_DIR):
     
     Args:
         working_dir (str): Working directory for the LightRAG instance
+        use_reasoning (bool): Whether to include reasoning capabilities
     
     Returns:
         RAGDeps: The dependencies required by the agent to perform RAG operations
@@ -90,9 +95,34 @@ async def get_agent_deps(working_dir=DEFAULT_WORKING_DIR):
         logger.info(f"Initializing LightRAG with working directory: {working_dir}")
         lightrag = await initialize_rag(working_dir)
         
-        # Return the dependencies object needed by the agent
+        # Create the dependencies object needed by the agent
         logger.info("LightRAG initialized successfully, creating agent dependencies")
-        return RAGDeps(lightrag=lightrag)
+        deps = RAGDeps(lightrag=lightrag)
+        
+        # Initialize reasoning components if requested
+        if use_reasoning:
+            logger.info("Initializing reasoning components")
+            try:
+                # Create reasoning agent
+                model = DeepSeekModel()
+                reasoning_agent = ReasoningAgent(model=model)
+                
+                # Create reasoning pipeline with the RAG system
+                reasoning_pipeline = ReasoningPipeline(
+                    reasoning_agent=reasoning_agent,
+                    rag_system=lightrag,
+                    enable_caching=True
+                )
+                
+                # Add reasoning pipeline to dependencies
+                deps.reasoning_pipeline = reasoning_pipeline
+                logger.info("Reasoning components initialized successfully")
+            except Exception as reasoning_err:
+                logger.error(f"Error initializing reasoning components: {reasoning_err}")
+                logger.error(f"Error details: {traceback.format_exc()}")
+                st.warning("推理模組初始化失敗，將使用基本RAG模式運行。")  # Reasoning module initialization failed, will run in basic RAG mode
+        
+        return deps
     except Exception as e:
         # Provide detailed error information for debugging
         error_details = traceback.format_exc()
@@ -174,6 +204,135 @@ def display_message_part(part):
         with st.expander("Tool Return (Debug)", expanded=False):
             st.markdown(f"**Result:** {part.content}")
 
+def display_reasoning_trace(reasoning_result):
+    """
+    Display the reasoning trace visualization in the Streamlit UI.
+    
+    Args:
+        reasoning_result: The result from the reasoning pipeline
+    """
+    if not reasoning_result:
+        return
+    
+    # Create tabs for different visualization views
+    trace_tab, graph_tab, steps_tab = st.tabs(["推理過程", "依賴關係圖", "步驟詳情"])
+    
+    # Main trace view
+    with trace_tab:
+        if "visualization" in reasoning_result and "text" in reasoning_result["visualization"]:
+            st.markdown(reasoning_result["visualization"]["text"])
+        else:
+            st.write("無可視化內容")  # No visualization content
+    
+    # Interactive graph view
+    with graph_tab:
+        if "visualization" in reasoning_result and "interactive_data" in reasoning_result["visualization"]:
+            # Get interactive data
+            graph_data = reasoning_result["visualization"]["interactive_data"]
+            
+            if "html" in graph_data:
+                # Display HTML visualization
+                st.components.v1.html(graph_data["html"], height=600)
+            elif "image" in graph_data:
+                # Display image
+                st.image(graph_data["image"])
+            else:
+                st.write("無依賴關係圖")  # No dependency graph
+        else:
+            st.write("無互動式圖表")  # No interactive chart
+    
+    # Detailed steps view
+    with steps_tab:
+        if "sub_questions" in reasoning_result:
+            for i, sq in enumerate(reasoning_result["sub_questions"]):
+                with st.expander(f"步驟 {i+1}: {sq['question']}", expanded=False):
+                    st.write(f"**相關度:** {sq.get('relevance', 'N/A')}")
+                    
+                    if sq.get('dependencies'):
+                        st.write(f"**依賴關係:** {', '.join(map(str, sq['dependencies']))}")
+                    
+                    # Show retrieval results for this sub-question
+                    sq_id = str(sq.get('id', i+1))
+                    if "sub_question_results" in reasoning_result and sq_id in reasoning_result["sub_question_results"]:
+                        results = reasoning_result["sub_question_results"][sq_id]
+                        st.write(f"**檢索結果:**")
+                        st.code(results, language="markdown")
+        else:
+            st.write("無分解步驟")  # No decomposition steps
+
+async def run_agent_with_reasoning(user_input, working_dir=DEFAULT_WORKING_DIR, use_reasoning=False):
+    """
+    Run the agent with reasoning capabilities when appropriate.
+    
+    This function:
+    1. Determines if reasoning should be used based on query complexity
+    2. Uses reasoning pipeline for complex queries
+    3. Falls back to basic RAG for simple queries
+    
+    Args:
+        user_input (str): The user's question
+        working_dir (str): Working directory for the LightRAG instance
+        use_reasoning (bool): Whether reasoning should be considered
+        
+    Returns:
+        dict: Results including answer and reasoning trace (if applicable)
+    """
+    # Verify the working directory exists before proceeding
+    if not os.path.exists(working_dir):
+        error_msg = f"Working directory {working_dir} not found. Please run insert_pydantic_docs.py first."
+        logger.error(error_msg)
+        st.error(error_msg)
+        raise FileNotFoundError(error_msg)
+    
+    logger.info(f"Running agent with input: {user_input}")
+    
+    # Check if reasoning pipeline is available
+    if use_reasoning and hasattr(st.session_state.agent_deps, 'reasoning_pipeline'):
+        # Analyze the query to decide if reasoning is needed
+        reasoning_agent = st.session_state.agent_deps.reasoning_pipeline.reasoning_agent
+        
+        # Do quick analysis to check if this is a complex query
+        logger.info("Analyzing query complexity")
+        try:
+            analysis = reasoning_agent.analyze_query(user_input)
+            requires_reasoning = (
+                analysis.get("requires_decomposition", False) or 
+                analysis.get("complexity", "") == "complex" or
+                (analysis.get("complexity", "") == "moderate" and "比較" in user_input)
+            )
+            
+            if requires_reasoning:
+                # Use reasoning pipeline for complex queries
+                st.info("此問題較為複雜，正在使用推理功能...")  # This question is complex, using reasoning capabilities...
+                logger.info("Using reasoning pipeline for complex query")
+                
+                # Run the reasoning pipeline
+                reasoning_result = st.session_state.agent_deps.reasoning_pipeline.process(user_input)
+                
+                # Return the results
+                return {
+                    "answer": reasoning_result.get("answer", {"answer": "無法獲得答案"}),
+                    "reasoning_result": reasoning_result,
+                    "used_reasoning": True
+                }
+        except Exception as reasoning_err:
+            logger.error(f"Error in reasoning analysis: {reasoning_err}")
+            logger.error(f"Error details: {traceback.format_exc()}")
+            st.warning("推理模組分析失敗，降級使用基本RAG模式。")  # Reasoning module analysis failed, downgrading to basic RAG mode.
+    
+    # For simple queries or if reasoning is unavailable, use the regular agent
+    logger.info("Using basic RAG for query")
+    result = await agent.run(
+        user_input, deps=st.session_state.agent_deps, message_history=st.session_state.messages
+    )
+    
+    # Add the new messages to the chat history for context preservation
+    st.session_state.messages.extend(result.new_messages())
+    
+    return {
+        "answer": {"answer": result.data},
+        "used_reasoning": False
+    }
 
 async def run_agent_with_streaming(user_input, working_dir=DEFAULT_WORKING_DIR):
     """
@@ -246,6 +405,22 @@ async def main():
         st.title("📚 系統設定")  # System Settings
         working_dir = st.text_input("知識庫目錄", DEFAULT_WORKING_DIR)  # Knowledge Base Directory
         
+        # Add option to enable/disable reasoning
+        use_reasoning = st.checkbox("啟用思考推理能力", value=True)  # Enable reasoning capabilities
+        
+        st.divider()
+        
+        # Add reasoning settings if enabled
+        if use_reasoning:
+            st.subheader("推理設定")  # Reasoning Settings
+            reasoning_mode = st.radio(
+                "推理模式",  # Reasoning Mode
+                options=["自動", "總是使用", "從不使用"],  # Auto, Always use, Never use
+                index=0
+            )
+            
+            st.divider()
+        
         # If directory is changed, we need to reset the session
         if "current_working_dir" in st.session_state and working_dir != st.session_state.current_working_dir:
             if st.button("重新初始化系統"):  # Reinitialize System
@@ -308,21 +483,21 @@ async def main():
         2. 在側邊欄選擇知識庫目錄
         3. 在下方輸入框中提問
         """)
-        # Translation:
-        # This is a RAG (Retrieval-Augmented Generation) based intelligent Q&A system
-        # that can answer questions about imported text data.
-        #
-        # System features:
-        # - Uses LightRAG for knowledge retrieval
-        # - Uses OpenAI GPT models for response generation
-        # - Supports Chinese and English Q&A
-        # - Can handle various text sources
-        #
-        # Usage:
-        # 1. Use insert_pydantic_docs.py to import text data into the knowledge base
-        # 2. Select knowledge base directory in the sidebar
-        # 3. Ask questions in the input box below
-
+        
+        # Add information about reasoning capabilities
+        if use_reasoning:
+            st.markdown("""
+            ### 思考推理能力
+            
+            本系統具備思考推理能力，可以：
+            - 將複雜問題拆解為多個子問題
+            - 為每個子問題找到相關資訊
+            - 整合所有資訊形成全面回答
+            - 顯示完整的推理過程
+            
+            當系統檢測到複雜問題時，會自動啟用推理功能。你也可以在側邊欄設定中修改推理模式。
+            """)
+    
     # Store the current working directory in session state for change detection
     if "current_working_dir" not in st.session_state:
         st.session_state.current_working_dir = working_dir
@@ -335,7 +510,10 @@ async def main():
     if "agent_deps" not in st.session_state:
         with st.spinner("初始化 RAG 系統..."):  # Initializing RAG system...
             try:
-                st.session_state.agent_deps = await get_agent_deps(working_dir)
+                st.session_state.agent_deps = await get_agent_deps(
+                    working_dir, 
+                    use_reasoning=use_reasoning
+                )
                 st.success("RAG 系統初始化成功!")  # RAG system initialized successfully!
             except Exception as e:
                 st.error(f"初始化 RAG 系統失敗: {str(e)}")  # Failed to initialize RAG system
@@ -358,24 +536,34 @@ async def main():
         # Display user prompt in the UI
         with st.chat_message("user"):
             st.markdown(user_input)
-
-        # Display the assistant's response with streaming
-        with st.chat_message("assistant"):
-            # Create a placeholder for the streaming text
-            message_placeholder = st.empty()
-            full_response = ""
-            
+        
+        # Determine if we should use reasoning based on user settings
+        should_use_reasoning = use_reasoning and (
+            reasoning_mode == "總是使用" or 
+            (reasoning_mode == "自動" and len(user_input) > 20)
+        )
+        
+        # For complex queries with reasoning enabled, use non-streaming approach
+        if should_use_reasoning:
             try:
-                # Consume the async generator to get streaming text chunks
-                generator = run_agent_with_streaming(user_input, working_dir)
-                async for message in generator:
-                    full_response += message
-                    # Display with a blinking cursor (▌) to indicate typing
-                    message_placeholder.markdown(full_response + "▌")
+                with st.chat_message("assistant"):
+                    with st.spinner("思考分析中..."):  # Thinking and analyzing...
+                        result = await run_agent_with_reasoning(
+                            user_input, 
+                            working_dir,
+                            use_reasoning=True
+                        )
+                    
+                    # Display the answer
+                    st.markdown(result["answer"]["answer"])
+                    
+                    # If reasoning was used, display the trace
+                    if result.get("used_reasoning") and "reasoning_result" in result:
+                        st.divider()
+                        st.subheader("思考推理過程")  # Reasoning Process
+                        display_reasoning_trace(result["reasoning_result"])
                 
-                # Final response without the cursor
-                message_placeholder.markdown(full_response)
-                logger.info("Response completed successfully")
+                logger.info("Response with reasoning completed successfully")
             except Exception as e:
                 # Handle and display errors
                 error_details = traceback.format_exc()
@@ -383,11 +571,36 @@ async def main():
                 logger.error(error_msg)
                 logger.error(f"Error details: {error_details}")
                 st.error(error_msg)
+        else:
+            # For simple queries or when reasoning is disabled, use streaming
+            with st.chat_message("assistant"):
+                # Create a placeholder for the streaming text
+                message_placeholder = st.empty()
+                full_response = ""
                 
-                # If directory doesn't exist, provide specific guidance
-                if not os.path.exists(working_dir):
-                    st.error(f"工作目錄不存在: {working_dir}")  # Working directory doesn't exist
-                    st.error("請先執行 insert_pydantic_docs.py 導入數據")  # Please run the import script first
+                try:
+                    # Consume the async generator to get streaming text chunks
+                    generator = run_agent_with_streaming(user_input, working_dir)
+                    async for message in generator:
+                        full_response += message
+                        # Display with a blinking cursor (▌) to indicate typing
+                        message_placeholder.markdown(full_response + "▌")
+                    
+                    # Final response without the cursor
+                    message_placeholder.markdown(full_response)
+                    logger.info("Response completed successfully")
+                except Exception as e:
+                    # Handle and display errors
+                    error_details = traceback.format_exc()
+                    error_msg = f"生成回應時出錯: {str(e)}"  # Error generating response
+                    logger.error(error_msg)
+                    logger.error(f"Error details: {error_details}")
+                    st.error(error_msg)
+                    
+                    # If directory doesn't exist, provide specific guidance
+                    if not os.path.exists(working_dir):
+                        st.error(f"工作目錄不存在: {working_dir}")  # Working directory doesn't exist
+                        st.error("請先執行 insert_pydantic_docs.py 導入數據")  # Please run the import script first
 
 
 # Application entry point
