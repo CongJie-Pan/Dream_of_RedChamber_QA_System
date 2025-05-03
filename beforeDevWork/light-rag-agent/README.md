@@ -19,14 +19,20 @@ The primary goal of this project is to showcase the power and efficiency of Ligh
 ### Prerequisites
 - Python 3.11+
 - OpenAI API key
+- DeepSeek API key (optional, for reasoning module)
 
 ### Setup
 
 1. Clone this repository
 
-2. Create a `.env` file in both the `BasicRAG` and `LightRAG` directories (or whichever you want to use) with your OpenAI API key:
+2. Create a `.env` file in both the `BasicRAG` and `LightRAG` directories (or whichever you want to use) with your API keys:
    ```
-   OPENAI_API_KEY=your_api_key_here
+   # Required for basic RAG functionality
+   OPENAI_API_KEY=your_openai_api_key_here
+   
+   # Required for reasoning module (optional)
+   DEEPSEEK_API_KEY=your_deepseek_api_key_here
+   DEEPSEEK_API_BASE=https://api.deepseek.com/v1  # Optional, default shown
    ```
 
 3. Set up a virtual environment and install dependencies:
@@ -50,6 +56,20 @@ The primary goal of this project is to showcase the power and efficiency of Ligh
    pip install -r requirements.txt
    ```
 
+### Environment Variables
+
+The reasoning module supports the following environment variables:
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `OPENAI_API_KEY` | OpenAI API key for RAG and fallback reasoning | *(required)* |
+| `DEEPSEEK_API_KEY` | DeepSeek API key for reasoning module | *(optional)* |
+| `DEEPSEEK_API_BASE` | DeepSeek API base URL | `https://api.deepseek.com/v1` |
+| `REASONING_CACHE_ENABLED` | Enable caching for reasoning | `true` |
+| `REASONING_LOG_LEVEL` | Log level for reasoning module | `INFO` |
+
+If `DEEPSEEK_API_KEY` is not available, the system will automatically fall back to using the OpenAI API with `gpt-4o-mini` model for reasoning operations.
+
 ## Running the Implementations
 
 ### LightRAG (Most Powerful)
@@ -71,6 +91,34 @@ The primary goal of this project is to showcase the power and efficiency of Ligh
    streamlit run streamlit_app.py
    ```
    This provides a chat interface where you can ask questions about Pydantic AI.
+
+### Using the Reasoning Module in LightRAG
+
+The Streamlit app now integrates the Reasoning module, offering advanced capabilities for complex queries:
+
+1. **Enable Reasoning Capabilities**:
+   The Streamlit interface has a checkbox in the sidebar to enable/disable reasoning.
+
+2. **Reasoning Modes**:
+   - **Auto**: Automatically determines if reasoning is needed based on query complexity
+   - **Always Use**: Uses reasoning for all queries regardless of complexity
+   - **Never Use**: Disables reasoning even for complex queries
+
+3. **Visualizing the Reasoning Process**:
+   When reasoning is used, the interface displays:
+   - The complete reasoning process with step-by-step analysis
+   - A dependency graph showing relationships between sub-questions
+   - Detailed information about each reasoning step
+
+4. **Running with Reasoning**:
+   ```bash
+   cd LightRAG
+   streamlit run streamlit_app.py
+   ```
+   Then enable reasoning in the sidebar and ask complex questions like:
+   ```
+   "Compare the differences between vector databases and traditional databases for RAG applications."
+   ```
 
 ### BasicRAG
 
@@ -110,6 +158,15 @@ The primary goal of this project is to showcase the power and efficiency of Ligh
 - **BasicRAG**: Requires more boilerplate code for setting up collections and processing documents
 - **LightRAG**: Offers a more concise API with fewer lines of code needed
 
+### Reasoning Capabilities
+- **BasicRAG**: Uses a straightforward retrieval approach without complex reasoning
+- **LightRAG**: Features an advanced reasoning system with:
+  - Chain of Thought decomposition of complex questions
+  - Sub-question dependency tracking and resolution
+  - Automatic retrieval strategy optimization
+  - Visual representation of the reasoning process
+  - Parallel processing of independent sub-questions
+
 ## Project Structure
 
 ### LightRAG
@@ -117,15 +174,16 @@ The primary goal of this project is to showcase the power and efficiency of Ligh
 - `LightRAG/insert_pydantic_docs.py`: Script to fetch and process documentation
 - `LightRAG/streamlit_app.py`: Interactive web interface
 - `LightRAG/reasoning/`: Reasoning agent module with Chain of Thought capabilities
-  - `agent.py`: Reasoning agent implementation
-  - `cot.py`: Chain of thought implementation
-  - `models.py`: DeepSeek R1 model interface
-  - `pipeline.py`: Reasoning pipeline coordination
-  - `parallel.py`: Parallel processing for sub-questions
-  - `visualization.py`: Reasoning process visualization
-  - `settings.py`: Configuration management
-  - `adaptive_concurrency.py`: Dynamic concurrency control
-  - `priority_scheduler.py`: Prioritized sub-question processing
+  - `agent.py`: Reasoning agent implementation with query analysis and decomposition
+  - `cot.py`: Chain of thought implementation for breaking down complex questions
+  - `models.py`: DeepSeek R1 model interface with fallback to OpenAI
+  - `pipeline.py`: Reasoning pipeline coordination and result integration
+  - `parallel.py`: Parallel processing for sub-questions with dependency management
+  - `visualization.py`: Reasoning process visualization with interactive diagrams
+  - `config.py`: Configuration and settings management with environment variable support
+  - `prompts.json`: Prompt templates for different reasoning operations
+  - `adaptive_concurrency.py`: Dynamic concurrency control based on system load
+  - `priority_scheduler.py`: Prioritized sub-question processing for time-sensitive queries
 
 ### BasicRAG
 - `BasicRAG/rag_agent.py`: Pydantic AI agent using traditional RAG with ChromaDB
@@ -148,6 +206,61 @@ To compare the performance of both implementations:
 4. Note the differences in response time and accuracy
 
 LightRAG typically provides more contextually relevant answers with less configuration, demonstrating the advantages of its enhanced knowledge graph capabilities and optimized retrieval mechanisms.
+
+## Reasoning Module Architecture
+
+The reasoning module enhances query processing through a sophisticated Chain of Thought approach:
+
+### Core Components
+
+1. **ReasoningAgent**: Analyzes query complexity and determines if decomposition is needed
+   - Performs query analysis to determine complexity and type
+   - Decomposes complex queries into manageable sub-questions
+   - Tracks dependencies between sub-questions
+
+2. **DeepSeekModel**: Provides AI reasoning capabilities
+   - Interfaces with DeepSeek API for advanced reasoning
+   - Includes automatic fallback to OpenAI when needed
+   - Provides batch processing for efficient API usage
+
+3. **ReasoningPipeline**: Coordinates the entire reasoning process
+   - Manages the flow between reasoning and retrieval
+   - Optimizes retrieval strategies for each sub-question
+   - Integrates results into a coherent answer
+
+4. **Visualization**: Renders the reasoning process for transparency
+   - Generates interactive diagrams of the reasoning process
+   - Provides text, HTML, and markdown visualizations
+   - Supports dependency graph visualization
+
+### Reasoning Process
+
+1. **Query Analysis**: The system analyzes the query to determine:
+   - Complexity level (simple, moderate, complex)
+   - Question type (factoid, comparative, exploratory, etc.)
+   - Need for decomposition
+
+2. **Decomposition**: Complex queries are broken down into:
+   - 3-5 focused sub-questions
+   - Logical dependencies between questions
+   - Sequential processing order
+
+3. **Retrieval Strategy**: For each sub-question:
+   - Optimal retrieval parameters are determined
+   - Knowledge sources are selected based on question type
+   - Results are cached for efficiency
+
+4. **Result Integration**: All sub-question results are:
+   - Combined according to dependency structure
+   - Synthesized into a comprehensive answer
+   - Structured for clarity and completeness
+
+### Benefits
+
+- **Improved Answer Quality**: Breaking complex questions into parts yields more thorough answers
+- **Transparency**: Users can see exactly how the system arrived at its answer
+- **Efficiency**: Targeted retrieval for each sub-question reduces processing load
+- **Adaptability**: Different retrieval strategies for different types of questions
 
 ## Documentation Standards
 
@@ -277,36 +390,6 @@ def process_query(query: str, options: Dict = None) -> Dict:
      - Guide for implementing user feedback collection
      - Instructions for adding visualization components
      - Examples of interface customization for specific use cases
-     
-  6. **Reasoning Module Visualization Interface**
-     - **Running the Interface**: 
-       ```bash
-       cd LightRAG
-       streamlit run reasoning/streamlit_app.py
-       ```
-     - **Interface Features**:
-       - Complex question decomposition visualization
-       - Chain of thought reasoning trace exploration
-       - Dependency graph visualization of sub-questions
-       - Step-by-step reasoning process exploration
-       
-     - **Using the Reasoning Interface**:
-       1. Enter a complex question in the text area
-       2. Click "開始推理分析" to start the reasoning process
-       3. Explore the question analysis, showing complexity and type
-       4. View the decomposed sub-questions and their dependencies
-       5. Examine the retrieval results for each sub-question
-       6. See the final integrated answer
-       7. Download the complete reasoning trace as JSON for analysis
-       
-     - **Example Questions**:
-       - "試舉例說明近百年間陸續出土的簡帛文獻，為群經與諸子揭露何許重要的學術訊息？"
-       - "自元代將四書納入科舉以來，其地位幾乎與五經平起平坐。然而，其中《論語》和《孟子》二書歷代學者是否將其視為「經」，卻有不一樣的描述。請以漢、唐、宋等三個時期，舉出立證，比較二書入經過程之異同。 "
-       - "試參考以下四則文字，據以評述各家史書(宜就己意加以闡說，不得流為語譯)。
-(1) 苟悅省前漢之繁而為漢紀袁宏剪後漢之穢而為編年
-(2) 晉史始有十八家之制作而成於唐臣之纂錄然好採詭異語多駢儷
-(3) 李延壽之南北史司馬公喜其叙事簡勁賢於正史但恨其不作志書使制度不見耳
-(4) 歐陽修作五代史立例精密取法春秋文簡而能暢事增而不費其為論必以鳴呼發之蓋以亂世之書故致其慨嘆之意也"
 
 - **Frequently Asked Questions**
   - Common issues and solutions
