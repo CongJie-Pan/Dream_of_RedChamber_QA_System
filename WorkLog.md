@@ -344,3 +344,9 @@ RuntimeError: Tried to instantiate class '__path__._path', but it does not exist
 
 - 發現o4-mini、R1、Qwen3 針對台大轉學考問題的輸出品質，是o4-mini的結果最好。
 - 我們這個問答系統最主要的是，要解決學生的問答問題，以及作為ai驅動輔助古漢語學習的工具。所以，問答系統最主要要包含高品質的書面資料，還有好的問答品質。
+
+### 2025/5/3
+
+- 完成reasoning 模組的建構
+- reasoning 模組每個program都還要進行單元測試，包括streamlit_app.py
+- 可以將單元測試的程式，將錯誤資訊，都要寫到一個log檔案
