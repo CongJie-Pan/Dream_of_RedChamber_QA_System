@@ -272,7 +272,7 @@ light-rag-agent/
 
 - **Code Documentation**
   - Use Sphinx to generate API documentation
-  - Provide detailed explanations for each module, class, and method
+  - Provide detailed explanations for each files, module, class, and method
   - Include usage examples and notes
 
 - **User Documentation**
