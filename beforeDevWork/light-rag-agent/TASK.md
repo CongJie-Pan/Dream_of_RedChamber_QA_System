@@ -109,9 +109,9 @@
   - [x] Create basic scheduling for sub-questions (implementation in ParallelProcessor)
   - [x] Develop batching strategies for API calls (implementation in parallel.py)
   - [x] Implement concurrency control (via MAX_CONCURRENT_TASKS)
-  - [ ] Implement priority-based scheduling for time-sensitive questions
-  - [ ] Develop adaptive concurrency based on system load monitoring
-  - [ ] Create intelligent API call batching based on token usage patterns
+  - [x] Implement priority-based scheduling for time-sensitive questions (implementation in PriorityScheduler)
+  - [x] Develop adaptive concurrency based on system load monitoring (implementation in AdaptiveConcurrencyManager)
+  - [x] Create intelligent API call batching based on token usage patterns (implementation in AdaptiveBatchProcessor)
 
 - [x] **Performance Monitoring System**
   - [x] Create performance metrics collection (in RetrievalMetadata)
@@ -138,6 +138,9 @@
 - [x] Interactive reasoning visualization (April 27, 2024)
 - [x] User preferences persistence system (April 27, 2024)
 - [x] Guided walkthrough for complex reasoning (April 27, 2024)
+- [x] Priority-based scheduling for time-sensitive questions (April 28, 2024)
+- [x] Adaptive concurrency based on system load monitoring (April 28, 2024)
+- [x] Intelligent API call batching based on token usage patterns (April 28, 2024)
 
 ## Discovered Requirements and Issues
 
@@ -155,4 +158,6 @@
 - Need to handle edge cases where the DeepSeek model fails to generate proper sub-questions 
 - Consider implementing a system health monitoring dashboard for production deployment
 - Need to enhance reasoning trace visualization with more interactive elements
-- Consider adding a model fallback mechanism when primary model is unavailable 
+- Consider adding a model fallback mechanism when primary model is unavailable
+- Need to develop proper tuning mechanisms for adaptive concurrency based on different hardware capabilities
+- Consider implementing end-to-end testing for the priority scheduling system 
