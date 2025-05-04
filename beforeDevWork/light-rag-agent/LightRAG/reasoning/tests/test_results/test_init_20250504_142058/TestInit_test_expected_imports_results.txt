@@ -1,0 +1,24 @@
+ERROR: Error in test_expected_imports
+Exception: No module named 'LightRAG'
+Traceback: Traceback (most recent call last):
+  File "D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-agent\LightRAG\reasoning\tests\_init_Py\test_init.py", line 75, in test_expected_imports
+    from LightRAG.reasoning import DeepSeekModel, ChainOfThought, ReasoningAgent, ReasoningPipeline
+ModuleNotFoundError: No module named 'LightRAG'
+
+--------------------------------------------------------------------------------
+
+Phase: call
+Outcome: failed
+Failure Information:
+self = <_init_Py.test_init.TestInit testMethod=test_expected_imports>
+
+    def test_expected_imports(self):
+        """Test case for expected use - all classes can be imported properly."""
+        try:
+            # Import the module
+>           from LightRAG.reasoning import DeepSeekModel, ChainOfThought, ReasoningAgent, ReasoningPipeline
+E           ModuleNotFoundError: No module named 'LightRAG'
+
+test_init.py:75: ModuleNotFoundError
+--------------------------------------------------------------------------------
+

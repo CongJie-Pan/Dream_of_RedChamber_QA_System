@@ -1,0 +1,97 @@
+ERROR: Unexpected error in test_import_failure
+Exception: reload() argument must be a module
+Traceback: Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 103, in reload
+    name = module.__spec__.name
+           ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute '__spec__'. Did you mean: '__doc__'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 106, in reload
+    name = module.__name__
+           ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute '__name__'. Did you mean: '__ne__'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-agent\LightRAG\reasoning\tests\_init_Py\test_init.py", line 122, in test_import_failure
+    importlib.reload(sys.modules.get('LightRAG.reasoning', None))
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 108, in reload
+    raise TypeError("reload() argument must be a module")
+TypeError: reload() argument must be a module
+
+--------------------------------------------------------------------------------
+
+Phase: call
+Outcome: failed
+Failure Information:
+def reload(module):
+        """Reload the module and return it.
+    
+        The module must have been successfully imported before.
+    
+        """
+        try:
+>           name = module.__spec__.name
+E           AttributeError: 'NoneType' object has no attribute '__spec__'. Did you mean: '__doc__'?
+
+C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:103: AttributeError
+
+During handling of the above exception, another exception occurred:
+
+    def reload(module):
+        """Reload the module and return it.
+    
+        The module must have been successfully imported before.
+    
+        """
+        try:
+            name = module.__spec__.name
+        except AttributeError:
+            try:
+>               name = module.__name__
+E               AttributeError: 'NoneType' object has no attribute '__name__'. Did you mean: '__ne__'?
+
+C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:106: AttributeError
+
+During handling of the above exception, another exception occurred:
+
+self = <_init_Py.test_init.TestInit testMethod=test_import_failure>
+
+    @patch.dict('sys.modules')
+    def test_import_failure(self):
+        """Test failure case - when an imported module raises an ImportError."""
+        try:
+            # Simulate an ImportError when importing models
+            sys.modules['LightRAG.reasoning.models'] = MagicMock(side_effect=ImportError("Mocked ImportError"))
+    
+            # Reload the module to simulate the import error
+            with self.assertRaises(ImportError):
+                # This should raise an ImportError because models.py can't be imported
+                import importlib
+>               importlib.reload(sys.modules.get('LightRAG.reasoning', None))
+
+test_init.py:122: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def reload(module):
+        """Reload the module and return it.
+    
+        The module must have been successfully imported before.
+    
+        """
+        try:
+            name = module.__spec__.name
+        except AttributeError:
+            try:
+                name = module.__name__
+            except AttributeError:
+>               raise TypeError("reload() argument must be a module")
+E               TypeError: reload() argument must be a module
+
+C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:108: TypeError
+--------------------------------------------------------------------------------
+

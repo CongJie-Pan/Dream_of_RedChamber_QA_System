@@ -1,0 +1,24 @@
+ERROR: Error in test_all_variable
+Exception: No module named 'LightRAG'
+Traceback: Traceback (most recent call last):
+  File "D:\AboutCoding\PKUDH_Project\DreamOf_RedMansions\QA_System\beforeDevWork\light-rag-agent\LightRAG\reasoning\tests\_init_Py\test_init.py", line 96, in test_all_variable
+    import LightRAG.reasoning as reasoning
+ModuleNotFoundError: No module named 'LightRAG'
+
+--------------------------------------------------------------------------------
+
+Phase: call
+Outcome: failed
+Failure Information:
+self = <_init_Py.test_init.TestInit testMethod=test_all_variable>
+
+    def test_all_variable(self):
+        """Test edge case - verify the __all__ variable contains the expected classes."""
+        try:
+            # Import the module
+>           import LightRAG.reasoning as reasoning
+E           ModuleNotFoundError: No module named 'LightRAG'
+
+test_init.py:96: ModuleNotFoundError
+--------------------------------------------------------------------------------
+
