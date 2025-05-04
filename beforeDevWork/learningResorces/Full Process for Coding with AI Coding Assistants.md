@@ -272,6 +272,25 @@ Unit tests can be annoying and LLMs aren’t perfect writing them either, but tr
 - Always “mock” calls to services like the DB and LLM so you aren’t interacting with anything “for real”.  
 - For each function, test at least one successful scenario, one intentional failure (to ensure proper error handling), and one edge case.
 
+- Example create testing prompt:
+```
+🧪 Testing & Reliability
+- Always create test unit tests for new features (functions, classes, routes, etc).
+- After updating any logic, check whether existing unit tests need to be updated. If so, do it.
+- Tests should reside in a `/tests` directory, and within it, create a subdirectory named after the testing file, reflecting the main application structure.
+  - Include at least:
+    - 1 test for expected use
+    - 1 edge case
+    - 1 failure case
+- Error Handling and Logging: Implement a mechanism to catch any runtime errors during the execution of tests. Ensure that these errors are logged in a detailed manner, including the error message and stack trace, into a document for later review. Store the output to the "test_results" folder like: <your test result folder> to be the txt file.
+- Organized Output Storage: Modify the code to create a directory named after each testing unit (e.g., the test module or class name) before storing any output. The output, including test results and error logs, should be saved in the corresponding directory to maintain an organized structure. Each test run should have a unique timestamped subdirectory to prevent overwriting previous results.
+---
+create tests for the <Your code name>
+---
+your code path : 
+---
+```
+
 ---
 
 ## **8\. 🐳 Docker Deployment (Supabase MCP Example)**
