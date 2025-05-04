@@ -358,4 +358,5 @@ RuntimeError: Tried to instantiate class '__path__._path', but it does not exist
 - 單元測試檔案，要先把一個檔案debug完才能進到下一個檔案。盡量不要一次都把單元測試檔案都建立完了，因為前面檔案的問題解決了，或許後面的問題也會解決。(但因為單元測試只是測試，和本身的code沒影響，所以也可以都把單元測試檔案都建立完了)
 - 系統分析與設計的部分可以給Cursor產出(基於lightRAG的方式)，以下都要有詳細的繁體中文詳細完整說明，包括一、系統流程圖；二、系統架構圖(需要包含專案的詳細風格與慣例 Style & Conventions)；三、介面示意圖；四、ER-Model；五、使用技術；六、甘特圖
 - 然後寫完了緒論與系統設計與分析後，給Manus寫市場分析的部分。
+- 可以先給Cursur 閱讀緒論的部分，然後再輸出系統分析與設計的內容，記得要先建立md文檔，然後建立Task.md，將此兩個檔案和code移植到IM-senior-project繼續專案。
 
