@@ -31,7 +31,7 @@ These are the high-level principles that guide how to work with AI tools efficie
 
 ## **2\. 🧠 Planning & Task Management**
 
-Before writing any code, it’s important to have a conversation with the LLM to plan the initial scope and tasks for the project. Scope goes into `PLANNING.md`, and specific tasks go into `TASK.md`. These should be updated by the AI coding assistant as the project progresses.
+BBefore writing any code, it’s important to have a conversation with the LLM to plan the initial scope and tasks for the project. Define detailed project objectives, features, and unique aspects of the project, as well as create a project flowchart. After evaluating technical feasibility, have the LLM thoroughly review all the above. The scope should be documented in `PLANNING.md`, and specific tasks should be listed in `TASK.md`. These files should be updated by the AI coding assistant as the project progresses.
 
 ### **`PLANNING.md`**
 
