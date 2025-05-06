@@ -1,0 +1,939 @@
+let's start with the big idea of scaling
+
+laws and the scaling hypothesis what is
+
+it what is its history and where do we
+
+stand today so I can only describe it as
+
+it you know as it relates to kind of my
+
+own experience but I've been in the AI
+
+field for about uh 10 years and it was
+
+something I noticed very early on so I
+
+first joined the AI world when I was uh
+
+working at BYU with Andrew ing in late
+
+2014 which is almost exactly 10 years
+
+ago now and and the first thing we
+
+worked on was speech recognition systems
+
+and in those days I think deep learning
+
+was a new thing it had made lots of
+
+progress but everyone was always saying
+
+we don't have the algorithms we need to
+
+succeed you know we we we we're we're
+
+not we're only matching a tiny tiny
+
+fraction there's so much we need to kind
+
+of discover algorithmically we haven't
+
+found the picture of how to match the
+
+human brain uh and when you know in some
+
+ways it was fortunate I was kind of you
+
+know you can have almost beginner's luck
+
+right was like a a newcomer to the field
+
+and you know I looked at the neural net
+
+that we were using for speech the
+
+recurrent neural networks and I said I
+
+don't know what if you make them bigger
+
+and give them more layers and what if
+
+you scale up the data along with this
+
+right I just saw these as as like
+
+independent dials that you could turn
+
+and I noticed that the model started to
+
+do better and better as you gave them
+
+more data as you as you made the models
+
+larger as you trained them for longer um
+
+and I I didn't measure things precisely
+
+in those days but but along with with
+
+colleagues we very much got the informal
+
+sense that the more data and the more
+
+compute and the more training you put
+
+into these models the better they
+
+perform and so initially my thinking was
+
+hey maybe that is just true for speech
+
+recognition systems right maybe maybe
+
+that's just one particular Quirk one
+
+particular area I think it wasn't until
+
+2017 when I first saw the results from
+
+gpt1 that it clicked for me that
+
+language is probably the area in which
+
+we can do this we can get trillions of
+
+words of language data we can train on
+
+them and the models we were training in
+
+those days were tiny you could train
+
+them on one to eight gpus whereas you
+
+know now we train jobs on tens of
+
+thousands soon going to hundreds of
+
+thousands of gpus and so when I when I
+
+saw those two things together um and you
+
+know there were a few people like Ilia
+
+Suiter who who you've interviewed who
+
+had somewhat similar reviews right he
+
+might have been the first one although I
+
+think a few people came to came to simil
+
+reviews around the same time Right There
+
+Was You Know Rich Sutton's bitter lesson
+
+there was G wrote about the scaling
+
+hypothesis but I think somewhere between
+
+2014 and 2017 was when it really clicked
+
+for me when I really got conviction that
+
+hey we're going to be able to do these
+
+incredibly wide cognitive tasks if we
+
+just if we just scale up the models and
+
+at at every stage of scaling there are
+
+always arguments and you know when I
+
+first heard them honestly I thought
+
+probably I'm the one who's wrong and you
+
+know all these all these experts in the
+
+field are right they know the situation
+
+better better than I do right there's
+
+you know the Chomsky argument about like
+
+you can get syntactics but you can't get
+
+semantics there's this idea oh you can
+
+make a sentence make sense but you can't
+
+make a paragraph make sense the latest
+
+one we have today is uh you know we're
+
+going to run out of data or the data
+
+isn't high quality enough or models
+
+can't reason and and each time every
+
+time we manage to we manage to either
+
+find a way around or scaling just is the
+
+way around sometimes it's one sometimes
+
+it's the other uh and and so I'm now at
+
+this point I I I still think you know
+
+it's it's it's always quite uncertain we
+
+have nothing but inductive inference to
+
+tell us that the next few years are
+
+going to be like the next the last 10
+
+years but but I've seen I've seen the
+
+movie enough times I've seen the story
+
+happen for for enough times to to really
+
+believe that probably the scaling is
+
+going to continue and that there's some
+
+magic to it that we haven't really
+
+explained on a theoretical basis yet and
+
+of course the scaling here is bigger
+
+networks bigger data bigger compute yes
+
+all those in in particular linear
+
+scaling up of bigger networks bigger
+
+training times and uh more and and more
+
+data uh so all of these things almost
+
+like a chemical reaction you know you
+
+have three ingredients in the chemical
+
+reaction and you need to linearly scale
+
+up the three ingredients if you scale up
+
+one not the others you run out of the
+
+other reagents and and the reaction
+
+stops but if you scale up everything
+
+everything in series then then the
+
+reaction can proceed and of course now
+
+that you have this kind of empirical
+
+scienceart you can apply to
+
+other uh more nuanced things like
+
+scaling laws applied to interpretability
+
+or scaling laws applied to post
+
+trainining or just seeing how does this
+
+thing scale but the big scaling law I
+
+guess the underlying scaling hypothesis
+
+has to do with big networks Big Data
+
+leads to intelligence yeah we've we've
+
+documented scaling laws in lots of
+
+domains other than language right so uh
+
+initially the the paper we did that
+
+first showed it was in early 2020 where
+
+we first showed it for language there
+
+was then some work late in 2020 where we
+
+showed the same thing for other
+
+modalities like images video text to
+
+image image to text math they all had
+
+the same pattern and and you're right
+
+now there are other stages like
+
+posttraining or there are new types of
+
+reasoning models and in in in all of
+
+those cases that we've measured we see
+
+similar similar types of scaling laws a
+
+bit of a philosophical question but
+
+what's your intuition about why bigger
+
+is better in terms of network size and
+
+data size why does it lead to more
+
+intelligent models so in my previous
+
+career as a as a biophysicist so I did
+
+physics undergrad and then biophysics in
+
+in in in grad school so I think back to
+
+what I know as a physicist which is
+
+actually much less than what some of my
+
+colleagues at anthropic have in terms of
+
+in terms of expertise in physics uh
+
+there's this there's this concept called
+
+the one over F noise and one overx
+
+distributions um where where often um uh
+
+you know just just like if you add up a
+
+bunch of natural processes you get a
+
+gaussian if you add up a bunch of kind
+
+of differently distributed natural
+
+processes if you like if you like take a
+
+take a um probe and and hook it up to a
+
+resistor the
+
+distribution of the thermal noise in the
+
+resistor goes as one over the frequency
+
+um it's some kind of natural convergent
+
+distribution uh and and I I I I and and
+
+I think what it amounts to is that if
+
+you look at a lot of things that are
+
+that are produced by some natural
+
+process that has a lot of different
+
+scales right not a gaussian which is
+
+kind of narrowly distributed but you
+
+know if I look at kind of like large and
+
+small fluctuations that lead to lead to
+
+electrical noise um they have this
+
+decaying 1/x distribution and so now I
+
+think of like patterns in the physical
+
+world right if I if or or in language if
+
+I think about the patterns in language
+
+there are some really simple patterns
+
+some words are much more common than
+
+others like the' then there's basic noun
+
+verb structure then there's the fact
+
+that you know nouns and verbs have to
+
+agree they have to coordinate then
+
+there's the higher level sentence
+
+structure then there's the Thematic
+
+structure of paragraphs and so the fact
+
+that there's this regressing structure
+
+you can imagine that as you make the
+
+networks larger first they capture the
+
+really simple correlations the really
+
+simple patterns and there's this long
+
+tail of other patterns and if that long
+
+tail of other patterns is really smooth
+
+like it is with the one over F noise in
+
+you know physical processes like like
+
+like like resistors then you could
+
+imagine as you make the network larger
+
+it's kind of capturing more and more of
+
+that distribution and so that smoothness
+
+gets reflected in how well the models
+
+are at predicting and how well they
+
+perform language is an evolved process
+
+right we've we've developed language we
+
+have common words and less common words
+
+we have common expressions and less
+
+common Expressions we have ideas cliches
+
+that are expressed frequently and we
+
+have novel ideas and that process has
+
+has developed has evolved with humans
+
+over millions of years and so the the
+
+the guess and this is pure speculation
+
+would be would be that there is there's
+
+some kind of longtail distribution of of
+
+of the distribu of these ideas so
+
+there's the long tail but also there's
+
+the height of the hierarchy of Concepts
+
+that you're building up so the bigger
+
+the network presumably you have a higher
+
+capacity to exactly if you have a small
+
+Network you only get the common stuff
+
+right if if I take a tiny neural network
+
+it's very good at understanding that you
+
+know a sentence has to have you know
+
+verb adjective noun right but it's it's
+
+terrible at deciding what those verb
+
+adjective and noun should be and whether
+
+they should make sense if I make it just
+
+a little bigger it gets good at that
+
+then suddenly it's good at the sentences
+
+but it's not good at the paragraphs and
+
+so the these these rarer and more
+
+complex patterns get picked up as I add
+
+as I add more capacity to the network
+
+well the natural question then is what's
+
+the ceiling of this yeah like how
+
+complicated and complex is the real
+
+world how much is stuff is there to
+
+learn I don't think any of us knows the
+
+answer to that question um I my strong
+
+Instinct would be that there's no
+
+ceiling below the level of humans right
+
+we humans are able to understand these
+
+various patterns and so that that makes
+
+me think that if we continue to you know
+
+scale up these these these models to
+
+kind of develop new methods for training
+
+them and scaling them up uh that will at
+
+least get to the level that we've gotten
+
+to with humans there's then a question
+
+of you know how much more is it possible
+
+to understand than humans do how much
+
+how much is it possible to be smarter
+
+and more perceptive than humans I I
+
+would guess the answer has has got to be
+
+domain dependent if I look at an area
+
+like biology and you know I wrote this
+
+essay Machines of Loving Grace it seems
+
+to me that humans are struggling to
+
+understand the complexity of biology
+
+right if you go to Stanford or to
+
+Harvard or to Berkeley you have whole
+
+Departments of you know folks trying to
+
+study you know like the immune system or
+
+metabolic pathways and and each person
+
+understands only a tiny bit part of it
+
+specializes and they're struggling to
+
+combine their knowledge with that of
+
+with that of other human and so I have
+
+an instinct that there's there's a lot
+
+of room at the top for AIS to get
+
+smarter if I think of something like
+
+materials in the in the physical world
+
+or you know um like addressing you know
+
+conflicts between humans or something
+
+like that I mean you know it it may be
+
+there's only some of these problems are
+
+not intractable but much harder and and
+
+it it may be that there's only there's
+
+only so well you can do with some of
+
+these things right just like with speech
+
+recognition there's only so clear I can
+
+hear your speech so I think in some
+
+areas there may be ceilings in in in you
+
+know that are very close to what humans
+
+have done in other areas those ceilings
+
+may be very far away and I think we'll
+
+only find out when we build these
+
+systems uh there's it's very hard to
+
+know in advance we can speculate but we
+
+can't be sure and in some domains the
+
+ceiling might have to do with human
+
+bureaucracies and things like this as
+
+you're right about yes so humans
+
+fundamentally have to be part of the
+
+loop that's the cause of the ceiling not
+
+maybe the limits of the intelligence
+
+yeah I think in many cases um you know
+
+in theory technology could change very
+
+fast for example all the things that we
+
+might invent with respect to biology um
+
+but remember there's there's a you know
+
+there's a clinical trial system that we
+
+have to go through to actually
+
+administer these things to humans I
+
+think that's a mixture of things that
+
+are unnecessary and bureaucratic and
+
+things that kind of protect the
+
+Integrity of society and the whole
+
+challenge is that it's hard to tell it's
+
+hard to tell what's going on uh it's
+
+hard to tell which is which right my my
+
+view is definitely Ely I think in terms
+
+of drug development we my view is that
+
+we're too slow and we're too
+
+conservative but certainly if you get
+
+these things wrong you know it's it's
+
+possible to to to risk people's lives by
+
+by being by being by being too Reckless
+
+and so at least at least some of these
+
+human institutions are in fact
+
+protecting people so it's it's all about
+
+finding the balance I strongly suspect
+
+that balance is kind of more on the side
+
+of pushing to make things happen faster
+
+but there is a balance if we do hit a
+
+limit
+
+if we do hit a Slowdown in the scaling
+
+laws what do you think would be the
+
+reason is it compute limited data
+
+limited uh is it something else idea
+
+limited so a few things now we're
+
+talking about hitting the limit before
+
+we get to the level of of humans and the
+
+skill of humans um so so I think one
+
+that's you know one that's popular today
+
+and I think you know could be a limit
+
+that we run into I like most of the
+
+limits I would bet against it but it's
+
+definitely possible is we simply run out
+
+of data there's only much data on the
+
+internet and there's issues with the
+
+quality of the data right you can get
+
+hundreds of trillions of words on the
+
+internet but a lot of it is is
+
+repetitive or it's search engine you
+
+know search engine optimization driil or
+
+maybe in the future it'll even be text
+
+generated by AIS itself uh and and so I
+
+think there are limits to what to to to
+
+what can be produced in this way that
+
+said we and I would guess other
+
+companies are working on ways to make
+
+data synthetic uh where you can you know
+
+you can use the model to generate more
+
+data of the type that you have that you
+
+have already or even generate data from
+
+scratch if you think about uh what was
+
+done with uh deep mines alphao zero they
+
+managed to get a bot all the way from
+
+you know no ability to play Go
+
+whatsoever to above human level just by
+
+playing against itself there was no
+
+example data from humans required in the
+
+the alphao zero version of it the other
+
+direction of course is these reasoning
+
+models that do Chain of Thought and stop
+
+to think um and and reflect on their own
+
+thinking in a way that's another kind of
+
+synthetic data coupled with
+
+reinforcement learning so my my guess is
+
+with one of those methods we'll get
+
+around the data limitation or there may
+
+be other sources of data that are that
+
+are available um we could just observe
+
+that even if there's no problem with
+
+data as we start to scale models up they
+
+just stop getting better it's it seemed
+
+to be a a reliable observation that
+
+they've gotten better that could just
+
+stop at some point for reason we don't
+
+understand um the answer could be that
+
+we need to uh you know we need to invent
+
+some new architecture um it's been there
+
+have been problems in the past with with
+
+say numerical stability of models where
+
+it looked like things were were leveling
+
+off but but actually you know when we
+
+when we when we found the right
+
+Unblocker they didn't end up doing so so
+
+perhaps there's new some new
+
+optimization method or some new uh
+
+Technique we need to to unblock things
+
+I've seen no evidence of that so far but
+
+if things were to to slow down that
+
+perhaps could be one reason what about
+
+the limits of compute meaning uh the
+
+expensive uh nature of building bigger
+
+and bigger data centers so right now I
+
+think uh you know most of the Frontier
+
+Model companies I would guess are are
+
+operating you know roughly you know $1
+
+billion scale plus or minus a factor of
+
+three right those are the models that
+
+exist now or are being trained now uh I
+
+think next year we're going to go to a
+
+few billion and then uh 2026 we may go
+
+to uh uh you know above 10 10 10 billion
+
+and probably by 2027 their Ambitions to
+
+build hundred hundred billion dollar uh
+
+hundred billion dollar clusters and I
+
+think all of that actually will happen
+
+there's a lot of determination to build
+
+the compute to do it within this country
+
+uh and I would guess that it actually
+
+does happen now if we get to a 100
+
+billion that's still not enough compute
+
+that's still not enough scale then
+
+either we need even more scale or we
+
+need to develop some way of doing it
+
+more efficiently of Shifting The Curve
+
+um I think be between all of these one
+
+of the reasons I'm bullish about
+
+powerful AI happening so fast is just
+
+that if you extrapolate the next few
+
+points on the curve we're very quickly
+
+getting towards human level ability
+
+right some of the new models that that
+
+we developed some some reasoning models
+
+that have come from other companies
+
+they're starting to get to what I would
+
+call the PHD or professional level right
+
+if you look at their their coding
+
+ability um the latest model we released
+
+Sonet 3.5 the new or updated version it
+
+gets something like 50% on sbench and
+
+sbench is an example of a bunch of
+
+professional real world software
+
+engineering tasks at the beginning of
+
+the year I think the state-of-the-art
+
+was three or 4% so in 10 months we've
+
+gone from 3% to 50% on this task and I
+
+think in another year we'll probably be
+
+at 90% I mean I don't know but might
+
+might even be might even be less than
+
+that uh we've seen similar things in
+
+graduate level math physics and biology
+
+from Models like open AI 01 uh so uh if
+
+we if we just continue to extrapolate
+
+this right in terms of skill skill that
+
+we have I think if we extrapolate the
+
+straight curve within a few years we
+
+will get to these models being you know
+
+above the the highest professional level
+
+in terms of humans now will that curve
+
+continue you've pointed to and I've
+
+pointed to a lot of reasons why you know
+
+possible reasons why that might not
+
+happen but if the if the extrapolation
+
+curve continues that is the trajectory
+
+we're on
+
+
